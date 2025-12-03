@@ -1,0 +1,107 @@
+server {
+    listen 443 ssl http2;
+
+    server_name example.metamuses.org;
+
+    root /var/www/example.metamuses.org;
+    index index.html;
+
+    access_log /var/log/nginx/example.metamuses.org.access.log;
+    error_log  /var/log/nginx/example.metamuses.org.error.log;
+
+    ssl_certificate /etc/nginx/certs/example.metamuses.org/fullchain.pem;
+    ssl_trusted_certificate /etc/nginx/certs/example.metamuses.org/fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/example.metamuses.org/key.pem;
+
+    ssl_session_timeout 1d;
+    ssl_session_cache shared:MozSSL:10m;
+    ssl_session_tickets off;
+
+    ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+
+    add_header Strict-Transport-Security "max-age=63072000" always;
+
+    resolver 1.1.1.1;
+
+    server_tokens off;
+
+    # ===== ONTOLOGY =========================
+    # redirect /ontology/ to /ontology
+    location = /ontology/ {
+        return 301 /ontology;
+    }
+
+    # don't serve directly files under /ontology/ folder
+    location ^~ /ontology/ {
+       return 404;
+    }
+
+    # serve versioned ontology files with local hosting
+    location ~ ^/v([0-9]+\.[0-9]+)/ontology\.ttl$ {
+        add_header Access-Control-Allow-Origin *;
+        add_header Cache-Control "public, max-age=7776000";
+        default_type text/turtle;
+
+        rewrite ^/v([0-9]+\.[0-9]+)/ontology\.ttl$ /ontology/v$1/ontology.ttl break;
+    }
+
+    # serve main ontology endpoint
+    location = /ontology {
+        add_header Access-Control-Allow-Origin *;
+        add_header Cache-Control "public, max-age=3600";
+        default_type text/turtle;
+
+        try_files /ontology/ontology.ttl =404;
+    }
+
+    # ===== DATA =============================
+    # redirect /data to /data/
+    location = /data {
+      return 301 /data/;
+    }
+
+    # redirect all /data/* to /data/ with 303 See Other
+    location ^~ /data/ {
+        add_header Access-Control-Allow-Origin *;
+        default_type text/turtle;
+
+        return 303 /data/;
+    }
+
+    # serve versioned data files with local hosting
+    location ~ ^/v([0-9]+\.[0-9]+)/data\.ttl$ {
+        add_header Access-Control-Allow-Origin *;
+        add_header Cache-Control "public, max-age=7776000";
+        default_type text/turtle;
+
+        rewrite ^/v([0-9]+\.[0-9]+)/data\.ttl$ /ontology/v$1/data.ttl break;
+    }
+
+    # serve main data endpoint
+    location = /data/ {
+        add_header Access-Control-Allow-Origin *;
+        add_header Cache-Control "public, max-age=3600";
+        default_type text/turtle;
+
+        try_files /ontology/data.ttl =404;
+    }
+
+    # ===== WEBSITE ==========================
+    location / {
+        alias /var/www/example.metamuses.org/docs/;
+        try_files $uri $uri/ =404;
+    }
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name example.metamuses.org;
+
+    return 301 https://$host$request_uri;
+}
