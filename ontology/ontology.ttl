@@ -14,7 +14,8 @@
         "Martina Uccheddu" ;
     owl:versionInfo "1.0" ;
     owl:versionIRI <https://example.metamuses.org/v1.0/ontology.ttl> ;
-    dcterms:issued "2025-12-31"^^xsd:date ;
+    dcterms:created "2025-12-31"^^xsd:date ;
+    dcterms:modified "2025-12-31"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
     rdfs:comment "A longer comment about the ontology and its purposes, components and else."@en ;
