@@ -13,7 +13,7 @@
         "Maryam Dadras" ,
         "Martina Uccheddu" ;
     owl:versionInfo "1.0" ;
-    owl:versionIRI <https://example.metamuses.org/v1.0/ontology.ttl> ;
+    owl:versionIRI <https://example.metamuses.org/1.0/ontology.ttl> ;
     dcterms:created "2025-12-31"^^xsd:date ;
     dcterms:modified "2025-12-31"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
