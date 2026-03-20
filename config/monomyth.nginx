@@ -2,17 +2,17 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
 
-    server_name example.metamuses.org;
+    server_name monomyth.metamuses.org;
 
-    root /var/www/example.metamuses.org;
+    root /var/www/monomyth.metamuses.org;
     index index.html;
 
-    access_log /var/log/nginx/example.metamuses.org.access.log;
-    error_log  /var/log/nginx/example.metamuses.org.error.log;
+    access_log /var/log/nginx/monomyth.metamuses.org.access.log;
+    error_log  /var/log/nginx/monomyth.metamuses.org.error.log;
 
-    ssl_certificate /etc/nginx/certs/example.metamuses.org/fullchain.pem;
-    ssl_trusted_certificate /etc/nginx/certs/example.metamuses.org/fullchain.pem;
-    ssl_certificate_key /etc/nginx/certs/example.metamuses.org/key.pem;
+    ssl_certificate /etc/nginx/certs/monomyth.metamuses.org/fullchain.pem;
+    ssl_trusted_certificate /etc/nginx/certs/monomyth.metamuses.org/fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/monomyth.metamuses.org/key.pem;
 
     ssl_session_timeout 1d;
     ssl_session_cache shared:MozSSL:10m;
@@ -93,7 +93,7 @@ server {
 
     # ===== WEBSITE ==========================
     location / {
-        alias /var/www/example.metamuses.org/docs/;
+        alias /var/www/monomyth.metamuses.org/website/;
         try_files $uri $uri/ =404;
     }
 }
@@ -102,7 +102,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name example.metamuses.org;
+    server_name monomyth.metamuses.org;
 
     return 301 https://$host$request_uri;
 }

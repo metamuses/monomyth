@@ -1,34 +1,113 @@
-@base <https://example.metamuses.org/graph/> .
-@prefix exmpl: <https://example.metamuses.org/ontology#> .
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.metamuses.org/graph/> a void:Dataset ;
-    dcterms:title "The dataset of the example ontology"@en ;
-    dcterms:description "A dataset containing instantiations of classes and properties."@en ;
+<https://monomyth.metamuses.org/graph/> a void:Dataset ;
+    dcterms:title "The Monomyth Knowledge Graph"@en ;
+    dcterms:description """A dataset representing the monomyth structure as it
+is realized in various narrative works across different time periods, cultures,
+and media."""@en ;
     dcterms:creator "Tommaso Barbato",
         "Nicol D'Amelio" ,
         "Maryam Dadras" ,
         "Martina Uccheddu" ;
-    dcterms:conformsTo <https://example.metamuses.org/ontology> ;
-    void:vocabulary <https://example.metamuses.org/ontology> ;
-    void:dataDump <https://example.metamuses.org/1.0/graph.ttl> ;
-    dcterms:created "2025-12-31"^^xsd:date ;
-    dcterms:modified "2025-12-31"^^xsd:date ;
+    dcterms:conformsTo <https://monomyth.metamuses.org/ontology> ;
+    void:vocabulary <https://monomyth.metamuses.org/ontology> ;
+    void:dataDump <https://monomyth.metamuses.org/1.0/graph.ttl> ;
+    dcterms:created "2026-04-13"^^xsd:date ;
+    dcterms:modified "2026-04-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
-    rdfs:comment "A longer comment about the dataset and its purposes, components and else."@en ;
-    rdfs:seeAlso <https://example.metamuses.org>,
-        <https://github.com/metamuses/example> .
+    rdfs:seeAlso <https://monomyth.metamuses.org>,
+        <https://github.com/metamuses/monomyth> .
 
-<item/exampleItem> a exmpl:Item ;
-    rdfs:label "An example item."@en ;
-    rdfs:comment "A longer comment about the item and its purposes, components and else."@en ;
-    exmpl:createdBy <org/examplePerson> .
+# =============================================================================
+# THE MATRIX (Movie, 1999)
+# =============================================================================
 
-<org/examplePerson> a exmpl:Person ;
-    rdfs:label "An example person."@en ;
-    rdfs:comment "A longer comment about the person and its purposes, components and else."@en .
+<the-matrix> a monomyth:NarrativeWork,
+        schema:Movie ;
+    rdfs:label "The Matrix"@en ;
+    dcterms:title "The Matrix"@en ;
+    dcterms:created "1999"^^xsd:gYear ;
+    dcterms:creator "Lana Wachowski" ,
+        "Lilly Wachowski" ;
+    schema:genre "Science Fiction"@en , "Action"@en , "Cyberpunk"@en ;
+    owl:sameAs wd:Q83495 ;
+    monomyth:interpretedBy <the-matrix/monomyth> ;
+    rdfs:comment """A 1999 science fiction film in which a computer hacker
+discovers that reality as he knows it is a simulated world created by machines
+to subjugate humanity."""@en .
+
+# --- Monomyth Expression --------------
+
+<the-matrix/monomyth> a monomyth:MonomythExpression ;
+    rdfs:label "Neo's Hero's Journey in The Matrix"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is
+realized in the narrative of 'The Matrix', focusing on the character Neo's
+journey."""@en ;
+    monomyth:interprets <the-matrix> ;
+    monomyth:hasHero <the-matrix/characters/neo> ;
+    monomyth:hasStageRealizations (
+        <the-matrix/stages/a-call-to-adventure>
+        <the-matrix/stages/refusal-of-the-call>
+        <the-matrix/stages/supernatural-aid>
+        <the-matrix/stages/crossing-first-threshold>
+        <the-matrix/stages/belly-of-the-whale>
+        <the-matrix/stages/road-of-trials>
+        <the-matrix/stages/meeting-goddess>
+        <the-matrix/stages/woman-temptress>
+        <the-matrix/stages/atonement-father>
+        <the-matrix/stages/apotheosis>
+        <the-matrix/stages/ultimate-boon>
+        <the-matrix/stages/refusal-return>
+        <the-matrix/stages/magic-flight>
+        <the-matrix/stages/rescue-without>
+        <the-matrix/stages/crossing-return-threshold>
+        <the-matrix/stages/master-two-worlds>
+        <the-matrix/stages/freedom-to-live>
+    ) .
+
+# --- Characters -----------------------
+
+<the-matrix/characters/neo> a monomyth:Character ;
+    rdfs:label "Neo (Thomas A. Anderson)"@en ;
+    rdfs:comment """A hacker who is revealed to be 'the One', the prophesied
+figure capable of manipulating the Matrix and liberating humanity."""@en ;
+    monomyth:embodiesArchetype monomyth:Hero ;
+    monomyth:isHeroOf <the-matrix/monomyth> ;
+    owl:sameAs wd:Q247120 .
+
+<the-matrix/characters/morpheus> a monomyth:Character ;
+    rdfs:label "Morpheus"@en ;
+    rdfs:comment """The leader of the human resistance who believes Neo is the
+prophesied 'One' capable of liberating humanity."""@en ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q1750842 .
+
+<the-matrix/characters/trinity> a monomyth:Character ;
+    rdfs:label "Trinity"@en ;
+    rdfs:comment """A skilled hacker and member of the human resistance who
+becomes Neo's love interest."""@en ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q246835 .
+
+# --- Stage Realizations ---------------
+
+<the-matrix/stages/a-call-to-adventure> a monomyth:StageRealization ;
+    rdfs:label "Call to Adventure"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ;
+    monomyth:involvesCharacter <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Neo's computer screen displays the message
+'Wake up, Neo... The Matrix has you... Follow the white rabbit.' He then follows
+a woman with a white rabbit tattoo to a club, where Trinity tells him she knows
+the answer to the question driving his life."""@en .

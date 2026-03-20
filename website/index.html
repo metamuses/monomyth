@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monomyth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f2e8d5;
+      --text: #1c1408;
+      --gold: #8a6420;
+      --muted: #8a7860;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: radial-gradient(ellipse 80% 80% at 50% 50%, #faf3e4 0%, #ecddc4 60%, #e4d4b5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+      opacity: 0.09;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* Vignette */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 90% 90% at 50% 50%, transparent 20%, rgba(140, 110, 60, 0.18) 100%);
+      pointer-events: none;
+      z-index: 19;
+    }
+
+    .scene {
+      position: relative;
+      width: min(75vw, 75vh, 520px);
+      height: min(75vw, 75vh, 520px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Celestial rings — very slowly rotating */
+    .rings {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      animation: slowRotate 90s linear infinite;
+      transform-origin: center;
+    }
+
+    @keyframes slowRotate {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Outer circle draws in on load */
+    .c-outer {
+      stroke-dasharray: 1508;
+      stroke-dashoffset: 1508;
+      animation: drawLine 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* Inner circle draws in slightly after */
+    .c-inner {
+      stroke-dasharray: 1351;
+      stroke-dashoffset: 1351;
+      animation: drawLine 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+
+    /* Tick marks appear after rings finish */
+    .ticks {
+      opacity: 0;
+      animation: appear 1.2s ease forwards;
+      animation-delay: 3.2s;
+    }
+
+    /* Text content */
+    .content {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.1rem;
+    }
+
+    /* Top ornament line */
+    .orn {
+      width: 32px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0;
+      animation: appear 1.2s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: clamp(1.8rem, 7vw, 3.2rem);
+      letter-spacing: 0.6em;
+      text-indent: 0.6em; /* compensate for letter-spacing on last char */
+      color: var(--text);
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: riseIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 1s;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+
+    /* Gold divider */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(106, 78, 24, 0.3);
+      opacity: 0;
+      animation: appear 1s ease forwards;
+      animation-delay: 1.8s;
+    }
+
+    .sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(0.62rem, 1.8vw, 0.8rem);
+      letter-spacing: 0.3em;
+      text-transform: lowercase;
+      color: var(--muted);
+      opacity: 0;
+      animation: appear 1.4s ease forwards;
+      animation-delay: 2.1s;
+    }
+
+    @keyframes riseIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes appear {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+
+    <!-- Rotating celestial rings with tick marks -->
+    <svg class="rings" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Outer ring (r=240, circumference≈1508) -->
+      <circle class="c-outer"
+        cx="250" cy="250" r="240"
+        stroke="#7a5c1e" stroke-width="0.7" opacity="0.5"/>
+
+      <!-- Inner ring (r=215, circumference≈1351) -->
+      <circle class="c-inner"
+        cx="250" cy="250" r="215"
+        stroke="#7a5c1e" stroke-width="0.4" opacity="0.25"/>
+
+      <!-- Tick marks — all positioned at top (y=10) and rotated around center -->
+      <g class="ticks">
+
+        <!-- Primary ticks (triquetra, 120° apart) — long -->
+        <g stroke="#6a4e18" stroke-width="0.9" opacity="0.6">
+          <line x1="250" y1="10" x2="250" y2="36"/>
+          <line x1="250" y1="10" x2="250" y2="36" transform="rotate(120 250 250)"/>
+          <line x1="250" y1="10" x2="250" y2="36" transform="rotate(240 250 250)"/>
+        </g>
+
+        <!-- Secondary ticks (bisecting, 60° offset) — shorter -->
+        <g stroke="#6a4e18" stroke-width="0.6" opacity="0.35">
+          <line x1="250" y1="10" x2="250" y2="24" transform="rotate(60 250 250)"/>
+          <line x1="250" y1="10" x2="250" y2="24" transform="rotate(180 250 250)"/>
+          <line x1="250" y1="10" x2="250" y2="24" transform="rotate(300 250 250)"/>
+        </g>
+
+        <!-- Small dots at remaining 30° positions -->
+        <g fill="#6a4e18" opacity="0.28">
+          <circle cx="250" cy="10" r="1.4" transform="rotate(30 250 250)"/>
+          <circle cx="250" cy="10" r="1.4" transform="rotate(90 250 250)"/>
+          <circle cx="250" cy="10" r="1.4" transform="rotate(150 250 250)"/>
+          <circle cx="250" cy="10" r="1.4" transform="rotate(210 250 250)"/>
+          <circle cx="250" cy="10" r="1.4" transform="rotate(270 250 250)"/>
+          <circle cx="250" cy="10" r="1.4" transform="rotate(330 250 250)"/>
+        </g>
+
+      </g>
+    </svg>
+
+    <!-- Centered text -->
+    <div class="content">
+      <div class="orn"></div>
+      <h1>Monomyth</h1>
+      <div class="divider"></div>
+      <p class="sub">coming soon</p>
+    </div>
+
+  </div>
+</body>
+</html>

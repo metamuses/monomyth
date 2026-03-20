@@ -1,72 +1,495 @@
-@prefix exmpl: <https://example.metamuses.org/ontology#> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix creon: <http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.metamuses.org/ontology> a owl:Ontology ;
-    dcterms:title "Example ontology"@en ;
-    dcterms:description "An ontology example to understand how ontology are done."@en ;
+<https://monomyth.metamuses.org/ontology> a owl:Ontology ;
+    dcterms:title "The Monomyth Ontology"@en ;
+    dcterms:description """An ontology for representing the Monomyth narrative
+structure and related concepts based on 'The Hero with a Thousand Faces' by
+Joseph Campbell."""@en ;
     dcterms:creator "Tommaso Barbato",
         "Nicol D'Amelio" ,
         "Maryam Dadras" ,
         "Martina Uccheddu" ;
     owl:versionInfo "1.0" ;
-    owl:versionIRI <https://example.metamuses.org/1.0/ontology.ttl> ;
-    dcterms:created "2025-12-31"^^xsd:date ;
-    dcterms:modified "2025-12-31"^^xsd:date ;
+    owl:versionIRI <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
+    dcterms:created "2026-04-13"^^xsd:date ;
+    dcterms:modified "2026-04-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
-    rdfs:comment "A longer comment about the ontology and its purposes, components and else."@en ;
-    rdfs:seeAlso <https://example.metamuses.org>,
-        <https://github.com/metamuses/example> .
+    rdfs:seeAlso <https://monomyth.metamuses.org>,
+        <https://github.com/metamuses/monomyth> .
 
-# ===== ANNOTATION PROPERTIES ============
-exmpl:inspiredBy a owl:AnnotationProperty ;
-    rdfs:label "inspired by"@en ;
-    rdfs:comment "Indicates the source of inspiration for a creative work, such as a person, story, or event."@en ;
-    rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
-    dcterms:creator "Martina Uccheddu" ;
-    dcterms:date "2025-12-31"^^xsd:date .
+# ==============================================================================
+# CLASSES
+# ==============================================================================
 
-# ===== CLASSES ==========================
-exmpl:Story a owl:Class ;
-    rdfs:label "Story"@en ;
-    rdfs:comment "A fictional or narrative work created by Gianni Rodari or inspired by his style."@en ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
-    dcterms:creator "Martina Uccheddu" ;
-    dcterms:date "2025-12-31"^^xsd:date ;
-    dcterms:source <https://en.wikipedia.org/wiki/Gianni_Rodari> .
+monomyth:NarrativeWork a owl:Class ;
+    rdfs:subClassOf creon:CreativeProduct ;
+    rdfs:label "Narrative Work"@en ;
+    rdfs:comment """A story, novel, epic, film, or other narrative that can be
+analyzed through the monomyth framework."""@en .
 
-# ===== OBJECT PROPERTIES ================
-exmpl:hasCharacter a owl:ObjectProperty ;
-    rdfs:label "has character"@en ;
-    rdfs:comment "Relates a story to one of its fictional characters."@en ;
-    owl:inverseOf exmpl:isCharacterOf ;
-    rdfs:domain exmpl:Story ;
-    rdfs:range exmpl:Character ;
-    rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
-    dcterms:creator "Nicol D'Amelio" ;
-    dcterms:date "2025-12-31"^^xsd:date .
+monomyth:MonomythExpression a owl:Class ;
+    rdfs:label "Monomyth Expression"@en ;
+    rdfs:comment """A specific realization of the monomyth structure within a
+particular narrative work."""@en .
 
-exmpl:isCharacterOf a owl:ObjectProperty ;
-    rdfs:label "is character of"@en ;
-    rdfs:comment "Indicates the story to which a character belongs."@en ;
-    owl:inverseOf exmpl:hasCharacter ;
-    rdfs:domain exmpl:Character ;
-    rdfs:range exmpl:Story ;
-    rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
-    dcterms:creator "Maryam Dadras" ;
-    dcterms:date "2025-12-31"^^xsd:date .
+monomyth:Act a owl:Class ;
+    rdfs:label "Act"@en ;
+    rdfs:comment """One of the three major phases of the monomyth, based on
+Joseph Campbell's framework."""@en .
 
-# ===== DATA PROPERTIES ==================
-exmpl:storyTitle a owl:DatatypeProperty ;
-    rdfs:label "story title"@en ;
-    rdfs:comment "The official title of a story as published or recognized in literary works."@en ;
-    rdfs:domain exmpl:Story ;
-    rdfs:range xsd:string ;
-    rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
-    dcterms:creator "Tommaso Barbato" ;
-    dcterms:date "2025-12-31"^^xsd:date .
+monomyth:Stage a owl:Class ;
+    rdfs:label "Stage"@en ;
+    rdfs:comment """One of the seventeen stages of the monomyth, based on Joseph
+Campbell's framework."""@en .
+
+monomyth:Character a owl:Class ;
+    rdfs:label "Character"@en ;
+    rdfs:comment """A character within a specific narrative work."""@en .
+
+monomyth:Archetype a owl:Class ;
+    rdfs:label "Archetype"@en ;
+    rdfs:comment """A recurring character role in the monomyth structure, based
+on Christopher Vogler's adaptation of Campbell's framework."""@en .
+
+monomyth:StageRealization a owl:Class ;
+    rdfs:label "Stage Realization"@en ;
+    rdfs:comment """The concrete manifestation of a monomyth stage within a
+specific narrative work. Links a stage archetype to its particular narrative
+content."""@en .
+
+monomyth:FitQuality a owl:Class ;
+    rdfs:label "Fit Quality"@en ;
+    rdfs:comment """An assessment of how well a narrative stage maps onto the
+monomyth archetype."""@en .
+
+# ==============================================================================
+# OBJECT PROPERTIES
+# ==============================================================================
+
+monomyth:interprets a owl:ObjectProperty ;
+    rdfs:label "interprets work"@en ;
+    rdfs:comment """Links a monomyth expression to the narrative work it
+interprets."""@en ;
+    rdfs:domain monomyth:MonomythExpression ;
+    rdfs:range monomyth:NarrativeWork .
+
+monomyth:interpretedBy a owl:ObjectProperty ;
+    rdfs:label "interpreted by"@en ;
+    rdfs:comment """Links a narrative work to the monomyth expression that
+interprets it."""@en ;
+    owl:inverseOf monomyth:interprets .
+
+monomyth:hasHero a owl:ObjectProperty ;
+    rdfs:label "has hero"@en ;
+    rdfs:comment """The character whose journey is being traced through the
+monomyth."""@en ;
+    rdfs:domain monomyth:MonomythExpression ;
+    rdfs:range monomyth:Character .
+
+monomyth:isHeroOf a owl:ObjectProperty ;
+    rdfs:label "is hero of"@en ;
+    rdfs:comment """Links a character to the monomyth expression in which they
+are the hero."""@en ;
+    owl:inverseOf monomyth:hasHero .
+
+monomyth:hasStageRealizations a owl:ObjectProperty ;
+    rdfs:label "has stage realizations"@en ;
+    rdfs:comment """Associates a monomyth expression with an ordered list of
+stage realizations that instantiate the monomyth stages within the specific
+narrative."""@en ;
+    rdfs:domain monomyth:MonomythExpression ;
+    rdfs:range rdf:List .
+
+monomyth:belongsToAct a owl:ObjectProperty ;
+    rdfs:label "belongs to act"@en ;
+    rdfs:comment """Associates a stage with the act to which it belongs."""@en ;
+    rdfs:domain monomyth:Stage ;
+    rdfs:range monomyth:Act .
+
+monomyth:followsStage a owl:ObjectProperty ;
+    rdfs:label "follows stage"@en ;
+    rdfs:comment """Indicates the sequential ordering of stages within the
+monomyth."""@en ;
+    rdfs:domain monomyth:Stage ;
+    rdfs:range monomyth:Stage .
+
+monomyth:embodiesArchetype a owl:ObjectProperty ;
+    rdfs:label "embodies archetype"@en ;
+    rdfs:comment """Links a character to the archetype(s) they embody in a
+narrative."""@en ;
+    rdfs:domain monomyth:Character ;
+    rdfs:range monomyth:Archetype .
+
+monomyth:realizesStage a owl:ObjectProperty ;
+    rdfs:label "realizes stage"@en ;
+    rdfs:comment """Links a concrete narrative moment to the abstract monomyth
+stage it instantiates."""@en ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range monomyth:Stage .
+
+monomyth:involvesCharacter a owl:ObjectProperty ;
+    rdfs:label "involves character"@en ;
+    rdfs:comment """Indicates the particular character(s) involved in the
+realization of a monomyth stage."""@en ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range monomyth:Character .
+
+monomyth:hasFitQuality a owl:ObjectProperty ;
+    rdfs:label "has fit quality"@en ;
+    rdfs:comment """Associates a stage realization with an evaluation of how
+well it fits the corresponding monomyth stage."""@en ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range monomyth:FitQuality .
+
+# ==============================================================================
+# DATATYPE PROPERTIES
+# ==============================================================================
+
+monomyth:actOrder a owl:DatatypeProperty ;
+    rdfs:label "act order"@en ;
+    rdfs:comment """The sequential position of an act in the three-act structure
+(1-3)."""@en ;
+    rdfs:domain monomyth:Act ;
+    rdfs:range [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:integer ;
+        owl:withRestrictions (
+            [ xsd:minInclusive 1 ]
+            [ xsd:maxInclusive 3 ]
+        )
+    ] .
+
+monomyth:stageOrder a owl:DatatypeProperty ;
+    rdfs:label "stage order"@en ;
+    rdfs:comment """The sequential position of a stage in the seventeen-stage
+monomyth (1-17)."""@en ;
+    rdfs:domain monomyth:Stage ;
+    rdfs:range [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:integer ;
+        owl:withRestrictions (
+            [ xsd:minInclusive 1 ]
+            [ xsd:maxInclusive 17 ]
+        )
+    ] .
+
+monomyth:fitScore a owl:DatatypeProperty ;
+    rdfs:label "fit score"@en ;
+    rdfs:comment """Numeric score for fit quality (-1 = inverted, 0 = absent,
+1 = weak, 2 = moderate, 3 = strong, 4 = perfect)."""@en ;
+    rdfs:domain monomyth:FitQuality ;
+    rdfs:range [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:integer ;
+        owl:withRestrictions (
+            [ xsd:minInclusive -1 ]
+            [ xsd:maxInclusive 4 ]
+        )
+    ] .
+
+monomyth:fitNote a owl:DatatypeProperty ;
+    rdfs:label "fit note"@en ;
+    rdfs:comment """An annotation explaining nuances, tensions, or interpretive
+choices in the stage mapping."""@en ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range xsd:string .
+
+monomyth:narrativeDescription a owl:DatatypeProperty ;
+    rdfs:label "narrative description"@en ;
+    rdfs:comment """A prose description of how a stage is realized in a specific
+narrative."""@en ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range xsd:string .
+
+# ==============================================================================
+# NAMED INDIVIDUALS
+# ==============================================================================
+
+# --- The Three Acts -------------------
+
+monomyth:Departure a monomyth:Act ;
+    rdfs:label "Departure"@en ;
+    rdfs:comment """The first act: the hero leaves the ordinary world."""@en ;
+    monomyth:actOrder 1 .
+
+monomyth:Initiation a monomyth:Act ;
+    rdfs:label "Initiation"@en ;
+    rdfs:comment """The second act: the hero undergoes trials and transformation
+in the special world."""@en ;
+    monomyth:actOrder 2 .
+
+monomyth:Return a monomyth:Act ;
+    rdfs:label "Return"@en ;
+    rdfs:comment """The third act: the hero returns to the ordinary world,
+transformed."""@en ;
+    monomyth:actOrder 3 .
+
+# --- The Seventeen Stages -------------
+
+monomyth:TheCallToAdventure a monomyth:Stage ;
+    rdfs:label "The Call to Adventure"@en ;
+    rdfs:comment """The hero receives a summons through a sign, messenger, or
+sudden rupture in the ordinary world that signals the beginning of a journey
+toward an as-yet-unknown transformation."""@en ;
+    monomyth:belongsToAct monomyth:Departure ;
+    monomyth:stageOrder 1 .
+
+monomyth:RefusalOfTheCall a monomyth:Stage ;
+    rdfs:label "Refusal of the Call"@en ;
+    rdfs:comment """Faced with the enormity of the journey ahead, the hero
+hesitates or outright refuses the summons, revealing the weight of what must be
+sacrificed to cross into the unknown."""@en ;
+    monomyth:belongsToAct monomyth:Departure ;
+    monomyth:stageOrder 2 ;
+    monomyth:followsStage monomyth:TheCallToAdventure .
+
+monomyth:SupernaturalAid a monomyth:Stage ;
+    rdfs:label "Supernatural Aid"@en ;
+    rdfs:comment """A protective figure such as a wizard, crone, ferryman, or
+divine messenger appears to equip the hero with talismans, wisdom, or assurance
+before the threshold is crossed."""@en ;
+    monomyth:belongsToAct monomyth:Departure ;
+    monomyth:stageOrder 3 ;
+    monomyth:followsStage monomyth:RefusalOfTheCall .
+
+monomyth:TheCrossingOfTheFirstThreshold a monomyth:Stage ;
+    rdfs:label "The Crossing of the First Threshold"@en ;
+    rdfs:comment """The hero commits to the adventure and passes beyond the
+familiar boundary of the known world, entering a sphere of magnified power where
+the ordinary rules no longer apply."""@en ;
+    monomyth:belongsToAct monomyth:Departure ;
+    monomyth:stageOrder 4 ;
+    monomyth:followsStage monomyth:SupernaturalAid .
+
+monomyth:TheBellyOfTheWhale a monomyth:Stage ;
+    rdfs:label "The Belly of the Whale"@en ;
+    rdfs:comment """The hero is swallowed into an unknown darkness as a symbolic
+death of the former self, from which, if survived, a new and transformed
+identity begins to emerge."""@en ;
+    monomyth:belongsToAct monomyth:Departure ;
+    monomyth:stageOrder 5 ;
+    monomyth:followsStage monomyth:TheCrossingOfTheFirstThreshold .
+
+monomyth:TheRoadOfTrials a monomyth:Stage ;
+    rdfs:label "The Road of Trials"@en ;
+    rdfs:comment """The hero undergoes a series of tests, ordeals, and
+encounters that progressively strip away illusions and forge the strength,
+wisdom, and character required for the supreme ordeal ahead."""@en ;
+    monomyth:belongsToAct monomyth:Initiation ;
+    monomyth:stageOrder 6 ;
+    monomyth:followsStage monomyth:TheBellyOfTheWhale .
+
+monomyth:TheMeetingWithTheGoddess a monomyth:Stage ;
+    rdfs:label "The Meeting with the Goddess"@en ;
+    rdfs:comment """The hero encounters an embodiment of totality in its fullest
+and most nurturing dimension, whose unconditional love reveals the deepest
+ground of existence itself."""@en ;
+    monomyth:belongsToAct monomyth:Initiation ;
+    monomyth:stageOrder 7 ;
+    monomyth:followsStage monomyth:TheRoadOfTrials .
+
+monomyth:WomanAsTheTemptress a monomyth:Stage ;
+    rdfs:label "Woman as the Temptress"@en ;
+    rdfs:comment """Confronted with desire, comfort, or worldly attachment, the
+hero faces a seduction that threatens to arrest the journey and bind
+consciousness to the transient rather than the transcendent."""@en ;
+    monomyth:belongsToAct monomyth:Initiation ;
+    monomyth:stageOrder 8 ;
+    monomyth:followsStage monomyth:TheMeetingWithTheGoddess .
+
+monomyth:AtonementWithTheFather a monomyth:Stage ;
+    rdfs:label "Atonement with the Father"@en ;
+    rdfs:comment """The hero confronts the ultimate authority of the inner world
+in the father-figure who both judges and initiates, and must be annihilated and
+reborn in the crucible of that encounter."""@en ;
+    monomyth:belongsToAct monomyth:Initiation ;
+    monomyth:stageOrder 9 ;
+    monomyth:followsStage monomyth:WomanAsTheTemptress .
+
+monomyth:Apotheosis a monomyth:Stage ;
+    rdfs:label "Apotheosis"@en ;
+    rdfs:comment """Stripped of all ego-bound limitation, the hero achieves a
+state of divine knowledge or blissful rest beyond all categories of being,
+dwelling momentarily in the eternal before returning."""@en ;
+    monomyth:belongsToAct monomyth:Initiation ;
+    monomyth:stageOrder 10 ;
+    monomyth:followsStage monomyth:AtonementWithTheFather .
+
+monomyth:TheUltimateBoon a monomyth:Stage ;
+    rdfs:label "The Ultimate Boon"@en ;
+    rdfs:comment """The hero attains the supreme goal of the quest in the form
+of an elixir, grail, fire, or wisdom that holds the power to restore life,
+fertility, or illumination to the world left behind."""@en ;
+    monomyth:belongsToAct monomyth:Initiation ;
+    monomyth:stageOrder 11 ;
+    monomyth:followsStage monomyth:Apotheosis .
+
+monomyth:RefusalOfTheReturn a monomyth:Stage ;
+    rdfs:label "Refusal of the Return"@en ;
+    rdfs:comment """Having tasted transcendence or bliss, the hero is reluctant
+to re-enter the mundane world, clinging to the realm of discovery rather than
+bearing its fruits back to humanity."""@en ;
+    monomyth:belongsToAct monomyth:Return ;
+    monomyth:stageOrder 12 ;
+    monomyth:followsStage monomyth:TheUltimateBoon .
+
+monomyth:TheMagicFlight a monomyth:Stage ;
+    rdfs:label "The Magic Flight"@en ;
+    rdfs:comment """The hero escapes from the inner world, sometimes aided and
+sometimes pursued, navigating a perilous retreat that itself becomes a test of
+the transformation newly won."""@en ;
+    monomyth:belongsToAct monomyth:Return ;
+    monomyth:stageOrder 13 ;
+    monomyth:followsStage monomyth:RefusalOfTheReturn .
+
+monomyth:RescueFromWithout a monomyth:Stage ;
+    rdfs:label "Rescue from Without"@en ;
+    rdfs:comment """When the hero cannot return alone, a guide or community from
+the ordinary world reaches across the threshold to draw the exhausted or
+reluctant traveller back into human society."""@en ;
+    monomyth:belongsToAct monomyth:Return ;
+    monomyth:stageOrder 14 ;
+    monomyth:followsStage monomyth:TheMagicFlight .
+
+monomyth:TheCrossingOfTheReturnThreshold a monomyth:Stage ;
+    rdfs:label "The Crossing of the Return Threshold"@en ;
+    rdfs:comment """The hero must re-enter the world of common day and find a
+way to translate the wisdom of the deep experience into terms that a community
+bound by time and form can receive."""@en ;
+    monomyth:belongsToAct monomyth:Return ;
+    monomyth:stageOrder 15 ;
+    monomyth:followsStage monomyth:RescueFromWithout .
+
+monomyth:MasterOfTheTwoWorlds a monomyth:Stage ;
+    rdfs:label "Master of the Two Worlds"@en ;
+    rdfs:comment """Having moved freely between the mortal and divine, the hero
+achieves the equilibrium to hold both realms simultaneously, neither clinging to
+the transcendent nor enslaved by the mundane."""@en ;
+    monomyth:belongsToAct monomyth:Return ;
+    monomyth:stageOrder 16 ;
+    monomyth:followsStage monomyth:TheCrossingOfTheReturnThreshold .
+
+monomyth:FreedomToLive a monomyth:Stage ;
+    rdfs:label "Freedom to Live"@en ;
+    rdfs:comment """Released from fear of death and attachment to outcome, the
+hero lives fully in the present moment as a conduit of the life-force who
+neither clings to nor flees from existence."""@en ;
+    monomyth:belongsToAct monomyth:Return ;
+    monomyth:stageOrder 17 ;
+    monomyth:followsStage monomyth:MasterOfTheTwoWorlds .
+
+# --- Character Archetypes -------------
+
+monomyth:Hero a monomyth:Archetype ;
+    rdfs:label "Hero"@en ;
+    rdfs:comment """The protagonist who undergoes the journey and
+transformation."""@en .
+
+monomyth:Mentor a monomyth:Archetype ;
+    rdfs:label "Mentor"@en ;
+    rdfs:comment """The guide or teacher who provides the hero with knowledge,
+tools, or confidence."""@en .
+
+monomyth:ThresholdGuardian a monomyth:Archetype ;
+    rdfs:label "Threshold Guardian"@en ;
+    rdfs:comment """A figure who tests the hero at the boundary of a new world
+or stage."""@en .
+
+monomyth:Herald a monomyth:Archetype ;
+    rdfs:label "Herald"@en ;
+    rdfs:comment """The figure or force that announces the call to the
+adventure."""@en .
+
+monomyth:Shapeshifter a monomyth:Archetype ;
+    rdfs:label "Shapeshifter"@en ;
+    rdfs:comment """A figure whose loyalty or nature is ambiguous and
+shifting."""@en .
+
+monomyth:Shadow a monomyth:Archetype ;
+    rdfs:label "Shadow"@en ;
+    rdfs:comment """The antagonist or dark mirror of the hero, representing
+repressed qualities or external opposition."""@en .
+
+monomyth:Trickster a monomyth:Archetype ;
+    rdfs:label "Trickster"@en ;
+    rdfs:comment """A figure who provides comic relief, disruption, or catalytic
+chaos."""@en .
+
+monomyth:Ally a monomyth:Archetype ;
+    rdfs:label "Ally"@en ;
+    rdfs:comment """A companion who supports the hero through the
+journey."""@en .
+
+# --- Fit Quality Values ---------------
+
+monomyth:PerfectFit a monomyth:FitQuality ;
+    rdfs:label "Perfect Fit"@en ;
+    rdfs:comment """The narrative maps onto the monomyth stage with
+precision."""@en ;
+    owl:differentFrom monomyth:StrongFit,
+        monomyth:ModerateFit,
+        monomyth:WeakFit,
+        monomyth:AbsentFit,
+        monomyth:InvertedFit ;
+    monomyth:fitScore 4 .
+
+monomyth:StrongFit a monomyth:FitQuality ;
+    rdfs:label "Strong Fit"@en ;
+    rdfs:comment """The narrative clearly manifests the stage with minor
+variations."""@en ;
+    owl:differentFrom monomyth:PerfectFit,
+        monomyth:ModerateFit,
+        monomyth:WeakFit,
+        monomyth:AbsentFit,
+        monomyth:InvertedFit ;
+    monomyth:fitScore 3 .
+
+monomyth:ModerateFit a monomyth:FitQuality ;
+    rdfs:label "Moderate Fit"@en ;
+    rdfs:comment """The stage is recognizable but requires some interpretive
+reframing."""@en ;
+    owl:differentFrom monomyth:PerfectFit,
+        monomyth:StrongFit,
+        monomyth:WeakFit,
+        monomyth:AbsentFit,
+        monomyth:InvertedFit ;
+    monomyth:fitScore 2 .
+
+monomyth:WeakFit a monomyth:FitQuality ;
+    rdfs:label "Weak Fit"@en ;
+    rdfs:comment """The stage is only loosely or partially present."""@en ;
+    owl:differentFrom monomyth:PerfectFit,
+        monomyth:StrongFit,
+        monomyth:ModerateFit,
+        monomyth:AbsentFit,
+        monomyth:InvertedFit ;
+    monomyth:fitScore 1 .
+
+monomyth:AbsentFit a monomyth:FitQuality ;
+    rdfs:label "Absent Fit"@en ;
+    rdfs:comment """The stage is not meaningfully present in the
+narrative."""@en ;
+    owl:differentFrom monomyth:PerfectFit,
+        monomyth:StrongFit,
+        monomyth:ModerateFit,
+        monomyth:WeakFit,
+        monomyth:InvertedFit ;
+    monomyth:fitScore 0 .
+
+monomyth:InvertedFit a monomyth:FitQuality ;
+    rdfs:label "Inverted Fit"@en ;
+    rdfs:comment """The stage is present but deliberately reversed or
+subverted."""@en ;
+    owl:differentFrom monomyth:PerfectFit,
+        monomyth:StrongFit,
+        monomyth:ModerateFit,
+        monomyth:WeakFit,
+        monomyth:AbsentFit ;
+    monomyth:fitScore -1 .
