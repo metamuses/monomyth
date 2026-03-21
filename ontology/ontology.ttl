@@ -69,6 +69,21 @@ monomyth:FitQuality a owl:Class ;
     rdfs:comment """An assessment of how well a narrative stage maps onto the
 monomyth archetype."""@en .
 
+monomyth:NarrativeDivergence a owl:Class ;
+    rdfs:subClassOf creon:ProductDivergence ;
+    rdfs:label "Narrative Divergence"@en ;
+    rdfs:comment """A specific type of creative divergence occurring when a
+narrative work departs from the expected monomyth pattern at a given stage,
+using CREON definition of divergence featured by a creative product.
+While fit quality assesses the degree of alignment between a stage realization
+and the monomyth archetype, narrative divergence formalizes the idea that stages
+assessed as Inverted, Absent, or Weak are not mere failures of fit but potential
+acts of deliberate artistic departure from the archetypal template.
+By explicitly modeling divergences as distinct entities linked to the stage
+realizations they characterize, the ontology allows for a richer analysis of how
+and why narratives deviate from the monomyth structure, capturing the creative
+intent and thematic significance behind such departures."""@en .
+
 # ==============================================================================
 # OBJECT PROPERTIES
 # ==============================================================================
@@ -148,6 +163,21 @@ well it fits the corresponding monomyth stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:FitQuality .
 
+monomyth:hasDivergence a owl:ObjectProperty ;
+    rdfs:label "has divergence"@en ;
+    rdfs:comment """Links a stage realization to a narrative divergence
+describing the creative departure from the expected monomyth pattern."""@en ;
+    owl:inverseOf monomyth:divergesAt ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range monomyth:NarrativeDivergence .
+
+monomyth:divergesAt a owl:ObjectProperty ;
+    rdfs:label "diverges at"@en ;
+    rdfs:comment """Links a narrative divergence to the stage realization where
+the departure from the archetypal pattern occurs."""@en ;
+    rdfs:domain monomyth:NarrativeDivergence ;
+    rdfs:range monomyth:StageRealization .
+
 # ==============================================================================
 # DATATYPE PROPERTIES
 # ==============================================================================
@@ -206,6 +236,15 @@ monomyth:narrativeDescription a owl:DatatypeProperty ;
     rdfs:comment """A prose description of how a stage is realized in a specific
 narrative."""@en ;
     rdfs:domain monomyth:StageRealization ;
+    rdfs:range xsd:string .
+
+monomyth:divergenceRationale a owl:DatatypeProperty ;
+    rdfs:label "divergence rationale"@en ;
+    rdfs:comment """A prose description of the artistic, thematic, or structural
+purpose behind a narrative divergence from the monomyth template.
+Complements a fit note on a stage realization by focusing specifically on the
+creative motivation for the departure."""@en ;
+    rdfs:domain monomyth:NarrativeDivergence ;
     rdfs:range xsd:string .
 
 # ==============================================================================
