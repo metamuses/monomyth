@@ -89,7 +89,7 @@ intent and thematic significance behind such departures."""@en .
 # ==============================================================================
 
 monomyth:interprets a owl:ObjectProperty ;
-    rdfs:label "interprets work"@en ;
+    rdfs:label "interprets"@en ;
     rdfs:comment """Links a monomyth expression to the narrative work it
 interprets."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
@@ -99,7 +99,9 @@ monomyth:interpretedBy a owl:ObjectProperty ;
     rdfs:label "interpreted by"@en ;
     rdfs:comment """Links a narrative work to the monomyth expression that
 interprets it."""@en ;
-    owl:inverseOf monomyth:interprets .
+    owl:inverseOf monomyth:interprets ;
+    rdfs:domain monomyth:NarrativeWork ;
+    rdfs:range monomyth:MonomythExpression .
 
 monomyth:hasHero a owl:ObjectProperty ;
     rdfs:label "has hero"@en ;
@@ -112,7 +114,9 @@ monomyth:isHeroOf a owl:ObjectProperty ;
     rdfs:label "is hero of"@en ;
     rdfs:comment """Links a character to the monomyth expression in which they
 are the hero."""@en ;
-    owl:inverseOf monomyth:hasHero .
+    owl:inverseOf monomyth:hasHero ;
+    rdfs:domain monomyth:Character ;
+    rdfs:range monomyth:MonomythExpression .
 
 monomyth:hasStageRealization a owl:ObjectProperty ;
     rdfs:label "has stage realization"@en ;
@@ -166,7 +170,6 @@ monomyth:hasDivergence a owl:ObjectProperty ;
     rdfs:label "has divergence"@en ;
     rdfs:comment """Links a stage realization to a narrative divergence
 describing the creative departure from the expected monomyth pattern."""@en ;
-    owl:inverseOf monomyth:divergesAt ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:NarrativeDivergence .
 
@@ -174,11 +177,12 @@ monomyth:divergesAt a owl:ObjectProperty ;
     rdfs:label "diverges at"@en ;
     rdfs:comment """Links a narrative divergence to the stage realization where
 the departure from the archetypal pattern occurs."""@en ;
+    owl:inverseOf monomyth:hasDivergence ;
     rdfs:domain monomyth:NarrativeDivergence ;
     rdfs:range monomyth:StageRealization .
 
 # ==============================================================================
-# DATATYPE PROPERTIES
+# DATA PROPERTIES
 # ==============================================================================
 
 monomyth:actOrder a owl:DatatypeProperty ;
