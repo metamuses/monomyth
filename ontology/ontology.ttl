@@ -75,10 +75,12 @@ monomyth:NarrativeDivergence a owl:Class ;
     rdfs:comment """A specific type of creative divergence occurring when a
 narrative work departs from the expected monomyth pattern at a given stage,
 using CREON definition of divergence featured by a creative product.
+
 While fit quality assesses the degree of alignment between a stage realization
 and the monomyth archetype, narrative divergence formalizes the idea that stages
 assessed as Inverted, Absent, or Weak are not mere failures of fit but potential
 acts of deliberate artistic departure from the archetypal template.
+
 By explicitly modeling divergences as distinct entities linked to the stage
 realizations they characterize, the ontology allows for a richer analysis of how
 and why narratives deviate from the monomyth structure, capturing the creative
@@ -87,29 +89,28 @@ intent and thematic significance behind such departures."""@en .
 monomyth:SequentialDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
     rdfs:label "Sequential Divergence"@en ;
-    rdfs:comment """A structural departure from the expected ordering of monomyth
-stages, occurring when a narrative realizes a stage earlier or later than its
-canonical position in Campbell's seventeen-stage sequence. Where narrative
-divergence concerns the quality of a stage's manifestation, sequential divergence
-concerns its placement within the temporal architecture of the story.
-Campbell's model implies a fixed progression, Departure before Initiation before
-Return, and a determinate order within each act, but many narratives rearrange
-this sequence for dramatic, thematic, or structural reasons: an Apotheosis may
-occur as the penultimate event rather than at the midpoint of Initiation, or a
-Refusal of the Call may surface retroactively through flashback rather than
-immediately following the Call to Adventure.
+    rdfs:comment """A structural departure from the expected ordering of
+monomyth stages, occurring when a narrative realizes a stage earlier or later
+than its canonical position in Campbell's seventeen-stage sequence.
+
+Where narrative divergence concerns the quality of a stage's manifestation,
+sequential divergence concerns its placement within the temporal architecture
+of the story. Campbell's model implies a fixed progression, Departure before
+Initiation before Return, and a determinate order within each act, but many
+narratives rearrange this sequence for dramatic, thematic, or structural
+reasons: an Apotheosis may occur as the penultimate event rather than at the
+midpoint of Initiation, or a Refusal of the Call may surface retroactively
+through flashback rather than immediately following the Call to Adventure.
+
 By modeling sequential divergences as first-class entities rather than silent
 deviations from stage numbering, the ontology captures a dimension of narrative
 craft that pure fit quality assessment cannot express. A stage may be a Perfect
 Fit in content yet significantly displaced in sequence; conversely, a stage in
 its canonical position may diverge narratively. The two divergence types are
-orthogonal and composable on the same stage realization, enabling queries such as
-'which narratives preserve the monomyth's content but restructure its order' or
-'which sequential displacements correlate with specific narrative divergence
-patterns across works.' This compositional modeling enriches the ontology's
-analytical power beyond what a single fit score could provide, making explicit
-the distinction between what a narrative says at each stage and when it chooses
-to say it."""@en .
+orthogonal and composable on the same stage realization, enriching the
+ontology's analytical power beyond what a single fit score could provide and
+thus making explicit the distinction between what a narrative says at each stage
+and when it chooses to say it."""@en .
 
 # ==============================================================================
 # OBJECT PROPERTIES
@@ -213,7 +214,7 @@ content, quality, or structure at this stage."""@en ;
 monomyth:hasSequentialDivergence a owl:ObjectProperty ;
     rdfs:subPropertyOf monomyth:hasDivergence ;
     rdfs:label "has sequential divergence"@en ;
-    rdfs:comment """Links a StageRealization to a SequentialDivergence
+    rdfs:comment """Links a stage realization to a sequential divergence
 describing how the stage occurs out of its canonical monomyth
 ordering."""@en ;
     rdfs:domain monomyth:StageRealization ;
