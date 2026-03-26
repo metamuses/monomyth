@@ -39,13 +39,13 @@ journey."""@en ;
     monomyth:hasStageRealization <the-matrix/stages/follow-the-white-rabbit> ,
         <the-matrix/stages/i-cant-do-this> ,
         <the-matrix/stages/let-me-tell-you-why-youre-here> ,
-        <the-matrix/stages/the-red-pill> ,
+        <the-matrix/stages/all-im-offering-is-the-truth> ,
         <the-matrix/stages/welcome-to-the-real-world> ,
-        <the-matrix/stages/the-road-of-trials> ,
-        <the-matrix/stages/the-meeting-with-the-goddess> ,
-        <the-matrix/stages/woman-as-the-temptress> ,
-        <the-matrix/stages/atonement-with-the-father> ,
-        <the-matrix/stages/apotheosis> ,
+        <the-matrix/stages/fear-doubt-and-disbelief> ,
+        <the-matrix/stages/the-oracle-will-see-you-now> ,
+        <the-matrix/stages/ignorance-is-bliss> ,
+        <the-matrix/stages/there-is-no-spoon> ,
+        <the-matrix/stages/hes-beginning-to-believe> ,
         <the-matrix/stages/the-ultimate-boon> ,
         <the-matrix/stages/refusal-of-the-return> ,
         <the-matrix/stages/the-magic-flight> ,
@@ -105,6 +105,14 @@ to return to the simulated world."""@en ;
         monomyth:Shadow ;
     owl:sameAs wd:Q1963886 .
 
+<the-matrix/characters/tank> a monomyth:Character ;
+    rdfs:label "Tank"@en ;
+    rdfs:comment """A member of the human resistance who serves as the operator
+of the Nebuchadnezzar, providing support to Neo and others during their
+missions."""@en ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q5668075 .
+
 # --- Stage Realizations ---------------
 
 <the-matrix/stages/follow-the-white-rabbit> a monomyth:StageRealization ;
@@ -134,14 +142,15 @@ implanted with a tracking bug."""@en .
     rdfs:label "Let me tell you why you're here"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ;
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:narrativeDescription """Morpheus serves as the supernatural mentor: he has sought Neo,
 believes in him as the One, and offers him the pivotal choice. Trinity and
 the crew give Neo another chance at understanding his destiny, bringing him to Morpheus."""@en .
 
-<the-matrix/stages/the-red-pill> a monomyth:StageRealization ;
-    rdfs:label "The red pill"@en ;
+<the-matrix/stages/all-im-offering-is-the-truth> a monomyth:StageRealization ;
+    rdfs:label "All I'm offering is the truth"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ,
         <the-matrix/characters/morpheus> ;
@@ -162,4 +171,160 @@ humans. He is flushed through a tube into dark water and rescued by the
 Nebuchadnezzar crew. The old Thomas Anderson dies in the pod; Neo is reborn
 fragile and overwhelmed."""@en .
 
+<the-matrix/stages/fear-doubt-and-disbelief> a monomyth:StageRealization ;
+    rdfs:label "Fear, doubt, and disbelief"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/tank> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Neo must rebuild himself from nothing after
+liberation. He downloads combat programs directly into his mind, absorbs kung fu
+at impossible speed, and tests his newly acquired skills against Morpheus in the
+sparring dojo. Yet the rooftop jump reveals a deeper trial: his residual
+self-image, anchored in old beliefs about what is possible, still limits him."""@en .
+
+<the-matrix/stages/the-oracle-will-see-you-now> a monomyth:StageRealization ;
+    rdfs:label "The Oracle will see you now"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/the-oracle> ,
+        <the-matrix/characters/morpheus> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:narrativeDescription """Neo visits the Oracle in her modest,
+maternal apartment, expecting definitive answers about his destiny. Instead, she
+offers cryptic guidance wrapped in domestic warmth—baking cookies, reading body
+language. When Neo concludes himself that he is not the One, she neither
+confirms nor denies, planting seeds of self-knowledge that will germinate only
+through sacrifice and choice."""@en .
+
+<the-matrix/stages/ignorance-is-bliss> a monomyth:StageRealization ;
+    rdfs:label "Ignorance is bliss"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <the-matrix/characters/cypher> ,
+        <the-matrix/characters/agent-smith> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:narrativeDescription """Cypher embodies the temptation to abandon
+truth for comfort. Over a steak dinner negotiated with Agent Smith, he chooses
+to betray the crew in exchange for reinsertion into the Matrix, preferring
+pleasurable illusion to the bleak real world. His betrayal externalizes the
+doubt lurking within every freed mind: that ignorance might be preferable to
+painful knowledge."""@en ;
+    monomyth:fitNote """No single character serves as a sustained narrative
+temptress for Neo personally. The temptation is structural, embodied by Cypher's
+choice as a shadow alternative, rather than a direct seduction of the hero."""@en ;
+    monomyth:hasDivergence <the-matrix/divergences/woman-as-the-temptress> .
+
+<the-matrix/stages/there-is-no-spoon> a monomyth:StageRealization ;
+    rdfs:label "There is no spoon"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ,
+        <the-matrix/characters/agent-smith> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:narrativeDescription """Agent Smith captures Morpheus and attempts
+to break him through interrogation. Neo defies the pragmatic counsel to abandon
+his mentor, re-entering the Matrix to mount a rescue. In saving the father
+figure rather than obeying him, Neo transcends discipleship, claiming autonomous
+authority not against Morpheus but through loyalty to him."""@en .
+
+<the-matrix/stages/hes-beginning-to-believe> a monomyth:StageRealization ;
+    rdfs:label "He's beginning to believe"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/agent-smith> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Neo's confrontation with Agent Smith culminates in a moment of transcendence. As Smith's attacks escalate, Neo's self-concept shifts from reactive survivor to proactive liberator. He begins to perceive the Matrix's code, manipulating it with newfound freedom. This apotheosis is not a solitary elevation but a relational one, achieved through his connection to Morpheus and his defiance of Smith's nihilistic control."""@en .
+
+<the-matrix/stages/the-ultimate-boon> a monomyth:StageRealization ;
+    rdfs:label "The ultimate boon"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/agent-smith> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
+<the-matrix/stages/refusal-of-the-return> a monomyth:StageRealization ;
+    rdfs:label "Refusal of the return"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
+<the-matrix/stages/the-magic-flight> a monomyth:StageRealization ;
+    rdfs:label "The magic flight"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
+<the-matrix/stages/rescue-from-without> a monomyth:StageRealization ;
+    rdfs:label "Rescue from without"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
+<the-matrix/stages/the-crossing-of-the-return-threshold> a monomyth:StageRealization ;
+    rdfs:label "The crossing of the return threshold"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
+<the-matrix/stages/master-of-the-two-worlds> a monomyth:StageRealization ;
+    rdfs:label "Master of the two worlds"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
+<the-matrix/stages/freedom-to-live> a monomyth:StageRealization ;
+    rdfs:label "Freedom to live"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Work in progress."""@en .
+
 # --- Narrative Divergences ------------
+
+<the-matrix/divergences/woman-as-the-temptress> a monomyth:NarrativeDivergence ;
+    rdfs:label "Dispersed Temptress divergence"@en ;
+    monomyth:divergesFrom <the-matrix/stages/ignorance-is-bliss> ;
+    monomyth:divergenceRationale """The Wachowskis distribute the temptation
+function across multiple loci rather than concentrating it in a single
+character-hero encounter. The Woman in the Red Dress is a brief pedagogical
+moment; Cypher embodies the deeper existential temptation as Neo's shadow rather
+than his seducer; and Neo himself, refusing to identify as the One, enacts an
+inward temptation—the lure of remaining ordinary rather than accepting a burden
+he does not yet believe he can carry. This dispersal reflects the film's
+philosophical framework: in The Matrix, temptation is systemic (the entire
+simulation is designed to seduce) rather than personal, making a single
+temptress figure structurally inadequate. The divergence is a creative
+adaptation of Campbell's stage to a narrative where the antagonist is an
+environment, not an individual."""@en .
+
+<the-matrix/divergences/refusal-of-the-return> a monomyth:NarrativeDivergence ;
+    rdfs:label "Refusal of the return divergence"@en ;
+    monomyth:divergesFrom <the-matrix/stages/refusal-of-the-return> ;
+    monomyth:divergenceRationale """The Matrix omits the Refusal of the Return
+because Neo's arc is structured as an awakening narrative rather than a circular
+homecoming. Once Neo achieves the boon, there is no ordinary world to be
+reluctant about returning to — his mission is forward-facing liberation, not
+nostalgic return. The Wachowskis' choice reflects a modern, messianic hero model
+(closer to the Bodhisattva who re-enters the world to liberate others) rather
+than Campbell's Odyssean homecoming pattern. The absence is deliberate and
+thematically coherent rather than an oversight."""@en .
