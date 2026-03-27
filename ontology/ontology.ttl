@@ -308,6 +308,36 @@ narrative."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:string .
 
+monomyth:stageRealizationOrder a owl:DatatypeProperty ;
+    rdfs:label "stage realization order"@en ;
+    rdfs:comment """The position at which this stage realization factually
+occurs in the narrative's own sequence. Expressed as a positive integer
+starting from 1, forming a continuous sequence across all realizations
+in a MonomythInstance.
+
+The canonical monomyth defines 17 stages ordered 1-17 via :stageOrder on Stage
+individuals. When a narrative realizes each stage exactly once in canonical
+order, :stageRealizationOrder values will mirror :stageOrder forming a complete
+parallel sequence to the monomyth framework.
+When they differ, a SequentialDivergence instance should be attached via
+:hasSequentialDivergence to document the rationale for the displacement.
+
+The sequence may extend beyond 17 when a narrative realizes the same stage more
+than once, whether as isolated repeated moments or as entire recurring blocks of
+consecutive stages. Each repetition is a separate StageRealization instance with
+its own :stageRealizationOrder value, :hasFitQuality assessment, and
+:narrativeDescription. This allows the ontology to capture cyclical, recursive,
+or episodic narrative structures without conflating distinct dramatic moments
+that instantiate the same archetypal stage.
+
+For stages assessed as Absent (FitQuality), the :stageRealizationOrder still
+records the position in the narrative's sequence where the absent stage would
+structurally belong, preserving continuity. This ensures that the full narrative
+ordering is always reconstructible from :stageRealizationOrder values alone,
+without gaps."""@en ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range xsd:positiveInteger .
+
 monomyth:divergenceRationale a owl:DatatypeProperty ;
     rdfs:label "divergence rationale"@en ;
     rdfs:comment """A prose description of the artistic, thematic, structural,
@@ -322,29 +352,6 @@ motivation for the departure."""@en ;
         )
     ] ;
     rdfs:range xsd:string .
-
-monomyth:actualPosition a owl:DatatypeProperty ;
-    rdfs:label "actual position"@en ;
-    rdfs:comment """The position at which this stage factually occurs in the
-narrative's own sequence, expressed as an integer comparable to the canonical
-:stageOrder (1-17) on the Stage individual."""@en ;
-    rdfs:domain monomyth:SequentialDivergence ;
-    rdfs:range xsd:integer .
-
-monomyth:displacementDirection a owl:DatatypeProperty ;
-    rdfs:label "displacement direction"@en ;
-    rdfs:comment """The direction in which the stage is displaced relative to
-its canonical monomyth position. Can take the values 'earlier' (the stage occurs
-before its expected position) or 'later' (the stage occurs after its expected
-position)."""@en ;
-    rdfs:domain monomyth:SequentialDivergence ;
-    rdfs:range [
-        a rdfs:Datatype ;
-        owl:oneOf (
-            "earlier"
-            "later"
-        )
-    ] .
 
 # ==============================================================================
 # NAMED INDIVIDUALS
