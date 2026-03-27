@@ -222,16 +222,28 @@ ordering."""@en ;
 
 monomyth:divergesFrom a owl:ObjectProperty ;
     rdfs:label "diverges from"@en ;
+    rdfs:comment """Links a divergence to the stage it departs from."""@en ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (
+            monomyth:NarrativeDivergence
+            monomyth:SequentialDivergence
+        )
+    ] ;
+    rdfs:range monomyth:Stage .
+
+monomyth:narrativeDivergenceOf a owl:ObjectProperty ;
+    rdfs:label "narrative divergence of"@en ;
     rdfs:comment """Links a narrative divergence to the stage realization where
 the departure from the archetypal pattern occurs."""@en ;
     owl:inverseOf monomyth:hasNarrativeDivergence ;
     rdfs:domain monomyth:NarrativeDivergence ;
     rdfs:range monomyth:StageRealization .
 
-monomyth:divergesAt a owl:ObjectProperty ;
-    rdfs:label "diverges at"@en ;
-    rdfs:comment """Links a sequential divergence to the stage realization at
-which the positional displacement occurs."""@en ;
+monomyth:sequentialDivergenceOf a owl:ObjectProperty ;
+    rdfs:label "sequential divergence of"@en ;
+    rdfs:comment """Links a sequential divergence to the stage realization where
+the departure from the canonical monomyth ordering occurs."""@en ;
     owl:inverseOf monomyth:hasSequentialDivergence ;
     rdfs:domain monomyth:SequentialDivergence ;
     rdfs:range monomyth:StageRealization .
