@@ -95,12 +95,12 @@ than its canonical position in Campbell's seventeen-stage sequence.
 
 Where narrative divergence concerns the quality of a stage's manifestation,
 sequential divergence concerns its placement within the temporal architecture
-of the story. Campbell's model implies a fixed progression, Departure before
-Initiation before Return, and a determinate order within each act, but many
-narratives rearrange this sequence for dramatic, thematic, or structural
-reasons: an Apotheosis may occur as the penultimate event rather than at the
-midpoint of Initiation, or a Refusal of the Call may surface retroactively
-through flashback rather than immediately following the Call to Adventure.
+of the story. Campbell's model implies a fixed progression and a determinate
+order within each act, but many narratives rearrange this sequence for dramatic,
+thematic, or structural reasons: an Apotheosis may occur as the penultimate
+event rather than at the midpoint of Initiation, or a Refusal of the Call may
+surface retroactively through flashback rather than immediately following
+the Call to Adventure.
 
 By modeling sequential divergences as first-class entities rather than silent
 deviations from stage numbering, the ontology captures a dimension of narrative
@@ -301,8 +301,8 @@ choices in the stage mapping."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:string .
 
-monomyth:narrativeDescription a owl:DatatypeProperty ;
-    rdfs:label "narrative description"@en ;
+monomyth:realizationDescription a owl:DatatypeProperty ;
+    rdfs:label "realization description"@en ;
     rdfs:comment """A prose description of how a stage is realized in a specific
 narrative."""@en ;
     rdfs:domain monomyth:StageRealization ;
@@ -326,9 +326,9 @@ The sequence may extend beyond 17 when a narrative realizes the same stage more
 than once, whether as isolated repeated moments or as entire recurring blocks of
 consecutive stages. Each repetition is a separate StageRealization instance with
 its own :stageRealizationOrder value, :hasFitQuality assessment, and
-:narrativeDescription. This allows the ontology to capture cyclical, recursive,
-or episodic narrative structures without conflating distinct dramatic moments
-that instantiate the same archetypal stage.
+:realizationDescription. This allows the ontology to capture cyclical,
+recursive, or episodic narrative structures without conflating distinct dramatic
+moments that instantiate the same archetypal stage.
 
 For stages assessed as Absent (FitQuality), the :stageRealizationOrder still
 records the position in the narrative's sequence where the absent stage would
