@@ -285,29 +285,12 @@ monomyth:divergesFrom a owl:ObjectProperty ;
     rdfs:domain creon:ProductDivergence ;
     rdfs:range monomyth:Stage .
 
-monomyth:narrativeDivergenceOf a owl:ObjectProperty ;
-    rdfs:label "narrative divergence of"@en ;
-    rdfs:comment """Links a narrative divergence to the stage realization where
-the departure from the archetypal pattern occurs."""@en ;
-    owl:inverseOf monomyth:hasNarrativeDivergence ;
-    rdfs:domain monomyth:NarrativeDivergence ;
-    rdfs:range monomyth:StageRealization .
-
-monomyth:sequentialDivergenceOf a owl:ObjectProperty ;
-    rdfs:label "sequential divergence of"@en ;
-    rdfs:comment """Links a sequential divergence to the stage realization where
-the departure from the canonical monomyth ordering occurs."""@en ;
-    owl:inverseOf monomyth:hasSequentialDivergence ;
-    rdfs:domain monomyth:SequentialDivergence ;
-    rdfs:range monomyth:StageRealization .
-
-monomyth:semioticDivergenceOf a owl:ObjectProperty ;
-    rdfs:label "semiotic divergence of"@en ;
-    rdfs:comment """Links a semiotic divergence to the stage realization where
-the departure from the expected monomyth pattern in its choice of signs and
-symbols occurs."""@en ;
-    owl:inverseOf monomyth:hasSemioticDivergence ;
-    rdfs:domain monomyth:SemioticDivergence ;
+monomyth:divergenceOf a owl:ObjectProperty ;
+    rdfs:label "divergence of"@en ;
+    rdfs:comment """Links any divergence to the stage realization where the
+departure occurs."""@en ;
+    owl:inverseOf monomyth:hasDivergence ;
+    rdfs:domain creon:ProductDivergence ;
     rdfs:range monomyth:StageRealization .
 
 # ==============================================================================
