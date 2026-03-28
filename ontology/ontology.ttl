@@ -72,19 +72,38 @@ monomyth archetype."""@en .
 monomyth:NarrativeDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
     rdfs:label "Narrative Divergence"@en ;
-    rdfs:comment """A specific type of creative divergence occurring when a
-narrative work departs from the expected monomyth pattern at a given stage,
-using CREON definition of divergence featured by a creative product.
+    rdfs:comment """A creative departure from the expected monomyth pattern at a
+given stage, concerning the quality, presence, or structural role of the stage's
+manifestation within a specific narrative work. Narrative divergence formalizes
+the insight that imperfect alignments between a narrative and the monomyth
+template are not failures of fit but potential acts of deliberate artistic
+choice.
 
-While fit quality assesses the degree of alignment between a stage realization
-and the monomyth archetype, narrative divergence formalizes the idea that stages
-assessed as Inverted, Absent, or Weak are not mere failures of fit but potential
-acts of deliberate artistic departure from the archetypal template.
+The monomyth ontology assesses every stage realization through a fit quality
+scale ranging from perfect alignment to complete absence or inversion.
+Narrative divergence operates in the space below perfect fit: when a stage
+is absent, the narrative has chosen silence where Campbell expects action;
+when a stage is inverted, the narrative has deliberately reversed the
+archetype's expected meaning; when a stage is weak or moderate, the
+narrative may have dispersed the stage's function across multiple moments,
+compressed it into a subordinate beat, merged it with an adjacent stage,
+or otherwise reshaped its dramatic weight. Each of these departures carries
+creative intent and thematic significance that a numeric fit score alone
+cannot capture.
 
-By explicitly modeling divergences as distinct entities linked to the stage
-realizations they characterize, the ontology allows for a richer analysis of how
-and why narratives deviate from the monomyth structure, capturing the creative
-intent and thematic significance behind such departures."""@en .
+Where sequential divergence concerns when a stage occurs in the narrative's
+order, and semiotic divergence concerns the conceptual vocabulary through which
+it is expressed, narrative divergence concerns what actually happens: whether
+the stage is present at all, whether it fulfills or subverts its archetypal
+function, and how the narrative's specific dramatic choices depart from the
+pattern Campbell describes. By explicitly modeling these departures as
+first-class entities linked to the stage realizations they characterize, the
+ontology enables richer analysis than fit scoring alone. It allows the
+documentation of why a narrative diverges, what artistic or thematic purpose the
+divergence serves, and how patterns of divergence cluster across works, genres,
+and periods, distinguishing narratives that systematically subvert specific acts
+or stages from those that faithfully preserve them, and capturing the creative
+rationale behind each departure."""@en .
 
 monomyth:SequentialDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
