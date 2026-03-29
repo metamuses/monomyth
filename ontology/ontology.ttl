@@ -167,13 +167,6 @@ surface language each narrative speaks."""@en .
 # OBJECT PROPERTIES
 # ==============================================================================
 
-monomyth:interprets a owl:ObjectProperty ;
-    rdfs:label "interprets"@en ;
-    rdfs:comment """Links a monomyth expression to the narrative work it
-interprets."""@en ;
-    rdfs:domain monomyth:MonomythExpression ;
-    rdfs:range monomyth:NarrativeWork .
-
 monomyth:interpretedBy a owl:ObjectProperty ;
     rdfs:label "interpreted by"@en ;
     rdfs:comment """Links a narrative work to the monomyth expression that
@@ -182,6 +175,13 @@ interprets it."""@en ;
     rdfs:domain monomyth:NarrativeWork ;
     rdfs:range monomyth:MonomythExpression .
 
+monomyth:interprets a owl:ObjectProperty ;
+    rdfs:label "interprets"@en ;
+    rdfs:comment """Links a monomyth expression to the narrative work it
+interprets."""@en ;
+    rdfs:domain monomyth:MonomythExpression ;
+    rdfs:range monomyth:NarrativeWork .
+
 monomyth:hasHero a owl:ObjectProperty ;
     rdfs:label "has hero"@en ;
     rdfs:comment """The character whose journey is being traced through the
@@ -189,13 +189,12 @@ monomyth."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:Character .
 
-monomyth:isHeroOf a owl:ObjectProperty ;
-    rdfs:label "is hero of"@en ;
-    rdfs:comment """Links a character to the monomyth expression in which they
-are the hero."""@en ;
-    owl:inverseOf monomyth:hasHero ;
-    rdfs:domain monomyth:Character ;
-    rdfs:range monomyth:MonomythExpression .
+monomyth:hasCharacter a owl:ObjectProperty ;
+    rdfs:label "has character"@en ;
+    rdfs:comment """Links a monomyth expression to any character involved in the
+narrative."""@en ;
+    rdfs:domain monomyth:MonomythExpression ;
+    rdfs:range monomyth:Character .
 
 monomyth:hasStageRealization a owl:ObjectProperty ;
     rdfs:label "has stage realization"@en ;
@@ -217,9 +216,25 @@ monomyth."""@en ;
     rdfs:domain monomyth:Stage ;
     rdfs:range monomyth:Stage .
 
+monomyth:isHeroOf a owl:ObjectProperty ;
+    rdfs:label "is hero of"@en ;
+    rdfs:comment """Links a character to the monomyth expression in which they
+are the hero."""@en ;
+    owl:inverseOf monomyth:hasHero ;
+    rdfs:domain monomyth:Character ;
+    rdfs:range monomyth:MonomythExpression .
+
+monomyth:isCharacterOf a owl:ObjectProperty ;
+    rdfs:label "is character of"@en ;
+    rdfs:comment """Links a character to the monomyth expression in which they
+are involved."""@en ;
+    owl:inverseOf monomyth:hasCharacter ;
+    rdfs:domain monomyth:Character ;
+    rdfs:range monomyth:MonomythExpression .
+
 monomyth:embodiesArchetype a owl:ObjectProperty ;
     rdfs:label "embodies archetype"@en ;
-    rdfs:comment """Links a character to the archetype(s) they embody in a
+    rdfs:comment """Links a character to the archetype they embody in a
 narrative."""@en ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:Archetype .
