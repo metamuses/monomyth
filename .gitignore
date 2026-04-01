@@ -86,7 +86,8 @@ ENV/
 env.bak/
 venv.bak/
 
-# ===== PROJECT =====================
-# Visual Studio Code
+# ===== VISUAL STUDIO ===============
 .vscode/
 
+# ===== PROJECT =====================
+ontology/v*
