@@ -9,9 +9,9 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# =============================================================================
+# ==============================================================================
 # THE MATRIX (Movie, 1999)
-# =============================================================================
+# ==============================================================================
 
 <the-matrix> a monomyth:NarrativeWork,
         schema:Movie ;
@@ -25,17 +25,15 @@
         "Cyberpunk"@en ;
     owl:sameAs wd:Q83495 ;
     monomyth:interpretedBy <the-matrix/monomyths/neo-journey> ;
-    rdfs:comment """A 1999 science fiction film in which a computer hacker
-discovers that reality as he knows it is a simulated world created by machines
-to subjugate humanity."""@en .
+    rdfs:comment """A 1999 science fiction film in which a computer hacker discovers that reality as
+he knows it is a simulated world created by machines to subjugate humanity."""@en .
 
 # --- Monomyth Expression --------------
 
 <the-matrix/monomyths/neo-journey> a monomyth:MonomythExpression ;
     rdfs:label "Neo's Hero's Journey in The Matrix"@en ;
-    rdfs:comment """A specific interpretation of the monomyth structure as it is
-realized in the narrative of 'The Matrix', focusing on the character Neo's
-journey."""@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'The Matrix', focusing on the character Neo's journey."""@en ;
     monomyth:interprets <the-matrix> ;
     monomyth:hasHero <the-matrix/characters/neo> ;
     monomyth:hasCharacter <the-matrix/characters/neo> ,
@@ -67,8 +65,8 @@ journey."""@en ;
 
 <the-matrix/characters/neo> a monomyth:Character ;
     rdfs:label "Neo (Thomas A. Anderson)"@en ;
-    rdfs:comment """A hacker who is revealed to be 'the One', the prophesied
-figure capable of manipulating the Matrix and liberating humanity."""@en ;
+    rdfs:comment """A hacker who is revealed to be 'the One', the prophesied figure capable of
+manipulating the Matrix and liberating humanity."""@en ;
     monomyth:heroOf <the-matrix/monomyths/neo-journey> ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
@@ -76,8 +74,8 @@ figure capable of manipulating the Matrix and liberating humanity."""@en ;
 
 <the-matrix/characters/trinity> a monomyth:Character ;
     rdfs:label "Trinity"@en ;
-    rdfs:comment """A skilled hacker and member of the human resistance who
-becomes Neo's love interest."""@en ;
+    rdfs:comment """A skilled hacker and member of the human resistance who becomes Neo's love
+interest."""@en ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Herald ;
@@ -85,17 +83,16 @@ becomes Neo's love interest."""@en ;
 
 <the-matrix/characters/morpheus> a monomyth:Character ;
     rdfs:label "Morpheus"@en ;
-    rdfs:comment """The leader of the human resistance who believes Neo is the
-prophesied 'One' capable of liberating humanity."""@en ;
+    rdfs:comment """The leader of the human resistance who believes Neo is the prophesied 'One'
+capable of liberating humanity."""@en ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor ;
     owl:sameAs wd:Q1750842 .
 
 <the-matrix/characters/agent-smith> a monomyth:Character ;
     rdfs:label "Agent Smith"@en ;
-    rdfs:comment """An antagonist in the form of a sentient program within the
-Matrix, who seeks to eliminate Neo and maintain control over the simulated
-reality."""@en ;
+    rdfs:comment """An antagonist in the form of a sentient program within the Matrix, who seeks to
+eliminate Neo and maintain control over the simulated reality."""@en ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
         monomyth:ThresholdGuardian ;
@@ -103,8 +100,8 @@ reality."""@en ;
 
 <the-matrix/characters/the-oracle> a monomyth:Character ;
     rdfs:label "The Oracle"@en ;
-    rdfs:comment """A prophetic figure within the Matrix who provides guidance
-to Neo and other characters, often speaking in riddles."""@en ;
+    rdfs:comment """A prophetic figure within the Matrix who provides guidance to Neo and other
+characters, often speaking in riddles."""@en ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Herald,
         monomyth:Mentor ;
@@ -112,9 +109,9 @@ to Neo and other characters, often speaking in riddles."""@en ;
 
 <the-matrix/characters/cypher> a monomyth:Character ;
     rdfs:label "Cypher"@en ;
-    rdfs:comment """A member of the human resistance who becomes disillusioned
-with the harsh reality outside the Matrix and betrays his comrades in an attempt
-to return to the simulated world."""@en ;
+    rdfs:comment """A member of the human resistance who becomes disillusioned with the harsh
+reality outside the Matrix and betrays his comrades in an attempt to return to the simulated
+world."""@en ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter,
         monomyth:Shadow ;
@@ -122,9 +119,8 @@ to return to the simulated world."""@en ;
 
 <the-matrix/characters/tank> a monomyth:Character ;
     rdfs:label "Tank"@en ;
-    rdfs:comment """A member of the human resistance who serves as the operator
-of the Nebuchadnezzar, providing support to Neo and others during their
-missions."""@en ;
+    rdfs:comment """A member of the human resistance who serves as the operator of the
+Nebuchadnezzar, providing support to Neo and others during their missions."""@en ;
     monomyth:characterOf <the-matrix/monomyths/neo-journey> ;
     monomyth:embodiesArchetype monomyth:Ally ;
     owl:sameAs wd:Q5668075 .
@@ -138,10 +134,9 @@ missions."""@en ;
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 1 ;
-    monomyth:realizationDescription """Neo's computer screen displays the message
-'Wake up, Neo... The Matrix has you... Follow the white rabbit.' He then follows
-a woman with a white rabbit tattoo to a club, where Trinity tells him she knows
-the answer to the question driving his life."""@en .
+    monomyth:realizationDescription """Neo's computer screen displays the message "Wake up, Neo...
+The Matrix has you... Follow the white rabbit." He then follows a woman with a white rabbit tattoo
+to a club, where Trinity tells him she knows the answer to the question driving his life."""@en .
 
 <the-matrix/stages/i-cant-do-this> a monomyth:StageRealization ;
     rdfs:label "I can't do this"@en ;
@@ -152,9 +147,8 @@ the answer to the question driving his life."""@en .
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizationDescription """Morpheus guides Neo by phone to escape via a building ledge.
-Neo looks down, says 'I can't do this,' and retreats inside, choosing the
-familiar world. He is immediately captured by Agent Smith, interrogated, and
-implanted with a tracking bug."""@en .
+Neo looks down, says "I can't do this," and retreats inside, choosing the familiar world. He is
+immediately captured by Agent Smith, interrogated, and implanted with a tracking bug."""@en .
 
 <the-matrix/stages/let-me-tell-you-why-youre-here> a monomyth:StageRealization ;
     rdfs:label "Let me tell you why you're here"@en ;
@@ -164,9 +158,10 @@ implanted with a tracking bug."""@en .
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 3 ;
-    monomyth:realizationDescription """Morpheus serves as the supernatural mentor: he has sought Neo,
-believes in him as the One, and offers him the pivotal choice. Trinity and
-the crew give Neo another chance at understanding his destiny, bringing him to Morpheus."""@en .
+    monomyth:realizationDescription """Morpheus serves as the supernatural mentor: he has sought
+Neo, believes in him as the One, and offers him the pivotal choice. Trinity and the crew give Neo
+another chance at understanding his destiny, bringing him to Morpheus."""@en ;
+    monomyth:hasSemioticDivergence <the-matrix/divergences/semiotic/supernatural-as-epistemic> .
 
 <the-matrix/stages/all-im-offering-is-the-truth> a monomyth:StageRealization ;
     rdfs:label "All I'm offering is the truth"@en ;
@@ -176,9 +171,8 @@ the crew give Neo another chance at understanding his destiny, bringing him to M
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
     monomyth:realizationDescription """Morpheus presents two pills: blue for return to ignorance,
-red for the truth. Neo takes the red pill. Reality disintegrates, the mirror
-liquefies and crawls up his arm, and he wakes in a pod in the real world.
-There is no going back."""@en .
+red for the truth. Neo takes the red pill. Reality disintegrates, the mirror liquefies and crawls up
+his arm, and he wakes in a pod in the real world. There is no going back."""@en .
 
 <the-matrix/stages/welcome-to-the-real-world> a monomyth:StageRealization ;
     rdfs:label "Welcome to the real world"@en ;
@@ -187,10 +181,9 @@ There is no going back."""@en .
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizationDescription """Neo awakens in an amniotic pod, hairless, atrophied, plugged
-into the machine infrastructure, surrounded by an infinite tower of sleeping
-humans. He is flushed through a tube into dark water and rescued by the
-Nebuchadnezzar crew. The old Thomas Anderson dies in the pod; Neo is reborn
-fragile and overwhelmed."""@en .
+into the machine infrastructure, surrounded by an infinite tower of sleeping humans. He is flushed
+through a tube into dark water and rescued by the Nebuchadnezzar crew. The old Thomas Anderson dies
+in the pod; Neo is reborn fragile and overwhelmed."""@en .
 
 <the-matrix/stages/fear-doubt-and-disbelief> a monomyth:StageRealization ;
     rdfs:label "Fear, doubt, and disbelief"@en ;
@@ -200,11 +193,11 @@ fragile and overwhelmed."""@en .
         <the-matrix/characters/tank> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 6 ;
-    monomyth:realizationDescription """Neo must rebuild himself from nothing after
-liberation. He downloads combat programs directly into his mind, absorbs kung fu
-at impossible speed, and tests his newly acquired skills against Morpheus in the
-sparring dojo. Yet the rooftop jump reveals a deeper trial: his residual
-self-image, anchored in old beliefs about what is possible, still limits him."""@en .
+    monomyth:realizationDescription """Neo must rebuild himself from nothing after liberation. He
+downloads combat programs directly into his mind, absorbs kung fu at impossible speed, and tests his
+newly acquired skills against Morpheus in the sparring dojo. Yet the rooftop jump reveals a deeper
+trial: his residual self-image, anchored in obsolete beliefs about what is possible, still limits
+him."""@en .
 
 <the-matrix/stages/the-oracle-will-see-you-now> a monomyth:StageRealization ;
     rdfs:label "The Oracle will see you now"@en ;
@@ -214,11 +207,10 @@ self-image, anchored in old beliefs about what is possible, still limits him."""
         <the-matrix/characters/morpheus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription """Neo visits the Oracle in her modest,
-maternal apartment, expecting definitive answers about his destiny. Instead, she
-offers cryptic guidance wrapped in domestic warmth—baking cookies, reading body
-language. When Neo concludes himself that he is not the One, she neither
-confirms nor denies, planting seeds of self-knowledge that will germinate only
+    monomyth:realizationDescription """Neo visits the Oracle in her modest, maternal apartment,
+expecting definitive answers about his destiny. Instead, she offers cryptic guidance wrapped in
+domestic warmth—baking cookies, reading body language. When Neo concludes himself that he is not the
+One, she neither confirms nor denies, planting seeds of self-knowledge that will germinate only
 through sacrifice and choice."""@en .
 
 <the-matrix/stages/ignorance-is-bliss> a monomyth:StageRealization ;
@@ -228,15 +220,14 @@ through sacrifice and choice."""@en .
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """Cypher embodies the temptation to abandon
-truth for comfort. Over a steak dinner negotiated with Agent Smith, he chooses
-to betray the crew in exchange for reinsertion into the Matrix, preferring
-pleasurable illusion to the bleak real world. His betrayal externalizes the
-doubt lurking within every freed mind: that ignorance might be preferable to
+    monomyth:realizationDescription """Cypher embodies the temptation to abandon truth for comfort.
+Over a steak dinner negotiated with Agent Smith, he chooses to betray the crew in exchange for
+reinsertion into the Matrix, preferring pleasurable illusion to the bleak real world. His betrayal
+externalizes the doubt lurking within every freed mind: that ignorance might be preferable to
 painful knowledge."""@en ;
-    monomyth:fitNote """No single character serves as a sustained narrative
-temptress for Neo personally. The temptation is structural, embodied by Cypher's
-choice as a shadow alternative, rather than a direct seduction of the hero."""@en ;
+    monomyth:fitNote """No single character serves as a sustained narrative temptress for Neo
+personally. The temptation is structural, embodied by Cypher's choice as a shadow alternative,
+rather than a direct seduction of the hero."""@en ;
     monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/dispersed-temptation> ;
     monomyth:hasSemioticDivergence <the-matrix/divergences/semiotic/woman-as-ignorance> .
 
@@ -249,20 +240,25 @@ choice as a shadow alternative, rather than a direct seduction of the hero."""@e
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 9 ;
-    monomyth:realizationDescription """Agent Smith captures Morpheus and attempts
-to break him through interrogation. Neo defies the pragmatic counsel to abandon
-his mentor, re-entering the Matrix to mount a rescue. In saving the father
-figure rather than obeying him, Neo transcends discipleship, claiming autonomous
-authority not against Morpheus but through loyalty to him."""@en .
+    monomyth:realizationDescription """Agent Smith captures Morpheus and attempts to break him
+through interrogation. Neo defies the pragmatic counsel to abandon his mentor, re-entering the
+Matrix to mount a rescue. In saving the father figure rather than obeying him, Neo transcends
+discipleship, claiming autonomous authority not against Morpheus but through loyalty to him."""@en .
 
 <the-matrix/stages/hes-beginning-to-believe> a monomyth:StageRealization ;
     rdfs:label "He's beginning to believe"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ,
         <the-matrix/characters/agent-smith> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 10 ;
-    monomyth:realizationDescription """Neo's confrontation with Agent Smith culminates in a moment of transcendence. As Smith's attacks escalate, Neo's self-concept shifts from reactive survivor to proactive liberator. He begins to perceive the Matrix's code, manipulating it with newfound freedom. This apotheosis is not a solitary elevation but a relational one, achieved through his connection to Morpheus and his defiance of Smith's nihilistic control."""@en . # imperfect apotheosis as he is not yet fully the One, and has to escape
+    monomyth:realizationDescription """With Morpheus and Trinity safely extracted, Neo stands before
+the escape route but chooses intead to turn back to face Agent Smith. The battle becomes a graduated
+awakening: blow by blow, Neo's confidence hardens into something approaching certainty. "He's
+beginning to believe" will declare Morpheus, watching. Freeing himself from the grip of Smith, he
+finally throws him under the train, winning the confrontation but immediately realizing he's not
+ready for another one and hence must escape for now."""@en ;
+    monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/imperfect-apotheosis> .
 
 <the-matrix/stages/mr-wizard-get-me-out-of-here> a monomyth:StageRealization ;
     rdfs:label "Mr. Wizard, get me out of here!"@en ;
@@ -271,7 +267,12 @@ authority not against Morpheus but through loyalty to him."""@en .
         <the-matrix/characters/tank> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 11 ;
-    monomyth:realizationDescription """WIP"""@en ;
+    monomyth:realizationDescription """Smith is defeated in the subway but not annihilated, and Neo
+must now flee a system that has fully mobilized against him. Tank provides real-time guidance
+through the Matrix's corridors, directing Neo toward safety while Agents pursue. This flight
+suspends the hero's nascent apotheosis in a state of anxious incompleteness, heightening the stakes
+by demonstrating that partial awakening carries its own dangers. Neo's dependence on Tank reveals
+that even emergent power requires external support to translate into survival."""@en ;
     monomyth:hasSequentialDivergence <the-matrix/divergences/sequential/escape-after-apotheosis> .
 
 <the-matrix/stages/the-man-i-loved-would-be-the-one> a monomyth:StageRealization ;
@@ -281,7 +282,13 @@ authority not against Morpheus but through loyalty to him."""@en .
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 12 ;
-    monomyth:realizationDescription """Neo's rescue from the Matrix by Morpheus and Trinity after his confrontation with Agent Smith is a pivotal moment, but it does not fit the traditional 'rescue from without' stage. Instead of being rescued by an external force, Neo's escape is facilitated by his own choices and actions, reflecting his agency and growth rather than dependence on others. Neo is rescued in the sense that it is given the final confirmation that he is the One by Trinity's love and belief in him."""@en ;
+    monomyth:realizationDescription """The Agents close in systematically, cutting off Neo's escape
+routes one by one until the city itself becomes a narrowing trap. Smith intercepts him in a hallway
+and fires at point-blank range, killing him. The hero's journey appears to terminate in unambiguous
+defeat. But in the real world, Trinity leans over Neo's body and confesses her love, revealing the
+Oracle's prophecy: the man she loved would be the One. Neo returns from death, resurrected by a
+conviction he could not yet supply for himself: ultimate awakening, the film suggests, requires
+being believed in before one can fully believe."""@en ;
     monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/validation-replaces-salvation> .
 
 <the-matrix/stages/he-is-the-one> a monomyth:StageRealization ;
@@ -291,49 +298,60 @@ authority not against Morpheus but through loyalty to him."""@en .
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 13 ;
-    monomyth:realizationDescription """Neo's victory over Agent Smith, culminating in his resurrection after being shot, represents the ultimate boon. He transcends death, fully actualizing his identity as the One. This boon is not just personal empowerment but a symbolic victory for humanity's potential to overcome systemic oppression."""@en .
+    monomyth:realizationDescription """Neo rises from death and the simulation's code becomes
+legible to him, its architecture now transparent and malleable. Agents open fire but he halts their
+bullets in midair through will alone. Smith charges and Neo dispatches him effortlessly, then enters
+his digital body and destroys him from within. The remaining Agents flee. Neo has attained total
+mastery over the Matrix, but the real world intrudes: sentinels are tearing the ship apart, and he
+must reach the exit before the boon he has claimed becomes irrelevant to a body that no longer
+survives."""@en .
 
 <the-matrix/stages/system-failure> a monomyth:StageRealization ;
-    rdfs:label "Refusal of the return"@en ;
+    rdfs:label "System failure"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
-        <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
-    monomyth:realizationDescription """After defeating Agent Smith, Neo faces the choice of returning to the real world or remaining in the Matrix to liberate others. He initially hesitates, torn between the safety of the real world and the responsibility of his newfound power. This internal conflict reflects a nuanced refusal of the return, as Neo grapples with the implications of his role as the One."""@en ;
     monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/awakening-not-homecoming> .
 
 <the-matrix/stages/i-can-feel-you-now> a monomyth:StageRealization ;
-    rdfs:label "The crossing of the return threshold"@en ;
+    rdfs:label "I can feel you now"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
-        <the-matrix/characters/trinity> ;
+    monomyth:involvesCharacter <the-matrix/characters/neo>
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 15 ;
-    monomyth:realizationDescription """Neo's decision to stay in the Matrix and fight against the machines rather than returning to the real world represents a subversion of the traditional return threshold. Instead of crossing back into the ordinary world, Neo chooses to remain in the special world to fulfill his role as the One, challenging the conventional structure of the hero's journey."""@en ;
+    monomyth:realizationDescription """In the film's compressed finale, Neo re-enters the Matrix no
+longer as a fugitive but as a being who has transcended its constraints entirely and addresses the
+Machines directly with calm authority, acknowledging their fear of what free humans represent.  The
+threshold between simulation and reality, which once marked the hero's fundamental vulnerability, is
+effectively dissolved as he's now free to move between both realms at will."""@en ;
     monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/master-of-the-threshold> .
 
 <the-matrix/stages/i-came-here-to-tell-you-how-its-going-to-begin> a monomyth:StageRealization ;
-    rdfs:label "Master of the two worlds"@en ;
+    rdfs:label "I came here to tell you how it's going to begin"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
-        <the-matrix/characters/trinity> ;
+    monomyth:involvesCharacter <the-matrix/characters/neo>
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
-    monomyth:realizationDescription """Neo's mastery over both the Matrix and the real world is a defining aspect of his character arc. By the end of the film, he demonstrates control over the simulated reality while maintaining his connection to the real world, embodying the archetype of the master of two worlds. MYNOTE: The stage is just hinted, as the thematic is being developed for the whole movie."""@en .
+    monomyth:realizationDescription """Neo has become illegible to the categories that once
+contained him: neither prisoner of the simulation nor mere survivor of the devastated Earth, he
+occupies both worlds with equal fluency and commands both with equal authority. His address to the
+Machines makes this legible through its sheer confidence, as he speaks not as someone who has
+escaped their system but as someone who has comprehended it so thoroughly that the power relation
+has permanently inverted. The resolution of the narrative's founding duality is complete, even if
+the film only gestures toward it in the closing moments rather than depicting it at length."""@en .
 
 <the-matrix/stages/where-we-go-from-there-is-a-choice-i-leave-to-you> a monomyth:StageRealization ;
     rdfs:label "Where we go from there is a choice I leave to you"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
-        <the-matrix/characters/trinity> ;
+    monomyth:involvesCharacter <the-matrix/characters/neo>
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
-    monomyth:realizationDescription """Neo's acceptance of his role as the One and his commitment to fight for humanity's liberation represents his freedom to live. He embraces his destiny without fear of death, embodying the ultimate freedom that comes from self-actualization and purpose."""@en .
+    monomyth:realizationDescription """The film ends on liberated possibility. Neo flies into the
+sky, free from the constraints of the code, from doubt, from gravity itself. His freedom is not
+domestic peace but the freedom of mission: knowing who he is and what he must do, acting from
+certainty rather than fear. The narrative closes not as a circle returning to its origin but as a
+trajectory launched outward, leaving the question of what comes next as a deliberate structural
+opening rather than an unresolved thread."""@en .
 
 # --- Narrative Divergences ------------
 
@@ -341,50 +359,58 @@ authority not against Morpheus but through loyalty to him."""@en .
     rdfs:label "Dispersed Temptress divergence"@en ;
     monomyth:divergenceOf <the-matrix/stages/ignorance-is-bliss> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """The Wachowskis distribute the temptation
-function across multiple loci rather than concentrating it in a single
-character-hero encounter. The Woman in the Red Dress is a brief pedagogical
-moment; Cypher embodies the deeper existential temptation as Neo's shadow rather
-than his seducer; and Neo himself, refusing to identify as the One, enacts an
-inward temptation—the lure of remaining ordinary rather than accepting a burden
-he does not yet believe he can carry. This dispersal reflects the film's
-philosophical framework: in The Matrix, temptation is systemic (the entire
-simulation is designed to seduce) rather than personal, making a single
-temptress figure structurally inadequate. The divergence is a creative
-adaptation of Campbell's stage to a narrative where the antagonist is an
-environment, not an individual."""@en .
+    monomyth:divergenceRationale """The Wachowskis distribute the temptation function across
+multiple loci rather than concentrating it in a single character-hero encounter. The Woman in the
+Red Dress is a brief pedagogical moment; Cypher embodies the deeper existential temptation as Neo's
+shadow rather than his seducer; and Neo himself, refusing to identify as the One, enacts an
+inward temptation—the lure of remaining ordinary rather than accepting a burden he does not yet
+believe he can carry. This dispersal reflects the film's philosophical framework: in The Matrix,
+temptation is systemic (the entire simulation is designed to seduce) rather than personal, making a
+single temptress figure structurally inadequate. The divergence is a creative adaptation of
+Campbell's stage to a narrative where the antagonist is an environment, not an individual."""@en .
+
+<the-matrix/divergences/narrative/imperfect-apotheosis> a monomyth:NarrativeDivergence ;
+    rdfs:label "Imperfect Apotheosis divergence"@en ;
+    monomyth:divergenceOf <the-matrix/stages/hes-beginning-to-believe> ;
+    monomyth:divergesFrom monomyth:Apotheosis ;
+    monomyth:divergenceRationale """Neo's apotheosis is deliberately incomplete and immediately
+followed by a new trial, subverting the traditional narrative where the hero enjoys a moment of
+elevated power before facing new challenges. This choice emphasizes the precariousness of Neo's
+newfound abilities and the ongoing struggle against systemic oppression, reinforcing the film's
+themes of resistance and resilience."""@en .
 
 <the-matrix/divergences/narrative/validation-replaces-salvation> a monomyth:NarrativeDivergence ;
     rdfs:label "Validation replaces salvation divergence"@en ;
     monomyth:divergenceOf <the-matrix/stages/the-man-i-loved-would-be-the-one> ;
     monomyth:divergesFrom monomyth:RescueFromWithout ;
-    monomyth:divergenceRationale """In The Matrix, the traditional 'rescue from without' stage is subverted by having Neo's validation as the One come from Trinity's love and belief in him, rather than from an external savior figure. This shift emphasizes the theme of self-actualization and the power of human connection, rather than reliance on an external force for salvation. Neo's 'rescue' is not a physical extraction from danger but an emotional and existential affirmation that enables him to fully embrace his identity as the One."""@en .
+    monomyth:divergenceRationale """In The Matrix, the traditional Rescue from Without stage is
+subverted by having Neo's validation as the One come from Trinity's love and belief in him, rather
+than from an external savior figure. This shift emphasizes the theme of self-actualization and the
+power of human connection, rather than reliance on an external force for salvation. Neo's "rescue"
+is not a physical extraction from danger but an emotional and existential affirmation that enables
+him to fully embrace his identity as the One."""@en .
 
 <the-matrix/divergences/narrative/awakening-not-homecoming> a monomyth:NarrativeDivergence ;
     rdfs:label "Refusal of the return divergence"@en ;
     monomyth:divergenceOf <the-matrix/stages/system-failure> ;
     monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
-    monomyth:divergenceRationale """The Matrix omits the Refusal of the Return
-because Neo's arc is structured as an awakening narrative rather than a circular
-homecoming. Once Neo achieves the boon, there is no ordinary world to be
-reluctant about returning to — his mission is forward-facing liberation, not
-nostalgic return. The Wachowskis' choice reflects a modern, messianic hero model
-(closer to the Bodhisattva who re-enters the world to liberate others) rather
-than Campbell's Odyssean homecoming pattern. The absence is deliberate and
-thematically coherent rather than an oversight."""@en .
+    monomyth:divergenceRationale """The Matrix omits the Refusal of the Return because Neo's arc is
+structured as an awakening narrative rather than a circular homecoming. Once Neo achieves the boon,
+there is no ordinary world to be reluctant about returning to: his mission is forward-facing
+liberation, not nostalgic return. The Wachowskis' choice reflects a modern, messianic hero model
+(closer to the Bodhisattva who re-enters the world to liberate others) rather than Campbell's
+Odyssean homecoming pattern. The absence is deliberate and thematically coherent rather than an
+oversight."""@en .
 
 <the-matrix/divergences/narrative/master-of-the-threshold> a monomyth:NarrativeDivergence ;
     rdfs:label "Master of the threshold divergence"@en ;
     monomyth:divergenceOf <the-matrix/stages/i-can-feel-you-now> ;
     monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:divergenceRationale """Campbell's model assumes the hero crosses back from
-the special world into the ordinary one. The Matrix inverts this: Neo
-re-enters the special world (the simulation) as its sovereign, dissolving
-the ontological hierarchy between worlds rather than crossing a boundary.
-This divergence transforms the return threshold from a spatial crossing
-into an epistemological claim — the hero's return is not a physical transit
-but a redefinition of what 'real' means. It reflects the film's
-Baudrillardian foundation: if simulation and reality are ontologically
+    monomyth:divergenceRationale """Campbell's model assumes the hero crosses back from the special
+world into the ordinary one. The Matrix inverts this: Neo re-enters the special world (the
+simulation) as its sovereign, dissolving the ontological hierarchy between worlds rather than
+crossing a boundary. This divergence transforms the return threshold from a spatial crossing into an epistemological claim: the hero's return is not a physical transit but a redefinition of what "real"
+means. It reflects the film's Baudrillardian foundation: if simulation and reality are ontologically
 entangled, the threshold itself is the illusion."""@en .
 
 # --- Sequential Divergences -----------
@@ -393,12 +419,35 @@ entangled, the threshold itself is the illusion."""@en .
     rdfs:label "Escape after apotheosis divergence"@en ;
     monomyth:divergenceOf <the-matrix/stages/hes-beginning-to-believe> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
-    monomyth:divergenceRationale """In The Matrix, Neo's apotheosis happens in two distinct phases. The first one, when "he's beginning to believe" and challenge Agent Smith, is not complete and it is immediately followed by a desperate escape from Agent Smith, rather than a period of triumphant mastery. This sequence subverts the traditional post-apotheosis narrative, where the hero typically enjoys a moment of elevated power before facing new challenges. The Wachowskis' choice emphasizes the precariousness of Neo's newfound abilities and the ongoing struggle against systemic oppression, reinforcing the film's themes of resistance and resilience."""@en .
+    monomyth:divergenceRationale """In The Matrix, Neo's apotheosis happens in two distinct phases.
+The first one, when "he's beginning to believe" and challenge Agent Smith, is not complete and it is
+immediately followed by a desperate escape from Agent Smith, rather than a period of triumphant
+mastery. This sequence subverts the traditional post-apotheosis narrative, where the hero typically
+enjoys a moment of elevated power before facing new challenges. The Wachowskis' choice emphasizes
+the precariousness of Neo's newfound abilities and the ongoing struggle against systemic oppression,
+reinforcing the film's themes of resistance and resilience."""@en .
 
 # --- Semiotic Divergences -------------
+
+<the-matrix/divergences/semiotic/supernatural-as-epistemic> a monomyth:SemioticDivergence ;
+    rdfs:label "Supernatural as Epistemic divergence"@en ;
+    monomyth:divergenceOf <the-matrix/stages/let-me-tell-you-why-youre-here> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ;
+    monomyth:divergenceRationale """The supernatural aid appears here not as a transcendent or
+magical intervention, but as privileged access to truth. Morpheus operates within the same
+ontological order as Neo, yet possesses knowledge that reveals the perceived world as illusory. The
+sense of the 'supernatural' arises from Neo's epistemic limitation rather than any actual breach of
+natural law. Guidance is thus enacted through disclosure and cognitive rupture, shifting the role
+from mystical benefactor to agent of ontological clarification within a simulated reality."""@en .
 
 <the-matrix/divergences/semiotic/woman-as-ignorance> a monomyth:SemioticDivergence ;
     rdfs:label "Woman as Ignorance divergence"@en ;
     monomyth:divergenceOf <the-matrix/stages/ignorance-is-bliss> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """The Matrix subverts the traditional Woman as the Temptress archetype by embodying the temptation to remain in ignorance not in a seductive figure, but in the systemic choice of ignorance itself. The film's primary antagonist, Agent Smith, represents the oppressive system that seeks to maintain control through ignorance, while Cypher's betrayal exemplifies the allure of returning to comfortable illusion. This divergence reflects the film's thematic focus on systemic control and the internal struggle for enlightenment, rather than external seduction."""@en .
+    monomyth:divergenceRationale """The Matrix subverts the traditional Woman as the Temptress
+archetype by embodying the temptation to remain in ignorance not in a seductive figure, but in the
+systemic choice of ignorance itself. The film's primary antagonist, Agent Smith, represents the
+oppressive system that seeks to maintain control through ignorance, while Cypher's betrayal
+exemplifies the allure of returning to comfortable illusion. This divergence reflects the film's
+thematic focus on systemic control and the internal struggle for enlightenment, rather than external
+seduction."""@en .
