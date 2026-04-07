@@ -15,3 +15,8 @@ jobs:
         run: rapper -i turtle ontology/ontology.ttl -c
       - name: Validate knowledge graph TTL
         run: rapper -i turtle ontology/graph.ttl -c
+      - name: Validate individual graphs TTLs
+        run: |
+          for graph in ontology/graphs/*.ttl; do
+            rapper -i turtle -c "$graph"
+          done
