@@ -65,9 +65,7 @@ companion to wild sovereign."""@en ;
 <the-call-of-the-wild/characters/buck> a monomyth:Character ;
     rdfs:label "Buck"@en ;
     rdfs:comment """A large, powerful dog of mixed St. Bernard and Scotch Collie ancestry, raised in
-comfort on a California estate and stolen into the Klondike sled dog trade, where a succession
-of masters and an increasingly insistent ancestral instinct drive his transformation from
-domesticated animal to leader of a wolf pack."""@en ;
+comfort on a California estate and stolen into the Klondike sled dog trade."""@en ;
     monomyth:heroOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:characterOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:embodiesArchetype monomyth:Hero .
@@ -75,8 +73,7 @@ domesticated animal to leader of a wolf pack."""@en ;
 <the-call-of-the-wild/characters/john-thornton> a monomyth:Character ;
     rdfs:label "John Thornton"@en ;
     rdfs:comment """A seasoned Klondike prospector who rescues Buck from a cruel and incompetent
-owner, forming the deepest bond of love and loyalty the dog has ever known, and whose death
-severs Buck's final attachment to the human world."""@en ;
+owner."""@en ;
     monomyth:characterOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Ally .
