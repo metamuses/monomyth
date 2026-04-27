@@ -65,26 +65,26 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
 <batman-year-one/characters/jim-gordon> a monomyth:Character ;
     rdfs:label "James Gordon"@en ;
     monomyth:embodiesArchetype monomyth:Ally ;
-    rdfs:comment "A corrupt-free cop who serves as a parallel hero and eventual ally."@en .
+    rdfs:comment "A corrupt-free cop who serves as a parallel hero and eventual ally."@en ;
     owl:sameAs wd:Q116113 .
 
 <batman-year-one/characters/selina-kyle> a monomyth:Character ;
     rdfs:label "Selina Kyle"@en ;
     monomyth:embodiesArchetype monomyth:Shapeshifter ;
     #shapeshifter ?
-    rdfs:comment "A dominatrix who is inspired by Batman to become Catwoman."@en .
+    rdfs:comment "A dominatrix who is inspired by Batman to become Catwoman."@en ;
     owl:sameAs wd:Q158952 .
 
 <batman-year-one/characters/commissioner-loeb> a monomyth:Character ;
     rdfs:label "Commissioner Loeb"@en ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    rdfs:comment "The head of the corrupt GCPD infrastructure."@en .
+    rdfs:comment "The head of the corrupt GCPD infrastructure."@en ;
     owl:sameAs wd:Q3000468 .
 
 <batman-year-one/characters/carmine-falcone> a monomyth:Character ;
     rdfs:label "Carmine Falcone" @en;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    rdfs:comment "Gotham City's untouchable mob boss." @en .
+    rdfs:comment "Gotham City's untouchable mob boss." @en ;
     owl:sameAs wd:Q2663956 .
 
 # --- Stage Realizations ---------------
@@ -96,7 +96,7 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizationDescription """Bruce returns to Gotham after years abroad. His 'summons' 
-is internal: the trauma of his parents' death and the decaying state of the city."""@en .
+is internal: the trauma of his parents' death and the decaying state of the city."""@en ;
     monomyth:hasSemioticDivergence <batman-year-one/divergences/internal-herald> .
 
 <batman-year-one/stages/i-am-not-ready> a monomyth:StageRealization ; 
@@ -217,7 +217,7 @@ than bestowing mastery, proving that Bruce’s gentle heart is reserved for his 
 Batman saves the life of Gordon’s infant son, James Jr., literally 'restoring life' to the 
 future of Gotham. This act of selflessness secures the 'Ultimate Boon': a clandestine alliance 
 with Jim Gordon. This partnership is the 'elixir' that brings a spark of illumination to a 
-corrupt city, ensuring that the hero's mission can now truly begin with the support of the law."""@en .
+corrupt city, ensuring that the hero's mission can now truly begin with the support of the law."""@en ;
     monomyth:hasSemioticDivergence <batman-year-one/divergences/the-human-elixir> .
 
 <batman-year-one/stages/refusal-of-the-return> a monomyth:StageRealization ;
