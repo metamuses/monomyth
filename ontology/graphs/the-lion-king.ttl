@@ -87,8 +87,7 @@ death as the moral and spiritual compass of the hero's journey."""@en ;
     rdfs:comment """Mufasa's brother and Simba's uncle, who orchestrates the king's assassination
 and manipulates the prince into exile in order to seize the throne for himself."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
-    monomyth:embodiesArchetype monomyth:Shadow,
-        monomyth:Shapeshifter ;
+    monomyth:embodiesArchetype monomyth:Shadow ;
     owl:sameAs wd:Q1977325 .
 
 <the-lion-king/characters/nala> a monomyth:Character ;
