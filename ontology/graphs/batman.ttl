@@ -39,7 +39,7 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
         <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/selina-kyle>,
         <batman-year-one/characters/carmine-falcone>,
-        <batman-year-one/characters/commissioner-loeb>,
+        <batman-year-one/characters/commissioner-loeb> ;
     monomyth:hasStageRealization <batman-year-one/stages/the-train-to-gotham>, 
         <batman-year-one/stages/i-am-not-ready>, 
         <batman-year-one/stages/the-bat-at-the-window>, 
@@ -443,8 +443,8 @@ There is no 'return' because the story is a beginning."""@en .
 # --- Jim Gordon's Monomyth Expression --------------
 <batman-year-one/monomyths/jim-gordon-journey> a monomyth:MonomythExpression ;
     rdfs:label "Jim Gordon's Hero's Journey in Batman: Year One"@en ;
-    rdfs:comment """An interpretation of the monomyth structure as realized through Jim Gordon, 
-whose grounded, deeply human arc serves as a counter-narrative to Bruce Wayne's semiotic dehumanization."""@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey."""@en ;
     monomyth:interprets <batman-year-one> ;
     monomyth:hasHero <batman-year-one/characters/jim-gordon> ;
     monomyth:hasCharacter <batman-year-one/characters/jim-gordon>,
@@ -464,3 +464,43 @@ whose grounded, deeply human arc serves as a counter-narrative to Bruce Wayne's 
         <batman-year-one/stages/gordon/confession-to-barbara>,
         <batman-year-one/stages/gordon/the-bridge-alliance>,
         <batman-year-one/stages/gordon/the-rooftop-equilibrium> .
+
+# --- Gordon's Expression Characters -----------------------
+
+<batman-year-one/characters/barbara-gordon> a monomyth:Character ;
+    rdfs:label "Barbara Gordon"@en ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    rdfs:comment "Jim Gordon's wife"@en .
+
+<batman-year-one/characters/detective-flass> a monomyth:Character ;
+    rdfs:label "Detective Arnold Flass"@en ;
+    monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
+    rdfs:comment "A corrupt cop who acts as the violent enforcer of the GCPD's status quo."@en .
+
+<batman-year-one/characters/sarah-essen> a monomyth:Character ;
+    rdfs:label "Sarah Essen"@en ;
+    monomyth:embodiesArchetype monomyth:Goddess ;
+    rdfs:comment "Gordon's intellectual equal and partner, who becomes the source of his temptation."@en .
+
+<batman-year-one/characters/officer-merkel> a monomyth:Character ;
+    rdfs:label "Officer Merkel"@en ;
+    monomyth:embodiesArchetype monomyth:Ally .
+
+<batman-year-one/characters/jefferson-skeevers> a monomyth:Character ;
+    rdfs:label "Jefferson Skeevers"@en ;
+    monomyth:embodiesArchetype monomyth:ThresholdGuardian .
+
+# --- Jim's Expression Stage Realizations ---------------
+<batman-year-one/stages/gordon/arrival-in-gotham> a monomyth:StageRealization ;
+    rdfs:label "Arrival in Gotham"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/detective-flass>, 
+        <batman-year-one/characters/commissioner-loeb> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """Gordon arrives in Gotham, viewing the transfer as a punishment. He 
+is immediately summoned into the 'special world' of systemic corruption, meeting Commissioner Loeb 
+and witnessing Detective Flass brutalize a teenager."""@en .
+#TO DO: semiotic divergence
+
