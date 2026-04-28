@@ -24,8 +24,8 @@
         "Survival"@en ;
     owl:sameAs wd:Q476871 ;
     monomyth:interpretedBy <the-call-of-the-wild/monomyths/buck-journey> ;
-    rdfs:comment """A 1903 novel in which a domesticated dog is stolen from a California estate
-and sold into the Klondike Gold Rush sled dog trade, where the progressive stripping away of
+    rdfs:comment """A 1903 novel in which a domesticated dog is stolen from a California estate and
+sold into the Klondike Gold Rush sled dog trade, where the progressive stripping away of
 civilization awakens an ancestral wildness that ultimately claims him entirely."""@en .
 
 # --- Monomyth Expression --------------
