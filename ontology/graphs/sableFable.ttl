@@ -29,10 +29,26 @@ anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and ac
     monomyth:hasCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-reflection>,
         <sable-fable/characters/the-new-love> ;
-    monomyth:hasStageRealization <sable-fable/stages/fear-of-change>,
-        <sable-fable/stages/the-violent-spree>,
-        <sable-fable/stages/the-peaceful-love>,
-        <sable-fable/stages/finding-the-rhythm> .
+    monomyth:hasStageRealization <sable-fable/stages/the-intrusive-call> , 
+        <sable-fable/stages/fear-of-change> ,
+        <sable-fable/stages/the-violent-spree> ,
+        <sable-fable/stages/the-peaceful-love> ,
+        <sable-fable/stages/the-plea-for-forgiveness> ,
+        <sable-fable/stages/accepting-the-change> ,
+        <sable-fable/stages/the-psychological-trials> ,
+        <sable-fable/stages/the-peaceful-love> , 
+        <sable-fable/stages/the-blissful-rest> ,
+        <sable-fable/stages/the-temptation-to-regress> ,
+        <sable-fable/stages/the-absent-father> ,
+        <sable-fable/stages/the-emotional-capacity> ,
+        <sable-fable/stages/lingering-in-the-sanctuary> ,
+
+
+
+
+
+
+# TO DO: CORRECT
 
 # --- Characters (Internalized Archetypes) -----------------------
 
@@ -283,6 +299,14 @@ and the 'tests' are the ongoing, cyclical strains of healing and unlearning past
 marriage to a divine or cosmic entity. In this autobiographical album, the 'Goddess' is semiotically 
 translated into a healthy, grounded romantic partner. The 'bliss' is not supernatural transcendence, 
 but the profound human relief of finding a loving, peaceful relationship after a period of intense trauma and guilt."""@en .
+
+<sable-fable/divergences/romantic-apotheosis> a monomyth:SemioticDivergence ;
+    rdfs:label "Romantic Apotheosis"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-blissful-rest> ;
+    monomyth:divergesFrom monomyth:Apotheosis ;
+    monomyth:divergenceRationale """The 'divine knowledge' and cosmic transcendence of the mythic Apotheosis 
+are semiotically translated into the profound, earthly safety of a romantic relationship. The hero is not 
+elevated to godhood, but rather elevated out of his crippling anxiety by the certainty that his partner 'was made for me'."""@en .
 
 <sable-fable/divergences/the-internal-temptress> a monomyth:SemioticDivergence ;
     rdfs:label "The Internal Temptress (Seduction of Regression)"@en ;
