@@ -71,7 +71,7 @@
 <rostam-haft-khan/characters/kay-kavus> a monomyth:Character ;
     rdfs:label "Kay Kavus"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
-    owl:sameAs wd:Q1338913.
+    owl:sameAs wd:Q1338913 .
 
 <rostam-haft-khan/characters/white-demon> a monomyth:Character ;
     rdfs:label "White Demon (Div-e Sepid)"@en ;
@@ -82,12 +82,13 @@
 <rostam-haft-khan/characters/olad> a monomyth:Character ;
     rdfs:label "Olad"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally, monomyth:Herald ;
+    monomyth:embodiesArchetype monomyth:Ally, monomyth:Herald .
 
 <rostam-haft-khan/characters/enchantress> a monomyth:Character ;
     rdfs:label "The Enchantress"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
-    monomyth:embodiesArchetype monomyth:Temptress, monomyth:Shadow .
+    monomyth:embodiesArchetype monomyth:Shapeshifter, monomyth:Shadow .
+    
 
 # --- Stage Realizations -------------------------------------------------------
 
