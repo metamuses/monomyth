@@ -51,7 +51,6 @@ anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and ac
 # TO DO: CORRECT
 
 # --- Characters (Internalized Archetypes) -----------------------
-
 <sable-fable/characters/justin-vernon> a monomyth:Character ;
     rdfs:label "Justin Vernon"@en ;
     monomyth:embodiesArchetype monomyth:Hero .
