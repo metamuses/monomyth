@@ -97,14 +97,22 @@
     monomyth:involvesCharacter <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
-    monomyth:realizationDescription """King Kay Kavus, driven by arrogance, invades Mazandaran and is defeated, captured, and blinded by demonic sorcery. His fall destabilizes the Iranian world and becomes the catalyst that summons Rostam to act as restorer of order."""@en .
+    monomyth:realizationDescription """King Kay Kavus, driven by arrogance, invades Mazandaran and is defeated, captured, and blinded by demonic sorcery. 
+    His fall destabilizes the Iranian world and becomes the catalyst that summons Rostam to act as restorer of order."""@en .
+
+<rostam-haft-khan/stages/refusal-of-the-call> a monomyth:StageRealization ;
+    rdfs:label "Refusal of the Call"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 2 ;
+    rdfs:comment "Rostam does not significantly refuse the call; his duty to the Shah and Iran leads to immediate acceptance after the initial shock of the news."@en .
 
 <rostam-haft-khan/stages/the-wisdom-of-zal> a monomyth:StageRealization ;
     rdfs:label "The Wisdom of Zal"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/zal>, <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 2 ;
+    monomyth:stageRealizationOrder 3 ;
     monomyth:realizationDescription """Zal prepares Rostam with weapons, armor, and knowledge of Mazandaran, equipping him to face a world governed by illusion and demonic forces rather than ordinary reality."""@en .
 
 <rostam-haft-khan/stages/choosing-the-perilous-path> a monomyth:StageRealization ;
@@ -112,32 +120,48 @@
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 3 ;
+    monomyth:stageRealizationOrder 4 ;
     monomyth:realizationDescription """Rostam chooses the dangerous shortcut to Mazandaran, consciously abandoning safety and entering a liminal realm of intensified danger and supernatural distortion."""@en .
+
+<rostam-haft-khan/stages/the-belly-of-the-whale> a monomyth:StageRealization ;
+    rdfs:label "The Belly of the Whale"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 5 ;
+    rdfs:comment "There is no singular moment of symbolic death/swallowing before the trials begin; the transition is handled by the choice of the perilous path."@en .
 
 <rostam-haft-khan/stages/the-road-of-trials> a monomyth:StageRealization ;
     rdfs:label "The Seven Labors"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/rakhsh> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 4 ;
+    monomyth:stageRealizationOrder 6 ;
     monomyth:realizationDescription """Rostam undergoes a sequence of escalating trials: Rakhsh kills a lion while Rostam sleeps, a deadly desert nearly kills him before divine aid provides water, and a dragon attacks repeatedly in darkness until Rostam defeats it. These trials dismantle the illusion of solitary heroism and reveal the necessity of endurance, divine favor, and companionship."""@en .
+
+<rostam-haft-khan/stages/the-meeting-with-the-goddess> a monomyth:StageRealization ;
+    rdfs:label "The Meeting with the Goddess"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 7 ;
+    rdfs:comment "The narrative focuses on trials and demonic combat rather than a meeting with a nurturing feminine embodiment of totality."@en .
 
 <rostam-haft-khan/stages/the-enchantress> a monomyth:StageRealization ;
     rdfs:label "The Enchantress"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/enchantress> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 5 ;
+    monomyth:stageRealizationOrder 8 ;
     monomyth:realizationDescription """Rostam encounters a deceptive banquet and a beautiful woman who is revealed as a demon when he invokes God’s name, exposing illusion as false reality."""@en ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/divine-word-as-truth> .
+    
+
 
 <rostam-haft-khan/stages/atonement-with-the-father> a monomyth:StageRealization ;
     rdfs:label "Restoring the Shah"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 6 ;
+    monomyth:stageRealizationOrder 9 ;
     monomyth:realizationDescription """Rostam reaches the blinded Shah and assumes responsibility for restoring him, transforming royal authority by demonstrating that legitimacy must be actively defended rather than passively held."""@en .
 
 <rostam-haft-khan/stages/apotheosis-white-demon> a monomyth:StageRealization ;
@@ -145,7 +169,7 @@
     monomyth:realizesStage monomyth:Apotheosis ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/white-demon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 7 ;
+    monomyth:stageRealizationOrder 10 ;
     monomyth:realizationDescription """Rostam kills the White Demon in its cave, destroying the source of Mazandaran’s sorcery and elevating himself into a figure capable of restoring order at a systemic level."""@en .
 
 <rostam-haft-khan/stages/the-blood-elixir> a monomyth:StageRealization ;
@@ -153,21 +177,114 @@
     monomyth:realizesStage monomyth:TheUltimateBoon ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 8 ;
+    monomyth:stageRealizationOrder 11 ;
     monomyth:realizationDescription """The blood of the White Demon restores the Shah’s sight, functioning as a literal and symbolic elixir that re-establishes order, perception, and sovereignty."""@en .
+
+<rostam-haft-khan/stages/refusal-of-the-return> a monomyth:StageRealization ;
+    rdfs:label "Refusal of the Return"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 12 ;
+    rdfs:comment "Rostam shows no reluctance to return; his goal is the restoration of the Iranian court, which he pursues immediately after the victory."@en .
+
+<rostam-haft-khan/stages/the-magic-flight> a monomyth:StageRealization ;
+    rdfs:label "The Magic Flight"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 13 ;
+    rdfs:comment "The return journey is not depicted as a perilous escape or pursuit; the defeat of the White Demon effectively clears the path."@en .
+
+<rostam-haft-khan/stages/rescue-from-without> a monomyth:StageRealization ;
+    rdfs:label "Rescue from Without"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 14 ;
+    rdfs:comment "Rostam requires no external rescue to return to the ordinary world; his own strength and the restoration of the Shah's army suffice."@en .
+
+<rostam-haft-khan/stages/the-crossing-of-the-return-threshold> a monomyth:StageRealization ;
+    rdfs:label "The Crossing of the Return Threshold"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 15 ;
+    rdfs:comment "The narrative transitions directly to the restoration of the throne without focusing on the difficulties of re-integrating into common society."@en .
+
+<rostam-haft-khan/stages/master-of-the-two-worlds> a monomyth:StageRealization ;
+    rdfs:label "Master of the Two Worlds"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 16 ;
+    rdfs:comment "While Rostam is the supreme hero, the story concludes with political restoration rather than a meditation on his mastery over both the divine and mundane realms."@en .
 
 <rostam-haft-khan/stages/return-with-elixir> a monomyth:StageRealization ;
     rdfs:label "Return and Restoration"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 9 ;
+    monomyth:stageRealizationOrder 17 ;
     monomyth:realizationDescription """Rostam returns from Mazandaran having restored order, emerging not merely as a hero but as the guarantor of Iran’s stability and future."""@en .
 
-# --- Divergence --------------------------------------------------------------
+# --- Narrative Divergences ----------------------------------------------------
 
-<rostam-haft-khan/divergences/semiotic/divine-word-as-truth> a monomyth:SemioticDivergence ;
-    rdfs:label "Divine Word as Truth divergence"@en ;
+<rostam-haft-khan/divergences/narrative/distributed-trials> a monomyth:NarrativeDivergence ;
+    rdfs:label "Distributed Trials divergence"@en ;
+    monomyth:divergenceOf <rostam-haft-khan/stages/the-road-of-trials> ;
+    monomyth:divergesFrom monomyth:TheRoadOfTrials ;
+    monomyth:divergenceRationale """Unlike the classical monomyth where trials often center on the hero's individual transformation, the Haft Khan distributes agency across both Rostam and Rakhsh. 
+    The horse repeatedly acts independently—slaying the lion, detecting danger, and compensating for Rostam’s moments of vulnerability. This reframes the heroic journey as a cooperative system rather than a singular ascent, 
+    challenging the assumption of isolated heroism embedded in Campbell’s model. this said, but it doesn't mean that the story has two hero figures. Rostam is still the main character and the hero of the story, 
+    but he is not the only one who acts heroically."""@en .
+
+<rostam-haft-khan/divergences/narrative/epistemic-temptation> a monomyth:NarrativeDivergence ;
+    rdfs:label "Epistemic Temptation divergence"@en ;
     monomyth:divergenceOf <rostam-haft-khan/stages/the-enchantress> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """Temptation is resolved through invocation of divine truth rather than psychological resistance."""@en .
+    monomyth:divergenceRationale """The temptation in the Haft Khan is not sustained through emotional or sensual attachment but appears as a brief illusion that collapses immediately under divine invocation. 
+    The narrative minimizes psychological struggle and instead frames temptation as a problem of perception: the danger lies in mistaking illusion for reality. 
+    This produces a compressed and epistemological version of the temptress stage rather than an extended moral or emotional conflict."""@en .
+
+<rostam-haft-khan/divergences/narrative/authority-reversal> a monomyth:NarrativeDivergence ;
+    rdfs:label "Authority Reversal divergence"@en ;
+    monomyth:divergenceOf <rostam-haft-khan/stages/atonement-with-the-father> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """In the classical model, atonement involves reconciliation with a superior authority figure. 
+    In the Haft Khan, this hierarchy is inverted: Kay Kavus is not a source of wisdom but a failed ruler whose blindness symbolizes his earlier hubris. 
+    Rostam’s role is not to submit but to restore and effectively supersede royal authority. The stage becomes an assertion of functional legitimacy over inherited power, transforming atonement into a political reconfiguration."""@en .
+
+<rostam-haft-khan/divergences/narrative/immediate-boon> a monomyth:NarrativeDivergence ;
+    rdfs:label "Immediate Boon divergence"@en ;
+    monomyth:divergenceOf <rostam-haft-khan/stages/the-blood-elixir> ;
+    monomyth:divergesFrom monomyth:TheUltimateBoon ;
+    monomyth:divergenceRationale """In many monomyth narratives, the boon requires transport, protection, or negotiation before it can be applied. 
+    In the Haft Khan, the boon is immediately usable: the blood of the White Demon directly restores the Shah’s sight without delay or further complication. 
+    This compresses the post-apotheosis phase and removes the narrative tension typically associated with securing and delivering the reward."""@en .
+
+
+# --- Sequential Divergence ----------------------------------------------------
+
+<rostam-haft-khan/divergences/sequential/compressed-return> a monomyth:SequentialDivergence ;
+    rdfs:label "Compressed Return divergence"@en ;
+    monomyth:divergenceOf <rostam-haft-khan/stages/return-with-elixir> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale """The Haft Khan omits an extended escape or pursuit sequence following the acquisition of the boon. 
+    Once the White Demon is slain and the Shah is restored, the narrative transitions directly to resolution without a prolonged return journey. 
+    This compression eliminates the tension typically associated with the hero’s escape and reflects the epic’s structural priority on restoration over suspense."""@en .
+
+# --- Semiotic Divergences -----------------------------------------------------
+
+<rostam-haft-khan/divergences/semiotic/trials-as-ontological-testing> a monomyth:SemioticDivergence ;
+    rdfs:label "Trials as Ontological Testing divergence"@en ;
+    monomyth:divergenceOf <rostam-haft-khan/stages/the-road-of-trials> ;
+    monomyth:divergesFrom monomyth:TheRoadOfTrials ;
+    monomyth:divergenceRationale """In the classical monomyth, the Road of Trials primarily functions as a sequence of challenges that refine the hero’s strength, skill, and moral resilience. 
+    In the Haft Khan, the trials instead operate as tests of ontological stability: the hero is repeatedly placed in situations where the boundaries between reality and illusion collapse. 
+    The desert produces mirage and near-death hallucination, the dragon appears and disappears in darkness, and survival depends not only on strength but on correctly interpreting a world that resists stable perception. 
+    The trials therefore signify not just external obstacles but a confrontation with an unstable reality, where knowing what is real becomes as crucial as overcoming physical threats."""@en .
+
+<rostam-haft-khan/divergences/semiotic/apotheosis-as-restoration> a monomyth:SemioticDivergence ;
+    rdfs:label "Apotheosis as Restoration divergence"@en ;
+    monomyth:divergenceOf <rostam-haft-khan/stages/apotheosis-white-demon> ;
+    monomyth:divergesFrom monomyth:Apotheosis ;
+    monomyth:divergenceRationale """In Campbell’s model, apotheosis signifies an inner transformation in which the hero attains enlightenment, transcendence, or divine awareness. 
+    In the Haft Khan, apotheosis is externalized and functional: Rostam’s slaying of the White Demon does not primarily produce a new state of consciousness, but instead restores order to a corrupted world. 
+    The act collapses a system of enchantment and re-establishes a stable reality rather than elevating the hero into a metaphysical plane. 
+    Apotheosis here is not a movement beyond the world, but a reconstitution of it, shifting the emphasis from inner transcendence to world-restoring agency."""@en .
