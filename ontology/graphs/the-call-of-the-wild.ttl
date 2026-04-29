@@ -465,8 +465,8 @@ an indifferent environment that teaches through consequences rather than through
 semiotic register is coercive and Darwinian where the archetype expects the sacred and the
 benevolent, yet the structural function endures with precision: the hero receives exactly what is
 needed to survive the crossing. What shifts is the sign system, from talisman to trauma, from
-endowment to discipline, reflecting London's naturalist conviction that the world instructs
-through force, not generosity."""@en .
+endowment to discipline, reflecting London's naturalist conviction that the world instructs through
+force, not generosity."""@en .
 
 <the-call-of-the-wild/divergences/semiotic/interspecies-love-as-totality> a monomyth:SemioticDivergence ;
     rdfs:label "Interspecies love as totality divergence"@en ;
@@ -475,13 +475,12 @@ through force, not generosity."""@en .
     monomyth:divergenceRationale """The nurturing totality that reveals the deepest ground of
 existence to the hero takes the form of interspecies devotion between a dog and a rugged male
 frontiersman. The semiotic shift operates on three axes simultaneously: gendered, since the
-archetype's feminine divine figure becomes a masculine human companion; ontological, since
-the encounter crosses the species boundary rather than the boundary between mortal and divine;
-and in register, since rough physical affection and murmured curses as endearments replace the
-numinous and the sacred. Thornton's love is nonetheless the most complete acceptance Buck has
-ever known, preserving the structural function with remarkable precision while conducting it
-entirely through London's naturalist vocabulary of embodied loyalty and physical
-interdependence."""@en .
+archetype's feminine divine figure becomes a masculine human companion; ontological, since the
+encounter crosses the species boundary rather than the boundary between mortal and divine; and in
+register, since rough physical affection and murmured curses as endearments replace the numinous and
+the sacred. Thornton's love is nonetheless the most complete acceptance Buck has ever known,
+preserving the structural function with remarkable precision while conducting it entirely through
+London's naturalist vocabulary of embodied loyalty and physical interdependence."""@en .
 
 <the-call-of-the-wild/divergences/semiotic/evolutionary-memory-as-father> a monomyth:SemioticDivergence ;
     rdfs:label "Evolutionary memory as father divergence"@en ;
