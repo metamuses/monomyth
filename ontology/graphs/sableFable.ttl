@@ -226,19 +226,74 @@ and 'Can I take another year?' demonstrate his desire to cling to this realm of 
 passage of time."""@en ;
     monomyth:hasNarrativeDivergence <sable-fable/divergences/the-gentle-refusal> .
 
+<sable-fable/stages/the-perilous-retreat> a monomyth:StageRealization ;
+    rdfs:label "I'll be there (Verse 1-2)"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:realizationDescription """In the verses of 'I'll Be There', the hero navigates the Magic Flight. 
+Rather than fleeing physical pursuers, Vernon is fleeing the threat of mental regression as he attempts to return 
+to ordinary life. He actively tests his newly won transformation by coaching himself to endure: 'Don't you dare go down 
+/ Tape the polaroid to your dome / Keep the sad shit off the phone'. The command to 'get your fine ass on the road' 
+represents the active, perilous push forward to maintain his healing."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/internal-flight> .
 
-#i'll be there as both the magic flight or rescue from Without
-# if only i could waut: the crossing ot the return threshold
-#there a rythim perfect fit for master of the two Worlds and als freedom to live (realeased from fear of attchment: 
-#[Verse 3] went to see you there in Spain
-#That was a month ago and change
-#And now I think you need some space
-#I will pause and stand with spade
-#'Cause you really are a babe
-#And how you treat me good your way
-#Ya know I've really no more shame
-#Now things really are arranged')
+<sable-fable/stages/the-lifeline> a monomyth:StageRealization ;
+    rdfs:label "I'll be there (Chorus)"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription """Because the hero exhibited a Refusal of the Return in the previous track, 
+he requires a Rescue from Without to pull him fully back into human society. This is structurally realized through 
+the song's chorus, sung by a guest vocalist (Danielle Haim) representing the partner. Her repeated assurances—
+'I'll be there / I won't move / Tell me more, or tell me nothing'—act as the external tether reaching across 
+the threshold, drawing the exhausted traveler safely home."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/partner-as-rescuer> .
 
+<sable-fable/stages/the-weight-of-the-world> a monomyth:StageRealization ;
+    rdfs:label "If only i could wait"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:realizationDescription """'If Only I Could Wait' perfectly embodies the Crossing of the Return Threshold. 
+The hero is stepping out of his isolated, timeless sanctuary (the cabin) to re-enter the ordinary world by moving 
+to California, but he is terrified of the impact. Vernon questions his ability to survive the transition, asking, 
+'Can I incur the weight? / Am I really this afraid now?'. The duet functions as 'a bilateral crying question' 
+representing the agonizing effort to hold onto the 'boon' of their newfound love amidst the uncertainty, distance, 
+and decay of the real world ('We'll decay in other ways now')."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/the-geographical-threshold> .
+
+<sable-fable/stages/the-equilibrium> a monomyth:StageRealization ;
+    rdfs:label "There's a Rhythm (Verse 1-2)"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:realizationDescription """In the first two verses of 'There's A Rhythmn', Vernon achieves the Master 
+of the Two Worlds stage. The 'two worlds' are geographically and emotionally represented as his dark, isolated past in Wisconsin ('the snow') 
+and his bright, connected future in California ('a land of palm and gold'). By asking 'Or are less and more the same?' and recognizing 
+that 'There's a rhythmn to reclaim', he achieves a psychological equilibrium. He holds both realities simultaneously, 
+finding harmony ('rhythmn') between his past trauma and his present healing."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/the-psychological-worlds> .
+
+<sable-fable/stages/no-more-shame> a monomyth:StageRealization ;
+    rdfs:label "There's a Rhythm (Verse 3)"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:realizationDescription """The album's lyrical climax in verse 3 perfectly embodies the Freedom to Live. 
+Released from the paralyzing anxiety and 'shame' that defined the beginning of his journey, Vernon lives fully in 
+the present moment. He declares, 'Ya know I've really no more shame / Now things really are arranged', proving he 
+has finally conquered the fear of change that initiated his Refusal of the Call. His focus shifts outward to pure 
+connection ('Cause you really are a babe'), acting as a conduit for love without attachment to the guilt of his past."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/living-without-shame> .
 
 # --- Semiotic Divergences ----------------------
 
@@ -331,6 +386,51 @@ returning to humanity. Here, it is a much gentler, understandable psychological 
 suffering, the hero simply wants to press pause ('We can just keep it here for now') to savor his hard-won 
 peace before facing whatever comes next."""@en .
  
+<sable-fable/divergences/internal-flight> a monomyth:SemioticDivergence ;
+    rdfs:label "Flight from Regression"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-perilous-retreat> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale """In classical myth, the Magic Flight involves escaping vengeful gods 
+or monsters after stealing the Boon. In this psychological context, the hero is fleeing his own internalized Shadow 
+(depression and self-sabotage), requiring intense mental focus ('Keep the sad shit off the phone') to successfully 
+return with his restored emotional capacity."""@en .
+
+<sable-fable/divergences/partner-as-rescuer> a monomyth:SemioticDivergence ;
+    rdfs:label "Partner as the Rescuer"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-lifeline> ;
+    monomyth:divergesFrom monomyth:RescueFromWithout ;
+    monomyth:divergenceRationale """The supernatural guide or community is localized entirely into the figure of 
+the romantic partner, whose unconditional emotional availability ('I won't move') provides the exact psychological 
+rescue needed to complete the journey."""@en .
+
+<sable-fable/divergences/the-geographical-threshold> a monomyth:SemioticDivergence ;
+    rdfs:label "The Geographical Threshold (Distance and Decay)"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-weight-of-the-world> ;
+    monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:divergenceRationale """In myth, the Return Threshold often involves crossing a physical boundary back 
+into the mortal realm, where magic fades. In this autobiographical narrative, the threshold is both geographical 
+(moving from Wisconsin to California) and relational. The 'magic' that threatens to fade is the blissful, 
+effortless love of the Goddess/Apotheosis stage, which must now survive the mundane, corrosive elements of 
+time, distance, and emotional 'decay'."""@en .
+
+<sable-fable/divergences/the-psychological-worlds> a monomyth:SemioticDivergence ;
+    rdfs:label "The Psychological Worlds"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-equilibrium> ;
+    monomyth:divergesFrom monomyth:MasterOfTheTwoWorlds ;
+    monomyth:divergenceRationale """The 'two worlds' of myth (mortal and divine) are semiotically translated 
+into two emotional and geographical states: the isolated, depressive state of his past ('snow' / Wisconsin / SABLE) 
+and the bright, communal state of his present ('palm and gold' / California / fABLE). Mastery is achieving the emotional 
+rhythm to accept both as part of his journey."""@en .
+
+<sable-fable/divergences/living-without-shame> a monomyth:SemioticDivergence ;
+    rdfs:label "Living Without Shame"@en ;
+    monomyth:divergenceOf <sable-fable/stages/no-more-shame> ;
+    monomyth:divergesFrom monomyth:FreedomToLive ;
+    monomyth:divergenceRationale """In myth, this stage represents a release from the literal fear of death. 
+In this psychological framework, the fear of 'death' is replaced by the fear of change, 'shame', and anxiety. 
+The hero's ultimate freedom is the ability to live in the present ('Now things really are arranged') without being 
+consumed by the guilt of his past mistakes."""@en .
+
 # --- Sequential Divergences ----------------------
 
 <sable-fable/divergences/healing-sequence-inversion> a monomyth:SequentialDivergence ;
