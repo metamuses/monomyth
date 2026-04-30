@@ -13,10 +13,11 @@
 # THE AENEID (Epic Poem, 19 BCE)
 # ==============================================================================
 
-<aeneid> a monomyth:NarrativeWork ;
-    rdfs:label "The Aeneid"@en ;
-    dcterms:title "The Aeneid"@en ;
-    dcterms:created "-0019"^^xsd:gYear ;
+<aeneid> a monomyth:NarrativeWork,
+        schema:Book ;
+    rdfs:label "Aeneid"@en ;
+    dcterms:title "Aeneid"@en ;
+    dcterms:created "-0018"^^xsd:gYear ;
     dcterms:creator "Publius Vergilius Maro" ;
     schema:genre "Epic Poetry"@en,
         "Mythological Literature"@en ;
@@ -26,7 +27,7 @@
 recounting the wanderings and wars of the Trojan exile Aeneas as he pursues the founding of the
 Roman race in Italy."""@en .
 
-# --- Monomyth Expression --------------
+# --- Monomyth Expressions --------------
 
 <aeneid/monomyths/aeneas-journey> a monomyth:MonomythExpression ;
     rdfs:label "Aeneas's Hero's Journey in The Aeneid"@en ;
@@ -41,7 +42,7 @@ patriarch of the Roman race."""@en ;
         <aeneid/characters/creusa>,
         <aeneid/characters/dido>,
         <aeneid/characters/mercury>,
-        <aeneid/characters/the-sibyl>,
+        <aeneid/characters/cumaean-sibyl>,
         <aeneid/characters/lavinia>,
         <aeneid/characters/latinus>,
         <aeneid/characters/turnus>,
@@ -79,7 +80,7 @@ found the lineage from which Rome will arise."""@en ;
     monomyth:heroOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
-    owl:sameAs wd:Q170579 .
+    owl:sameAs wd:Q82732 .
 
 <aeneid/characters/venus> a monomyth:Character ;
     rdfs:label "Venus"@en ;
@@ -97,7 +98,7 @@ who dies in Sicily during the wanderings and is encountered again as a luminous 
 fields where he discloses the future of the Roman race."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor ;
-    owl:sameAs wd:Q193257 .
+    owl:sameAs wd:Q211953 .
 
 <aeneid/characters/creusa> a monomyth:Character ;
     rdfs:label "Creusa"@en ;
@@ -105,7 +106,8 @@ fields where he discloses the future of the Roman race."""@en ;
 ghostly apparition who releases him from their bond and prophesies the western kingdom and the royal
 bride that await him."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Herald .
+    monomyth:embodiesArchetype monomyth:Herald ;
+    owl:sameAs wd:Q375174 .
 
 <aeneid/characters/dido> a monomyth:Character ;
     rdfs:label "Dido"@en ;
@@ -114,7 +116,7 @@ shipwrecked Trojans with hospitality, falls into consuming love for Aeneas, and 
 the pyre when he sails away under divine command."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter ;
-    owl:sameAs wd:Q183669 .
+    owl:sameAs wd:Q905162 .
 
 <aeneid/characters/mercury> a monomyth:Character ;
     rdfs:label "Mercury"@en ;
@@ -123,15 +125,16 @@ unambiguous command that recalls Aeneas to his fated mission and severs the Cart
 entanglement."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:embodiesArchetype monomyth:Herald ;
-    owl:sameAs wd:Q39798 .
+    owl:sameAs wd:Q1150 .
 
-<aeneid/characters/the-sibyl> a monomyth:Character ;
-    rdfs:label "The Sibyl of Cumae"@en ;
+<aeneid/characters/cumaean-sibyl> a monomyth:Character ;
+    rdfs:label "Cumaean Sibyl"@en ;
     rdfs:comment """The aged prophetess of Apollo at Cumae, who instructs Aeneas in the prerequisites
 of the catabasis, conducts him through the underworld, and mediates between the mortal traveller and
 the realm of the dead."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Mentor .
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q762835 .
 
 <aeneid/characters/lavinia> a monomyth:Character ;
     rdfs:label "Lavinia"@en ;
@@ -335,7 +338,7 @@ realization."""@en .
     rdfs:label "Facilis descensus Averno"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
-        <aeneid/characters/the-sibyl> ;
+        <aeneid/characters/cumaean-sibyl> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 7 ;
     monomyth:realizationDescription """At Cumae the Sibyl receives Aeneas in the cavern of the hundred
@@ -356,7 +359,7 @@ would be impossible at every stage of its unfolding."""@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises>,
-        <aeneid/characters/the-sibyl>,
+        <aeneid/characters/cumaean-sibyl>,
         <aeneid/characters/dido> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
@@ -837,4 +840,3 @@ The shift from numinous figure to political cipher reflects this realization's b
 grounding mythological structure in historical institution, the goddess function recoded as the
 genealogical instrument by which the founding labour transmits itself to the future the underworld
 disclosed."""@en .
-
