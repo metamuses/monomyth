@@ -28,7 +28,7 @@
 sold into the Klondike Gold Rush sled dog trade, where the progressive stripping away of
 civilization awakens an ancestral wildness that ultimately claims him entirely."""@en .
 
-# --- Monomyth Expression --------------
+# --- Monomyth Expressions --------------
 
 <the-call-of-the-wild/monomyths/buck-journey> a monomyth:MonomythExpression ;
     rdfs:label "Buck's Hero's Journey in The Call of the Wild"@en ;
@@ -129,9 +129,9 @@ abduction rather than summons, giving Buck no agency in the disruption."""@en ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizationDescription """Delivered to a man in a red sweater in a yard behind a saloon
 in Seattle, Buck explodes from his crate in a fury of teeth and muscle. He charges the man again
-and again, a red-eyed devil snarling and frothing, and is clubbed to the ground each time until
-he can no longer stand. He is not broken, but he has learned something fundamental: a man with a
-club is a lawgiver to be obeyed, though not necessarily conciliated."""@en ;
+and again, a red-eyed devil snarling and frothing, and is clubbed to the ground each time until he
+can no longer stand. He is not broken, but he has learned something fundamental: a man with a club
+is a lawgiver to be obeyed, though not necessarily conciliated."""@en ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/resistance-not-refusal> .
 
 <the-call-of-the-wild/stages/the-law-of-club-and-fang> a monomyth:StageRealization ;
@@ -143,10 +143,9 @@ club is a lawgiver to be obeyed, though not necessarily conciliated."""@en ;
     monomyth:stageRealizationOrder 3 ;
     monomyth:realizationDescription """François and Perrault buy Buck and harness him to the sled
 team. The experienced dogs Dave and Sol-leks teach him through proximity and imitation: how to pull
-in trace, how to dig a sleeping hole in the snow, how to break ice from between his toes. The
-lesson of the man in the red sweater deepens into a general law. Brute force governs this world,
-and survival belongs to those who learn its grammar quickly and adapt without
-sentimentality."""@en ;
+in trace, how to dig a sleeping hole in the snow, how to break ice from between his toes. The lesson
+of the man in the red sweater deepens into a general law. Brute force governs this world, and
+survival belongs to those who learn its grammar quickly and adapt without sentimentality."""@en ;
     monomyth:hasSemioticDivergence <the-call-of-the-wild/divergences/semiotic/violence-as-instruction> .
 
 <the-call-of-the-wild/stages/that-first-day-on-the-dyea-beach> a monomyth:StageRealization ;
@@ -172,11 +171,11 @@ conclusion."""@en .
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizationDescription """After his first day of pulling in harness, Buck searches
 desperately for shelter. The tent is closed to him; the snow offers nothing. He stumbles over a
-mound and discovers his teammates buried beneath the surface, warm in their snow-nests. He digs
-his own hole and sleeps. In the morning he wakes in total darkness, panics, and bursts upward
-through the snow into the grey dawn. For a moment he has no idea where or what he is. The dog
-who slept on the Judge's hearth has been swallowed by a world that buries its inhabitants each
-night and demands they claw their way back to the surface each morning."""@en .
+mound and discovers his teammates buried beneath the surface, warm in their snow-nests. He digs his
+own hole and sleeps. In the morning he wakes in total darkness, panics, and bursts upward through
+the snow into the grey dawn. For a moment he has no idea where or what he is. The dog who slept on
+the Judge's hearth has been swallowed by a world that buries its inhabitants each night and demands
+they claw their way back to the surface each morning."""@en .
 
 <the-call-of-the-wild/stages/the-dominant-primordial-beast> a monomyth:StageRealization ;
     rdfs:label "The dominant primordial beast"@en ;
@@ -188,13 +187,13 @@ night and demands they claw their way back to the surface each morning."""@en .
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizationDescription """Buck learns to steal food without getting caught, to sleep
-warm in the deepest cold, to break trail through crusted snow. He grows cunning and efficient,
-every wasted movement shed. The rivalry with Spitz sharpens across weeks of escalating
-confrontation until they fight in the open under the aurora, and Buck kills him, claiming the lead
-position. He serves under François and Perrault, then under a Scotch half-breed on the mail run,
-then under Hal, Charles, and Mercedes, whose ignorance starves the team and drives them into the
-spring ice. Each master strips another layer of the domestic animal away, exposing something older
-and harder underneath."""@en .
+warm in the deepest cold, to break trail through crusted snow. He grows cunning and efficient, every
+wasted movement shed. The rivalry with Spitz sharpens across weeks of escalating confrontation until
+they fight in the open under the aurora, and Buck kills him, claiming the lead position. He serves
+under François and Perrault, then under a Scotch half-breed on the mail run, then under Hal,
+Charles, and Mercedes, whose ignorance starves the team and drives them into the spring ice. Each
+master strips another layer of the domestic animal away, exposing something older and harder
+underneath."""@en .
 
 <the-call-of-the-wild/stages/love-genuine-and-true> a monomyth:StageRealization ;
     rdfs:label "Love genuine and true"@en ;
@@ -207,12 +206,11 @@ and harder underneath."""@en .
     monomyth:realizationDescription """Hal beats Buck to force him onto the rotten spring ice. Buck
 refuses to move. John Thornton steps in, cuts Buck's traces, and tells Hal to leave or be hit
 himself. Hal's party drives on and the ice gives way beneath them. Thornton nurses Buck back to
-health, and what grows between them is described as love, fervid and burning, that runs deeper
-than anything Buck has known: he will lie for hours at Thornton's feet gazing up at his face, and
+health, and what grows between them is described as love, fervid and burning, that runs deeper than
+anything Buck has known: he will lie for hours at Thornton's feet gazing up at his face, and
 Thornton will seize Buck's head, rest his own against it, and shake him back and forth murmuring
-soft curses as endearments. Buck saves Thornton from drowning in a river rapid. He wins Thornton
-a thousand-dollar wager by breaking a half-ton sled free from the ice by sheer pulling
-force."""@en ;
+soft curses as endearments. Buck saves Thornton from drowning in a river rapid. He wins Thornton a
+thousand-dollar wager by breaking a half-ton sled free from the ice by sheer pulling force."""@en ;
     monomyth:hasSemioticDivergence <the-call-of-the-wild/divergences/semiotic/interspecies-love-as-totality> .
 
 <the-call-of-the-wild/stages/the-call-sounding-in-the-forest> a monomyth:StageRealization ;
@@ -229,9 +227,7 @@ to Thornton's camp, because the love he bears this one man outweighs the instinc
 outward. The pattern repeats across weeks and months: departure, deepening immersion in the wild,
 and then the gravitational pull of devotion dragging him back to the campfire. What holds the hero
 in place is not comfort or ignorance but the purest bond he possesses."""@en ;
-    monomyth:fitNote """The temptation that arrests the journey is Thornton's love itself, the
-one force strong enough to compete with the hero's deepening wildness. The seduction
-operates through fidelity, not desire."""@en .
+    monomyth:hasSemioticDivergence <the-call-of-the-wild/divergences/semiotic/fidelity-as-seduction> .
 
 <the-call-of-the-wild/stages/the-hairy-man-crouching-by-the-fire> a monomyth:StageRealization ;
     rdfs:label "The hairy man crouching by the fire"@en ;
@@ -240,16 +236,16 @@ operates through fidelity, not desire."""@en .
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:realizationDescription """As Buck sleeps by the campfire, visions surface with
-increasing vividness. He sees a short-legged, hairy man crouching beside a different fire in
-a different age, fearful of the darkness beyond the flame's reach. He dreams of running with
-this figure through primeval forests, of hunting in vast open spaces, of the terror and the
-exhilaration of a world before domestication. The visions are not willed; they arrive as ancestral
-memory asserting itself through the body's deep time, and they grow more insistent and more
-detailed as the weeks pass until the boundary between Buck's waking life and the evolutionary
-past thins almost to transparency."""@en ;
-    monomyth:fitNote """There is no confrontation with a discrete paternal figure. The
-"father" is the species' evolutionary past, encountered not through dramatic crisis but
-through cumulative visionary deepening."""@en ;
+increasing vividness. He sees a short-legged, hairy man crouching beside a different fire in a
+different age, fearful of the darkness beyond the flame's reach. He dreams of running with this
+figure through primeval forests, of hunting in vast open spaces, of the terror and the exhilaration
+of a world before domestication. The visions are not willed; they arrive as ancestral memory
+asserting itself through the body's deep time, and they grow more insistent and more detailed as
+the weeks pass until the boundary between Buck's waking life and the evolutionary past thins almost
+to transparency."""@en ;
+    monomyth:fitNote """There is no confrontation with a discrete paternal figure. The "father" is
+the species' evolutionary past, encountered not through dramatic crisis but through cumulative
+visionary deepening."""@en ;
     monomyth:hasSemioticDivergence <the-call-of-the-wild/divergences/semiotic/evolutionary-memory-as-father> .
 
 <the-call-of-the-wild/stages/patient-as-the-wild-itself> a monomyth:StageRealization ;
@@ -259,13 +255,13 @@ through cumulative visionary deepening."""@en ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 10 ;
     monomyth:realizationDescription """Buck selects a great bull moose, wounded and separated from
-the herd, and hunts it alone across four days and four nights. He does not rush. He cuts the moose
-off from water, harasses it when it rests, drives away the younger bulls that try to rejoin it,
-and waits with a patience that is no longer a dog's patience but something far older. When the
-moose finally collapses, Buck kills it and feeds, then rests beside the carcass for a day and a
-night, utterly at home in the silence. Every faculty he possesses, the strength, the cunning,
-the endurance, the ancestral instinct, converges in this single sustained act, and what emerges
-from it is not the animal who entered the hunt but something more complete."""@en .
+the herd, and hunts it alone across four days and four nights. He cuts the moose off from water,
+harasses it when it rests, drives away the younger bulls that try to rejoin it, and waits with a
+patience that is no longer a dog's patience but something far older. When the moose finally
+collapses, Buck kills it and feeds, then rests beside the carcass for a day and a night, utterly at
+home in the silence. Every faculty he possesses, the strength, the cunning, the endurance, the
+ancestral instinct, converges in this single sustained act, and what emerges from it is not the
+animal who entered the hunt but something more complete."""@en .
 
 <the-call-of-the-wild/stages/the-blood-longing> a monomyth:StageRealization ;
     rdfs:label "The blood-longing"@en ;
@@ -275,9 +271,9 @@ from it is not the animal who entered the hunt but something more complete."""@e
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 11 ;
     monomyth:realizationDescription """Buck returns from the moose hunt to find Thornton's camp
-destroyed. The Yeehats have killed Thornton, Hans, and Pete, and their dogs lie dead or dying by
-the wrecked campsite. Buck follows the scent trail to the Yeehat camp and attacks, tearing through
-the group with a fury that scatters those it does not kill. He returns to the ruined camp and stays
+destroyed. The Yeehats have killed Thornton, Hans, and Pete, and their dogs lie dead or dying by the
+wrecked campsite. Buck follows the scent trail to the Yeehat camp and attacks, tearing through the
+group with a fury that scatters those it does not kill. He returns to the ruined camp and stays
 beside Thornton's body through the night. What has been obtained is not an object, a power, or a
 piece of wisdom carried back from the special world, but total severance: the single bond that held
 the hero to the human world is gone, and with it every reason to remain anything other than what
@@ -317,12 +313,12 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:realizationDescription """Each year when the days grow long, Buck visits the valley
-where Thornton died. He stands motionless beside the stream for a time, muzzle raised, then
-howls once, long and mournful, before returning to the pack. The Yeehats speak of a Ghost Dog
-that haunts the valley and kills any hunter who camps there alone. The threshold is crossed, but
-in the wrong direction: the hero has not returned from the special world into the ordinary one
-but has passed permanently beyond the boundary that separates them, re-entering the ordinary world
-only as a phantom, a rumour, a figure of dread."""@en ;
+where Thornton died. He stands motionless beside the stream for a time, muzzle raised, then howls
+once, long and mournful, before returning to the pack. The Yeehats speak of a Ghost Dog that haunts
+the valley and kills any hunter who camps there alone. The threshold is crossed, but in the wrong
+direction: the hero has not returned from the special world into the ordinary one but has passed
+permanently beyond the boundary that separates them, re-entering the ordinary world only as a
+phantom, a rumour, a figure of dread."""@en ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/inverted-return> .
 
 <the-call-of-the-wild/stages/fear-and-mystery> a monomyth:StageRealization ;
@@ -332,14 +328,12 @@ only as a phantom, a rumour, a figure of dread."""@en ;
     monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:realizationDescription """The Yeehats alter their hunting routes to avoid the haunted
-valley and weave the Ghost Dog into their legends: a spectral beast of enormous size that runs
-at the head of the wolf pack. Buck exists simultaneously as the sovereign of the wild pack and as
-a figure in human oral tradition, inhabiting both worlds not through choice or mastery but through
-the ineradicable trace his passage has left on each. He does not mediate between the two realms;
-he is simply, irreducibly present in both, one as flesh and one as story."""@en ;
-    monomyth:fitNote """The equilibrium Campbell describes requires the hero to hold both worlds
-consciously. Buck holds them biologically in one, mythologically in the other, but
-there is no deliberate integration."""@en .
+valley and weave the Ghost Dog into their legends: a spectral beast of enormous size that runs at
+the head of the wolf pack. Buck exists simultaneously as the sovereign of the wild pack and as a
+figure in human oral tradition, inhabiting both worlds not through choice or mastery but through the
+ineradicable trace his passage has left on each. He does not mediate between the two realms; he is
+simply, irreducibly present in both, one as flesh and one as story."""@en ;
+    monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/mastery-without-consciousness> .
 
 <the-call-of-the-wild/stages/running-at-the-head-of-the-pack> a monomyth:StageRealization ;
     rdfs:label "Running at the head of the pack"@en ;
@@ -348,12 +342,11 @@ there is no deliberate integration."""@en .
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:realizationDescription """Buck runs at the head of the wolf pack through the pale
-moonlight, splashing through broad flats of shallow water where the timber wolves drink. He sings
-a song of the younger world, a song of the pack. He is fully alive, fully present, released from
-the domesticated past and unburdened by any obligation to return to it. The freedom he possesses
-is not the freedom of a hero who has reconciled two worlds but the freedom of one who has chosen
-entirely, surrendered nothing he still wanted, and arrived at the place the entire journey was
-leading him."""@en .
+moonlight, splashing through broad flats of shallow water where the timber wolves drink. He sings a
+song of the younger world, a song of the pack. He is fully alive, fully present, released from the
+domesticated past and unburdened by any obligation to return to it. The freedom he possesses is not
+the freedom of a hero who has reconciled two worlds but the freedom of one who has chosen entirely,
+surrendered nothing he still wanted, and arrived at the place the entire journey was leading him."""@en .
 
 # --- Narrative Divergences ------------
 
@@ -390,15 +383,15 @@ once tethered him to the world he is leaving behind."""@en .
     rdfs:label "Permanent refusal divergence"@en ;
     monomyth:divergenceOf <the-call-of-the-wild/stages/the-last-tie-was-broken> ;
     monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
-    monomyth:divergenceRationale """Buck achieves his destiny by refusing to return, and the
-refusal is never overcome because it is not an obstacle within the journey but the journey's
-conclusion. The novel's one-way trajectory, from civilization toward wildness without reversal,
-transforms what is conventionally a transient hesitation, soon dissolved by dramatic necessity
-or external intervention, into a permanent condition. The distinction between refusing the return
-and completing the journey collapses entirely. A circular architecture in which the hero must
-bring the boon home is structurally incompatible with a story whose central argument is that the
-hero's true home was always the place civilization taught him to forget, and that arriving there
-is not a detour from the path but the path's destination."""@en .
+    monomyth:divergenceRationale """Buck achieves his destiny by refusing to return, and the refusal
+is never overcome because it is not an obstacle within the journey but the journey's conclusion. The
+novel's one-way trajectory, from civilization toward wildness without reversal, transforms what is
+conventionally a transient hesitation, soon dissolved by dramatic necessity or external
+intervention, into a permanent condition. The distinction between refusing the return and completing
+the journey collapses entirely. A circular architecture in which the hero must bring the boon home
+is structurally incompatible with a story whose central argument is that the hero's true home was
+always the place civilization taught him to forget, and that arriving there is not a detour from the
+path but the path's destination."""@en .
 
 <the-call-of-the-wild/divergences/narrative/absent-flight> a monomyth:NarrativeDivergence ;
     rdfs:label "Absent flight divergence"@en ;
@@ -408,36 +401,46 @@ is not a detour from the path but the path's destination."""@en .
 transformation is not an artefact that can be stolen or pursued but an ontological change that the
 special world has produced in him, irreversible and non-transferable. No guardians give chase
 because the wild does not lose what it claims; it gains a member. A perilous escape carrying a
-hard-won prize presupposes a hero whose trajectory bends homeward, and Buck's trajectory bends
-only deeper into the territory he is becoming part of. The directionality that the stage requires
-is simply unavailable to this narrative."""@en .
+hard-won prize presupposes a hero whose trajectory bends homeward, and Buck's trajectory bends only
+deeper into the territory he is becoming part of. The directionality that the stage requires is
+simply unavailable to this narrative."""@en .
 
 <the-call-of-the-wild/divergences/narrative/absent-rescue> a monomyth:NarrativeDivergence ;
     rdfs:label "Absent rescue divergence"@en ;
     monomyth:divergenceOf <the-call-of-the-wild/stages/no-voice-calls-him-back> ;
     monomyth:divergesFrom monomyth:RescueFromWithout ;
     monomyth:divergenceRationale """The sole human who might have reached across the threshold to
-retrieve Buck is dead, and no other figure from the domestic world has either the knowledge or
-the motivation to attempt it. The absence is not an omission but a thematic necessity rooted in
-London's naturalist framework: the forces acting on an organism are impersonal and irreversible,
-nature does not yield its converts back to civilization, and sentimental retrieval is simply not
-available as a narrative possibility. A community invested in the hero's return would require a
-world that misses him, and by this point the only world that registers Buck's presence is the one
-he has joined, not the one he has left."""@en .
+retrieve Buck is dead, and no other figure from the domestic world has either the knowledge or the
+motivation to attempt it. The absence is not an omission but a thematic necessity rooted in London's
+naturalist framework: the forces acting on an organism are impersonal and irreversible, nature does
+not yield its converts back to civilization, and sentimental retrieval is simply not available as a
+narrative possibility. A community invested in the hero's return would require a world that misses
+him, and by this point the only world that registers Buck's presence is the one he has joined, not
+the one he has left."""@en .
 
 <the-call-of-the-wild/divergences/narrative/inverted-return> a monomyth:NarrativeDivergence ;
     rdfs:label "Inverted return divergence"@en ;
     monomyth:divergenceOf <the-call-of-the-wild/stages/the-ghost-dog> ;
     monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
     monomyth:divergenceRationale """Buck crosses the threshold permanently in the wrong direction.
-His annual return to the valley where Thornton died is not a re-entry into the human world but
-a ritual visitation from outside it, witnessed only as absence, the empty valley, and aftermath,
-dead hunters who ventured too close. Rather than dissolving the boundary between worlds through
-hard-won mastery, the crossing reinforces it: the threshold now separates a ghost from the living
-rather than a traveller from home. The inversion is the novel's most direct structural claim
-against the circular journey. Buck's nature runs counter to the trajectory of human civilisation,
-and authentic freedom, London insists, lies in completing the crossing rather than
-reversing it."""@en .
+His annual return to the valley where Thornton died is not a re-entry into the human world but a
+ritual visitation from outside it, witnessed only as absence, the empty valley, and aftermath, dead
+hunters who ventured too close. Rather than dissolving the boundary between worlds through hard-won
+mastery, the crossing reinforces it: the threshold now separates a ghost from the living rather than
+a traveller from home. The inversion is the novel's most direct structural claim against the
+circular journey. Buck's nature runs counter to the trajectory of human civilisation, and authentic
+freedom, London insists, lies in completing the crossing rather than reversing it."""@en .
+
+<the-call-of-the-wild/divergences/narrative/mastery-without-consciousness> a monomyth:NarrativeDivergence ;
+    rdfs:label "Mastery without consciousness divergence"@en ;
+    monomyth:divergenceOf <the-call-of-the-wild/stages/fear-and-mystery> ;
+    monomyth:divergesFrom monomyth:MasterOfTheTwoWorlds ;
+    monomyth:divergenceRationale """Buck inhabits both worlds simultaneously but without awareness
+or intention: he is sovereign of the wolf pack in one and a figure of dread woven into Yeehat oral
+tradition in the other. The two presences are entirely disconnected. Buck does not mediate between
+realms or move freely across the boundary; the human world constructs a myth around his absence
+while he lives indifferent to it. What looks like dual mastery is an accident of narrative
+perspective rather than something the hero achieves."""@en .
 
 # --- Semiotic Divergences -------------
 
@@ -448,11 +451,11 @@ reversing it."""@en .
     monomyth:divergenceRationale """Buck's ordinary world is shattered not by a sign or a messenger
 but by a rope, a crate, and a train. No agent of destiny speaks to him; the universe rearranges
 itself around him through economic violence motivated by gold-rush demand for strong dogs. The
-semiotic register shifts from the numinous to the mercantile, from a summons freighted with
-vocation to a commercial transaction in which the hero is the commodity. The structural function
-is fully preserved, the familiar world is irrevocably disrupted, but the vocabulary through which
-disruption is encoded belongs entirely to the language of property and exchange rather than
-the language of fate."""@en .
+semiotic register shifts from the numinous to the mercantile, from a summons freighted with vocation
+to a commercial transaction in which the hero is the commodity. The structural function is fully
+preserved, the familiar world is irrevocably disrupted, but the vocabulary through which disruption
+is encoded belongs entirely to the language of property and exchange rather than the language of
+fate."""@en .
 
 <the-call-of-the-wild/divergences/semiotic/violence-as-instruction> a monomyth:SemioticDivergence ;
     rdfs:label "Violence as instruction divergence"@en ;
@@ -481,6 +484,16 @@ register, since rough physical affection and murmured curses as endearments repl
 the sacred. Thornton's love is nonetheless the most complete acceptance Buck has ever known,
 preserving the structural function with remarkable precision while conducting it entirely through
 London's naturalist vocabulary of embodied loyalty and physical interdependence."""@en .
+
+<the-call-of-the-wild/divergences/semiotic/fidelity-as-seduction> a monomyth:SemioticDivergence ;
+    rdfs:label "Fidelity as seduction divergence"@en ;
+    monomyth:divergenceOf <the-call-of-the-wild/stages/the-call-sounding-in-the-forest> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """The force holding Buck at the campfire is not desire or worldly
+comfort but the single most admirable quality he possesses: his love for Thornton. The semiotic
+register encodes temptation as interspecies loyalty rather than feminine allure or sensual
+entanglement, so that resisting the call and betraying the hero's deepest bond become, for the
+duration of Thornton's life, the same act."""@en .
 
 <the-call-of-the-wild/divergences/semiotic/evolutionary-memory-as-father> a monomyth:SemioticDivergence ;
     rdfs:label "Evolutionary memory as father divergence"@en ;
