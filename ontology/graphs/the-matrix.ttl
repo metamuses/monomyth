@@ -28,7 +28,7 @@
     rdfs:comment """A 1999 science fiction film in which a computer hacker discovers that reality as
 he knows it is a simulated world created by machines to subjugate humanity."""@en .
 
-# --- Monomyth Expression --------------
+# --- Monomyth Expressions --------------
 
 <the-matrix/monomyths/neo-journey> a monomyth:MonomythExpression ;
     rdfs:label "Neo's Hero's Journey in The Matrix"@en ;
