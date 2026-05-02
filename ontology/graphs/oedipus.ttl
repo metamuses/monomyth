@@ -65,13 +65,13 @@
         <oedipus-myth/characters/ismene>,
         <oedipus-myth/characters/theseus> ;
     monomyth:hasStageRealization <oedipus-myth/stages/the-oracle-prophecy>,
-        <oedipus-myth/stages/fleeing-corinth>,
-        <oedipus-myth/stages/meeting-the-blind-seer>,
+        <oedipus-myth/stages/apollos-guidance>
+        <oedipus-myth/stages/flee-from-corinth>,
         <oedipus-myth/stages/the-triple-crossroads>,
         <oedipus-myth/stages/riddle-of-the-sphinx>,
-        <oedipus-myth/stages/the-plague-of-thebes>,
-        <oedipus-myth/stages/marriage-to-the-queen>,
-        <oedipus-myth/stages/jocastas-plea>,
+        <oedipus-myth/stages/search-for-the-regicide>,
+        <oedipus-myth/stages/reveal-it-all-to-me>,
+        <oedipus-myth/stages/dont-concearn-yourself-with-prophecies>,
         <oedipus-myth/stages/the-herdsmans-revelation>,
         <oedipus-myth/stages/the-self-blinding>,
         <oedipus-myth/stages/lifting-the-plague>,
@@ -181,33 +181,41 @@
 <oedipus-myth/stages/the-oracle-prophecy> a monomyth:StageRealization ;
     rdfs:label "The Oracle's Prophecy"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/oracle-of-delphi> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizationDescription """Oedipus hears from the Oracle at Delphi that he is 
 destined to kill his father and wed his mother."""@en .
 
-<oedipus-myth/stages/fleeing-corinth> a monomyth:StageRealization ;
-    rdfs:label "Fleeing Corinth"@en ;
-    monomyth:realizesStage monomyth:RefusalOfTheCall ;
-    monomyth:hasFitQuality monomyth:InvertedFit ;
+<oedipus-myth/stages/apollos-guidance> a monomyth:StageRealization ;
+    rdfs:label "Apollo's Guidance"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/oracle-of-delphi> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """Through the Delphic Oracle, Apollo grants supernatural aid by revealing 
+    a destination of ultimate peace, turning a tragic doom into a journey toward divine passing."""@en ;
+    monomyth:fitNote """The god doesnt proviude the hero with wisdom or talismans but with his tragic faith; 
+    the only true aid is the assurance that he will find rest"""@en ;
+    monomyth:hasSequentialDivergence <oedipus-myth/divergences/sequential/aid-before-flee> .
+
+<oedipus-myth/stages/flee-from-corinth> a monomyth:StageRealization ;
+    rdfs:label "Flee from Corinth"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 3 ;
     monomyth:realizationDescription """Oedipus leaves Corinth to avoid the prophecy. In 
 trying to 'refuse' the fate, he actually sets out on the path to fulfill it."""@en ;
-    monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/proactive-refusal> .
-
-<oedipus-myth/stages/meeting-the-blind-seer> a monomyth:StageRealization ;
-    rdfs:label "Meeting the Blind Seer"@en ;
-    monomyth:realizesStage monomyth:SupernaturalAid ;
-    monomyth:involvesCharacter <oedipus-myth/characters/teiresias> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 3 ;
-    monomyth:realizationDescription """Teiresias provides the 'truth' as a form of aid, 
-though Oedipus initially rejects the wisdom because it is too painful to bear."""@en .
+    monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/proactive-departure> . 
 
 <oedipus-myth/stages/the-triple-crossroads> a monomyth:StageRealization ;
     rdfs:label "The Triple Crossroads"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:involvesCharacter <oedipus-myth/characters/laius> ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/laius> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
     monomyth:realizationDescription """Oedipus kills a traveler (Laius) at a crossroads. 
@@ -216,40 +224,59 @@ This violent act is his crossing into the tragic world of his destiny."""@en .
 <oedipus-myth/stages/riddle-of-the-sphinx> a monomyth:StageRealization ;
     rdfs:label "Riddle of the Sphinx"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
-    monomyth:involvesCharacter <oedipus-myth/characters/the-sphinx> ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/the-sphinx> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizationDescription """Oedipus confronts the Sphinx. By solving the 
-riddle, he 'dies' as a wandering traveler and is 'reborn' as the King of Thebes."""@en .
+riddle, he 'dies' as a wandering traveler and is 'reborn' as the King of Thebes. 
+This brings him to the second step of the prophecy, marrying his mother."""@en .
 
-<oedipus-myth/stages/marriage-to-the-queen> a monomyth:StageRealization ;
-    rdfs:label "Marriage to the Queen"@en ;
+<oedipus-myth/stages/search-for-the-regicide> a monomyth:StageRealization ;
+    rdfs:label "Search for the Regicide"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription """Oedipus embarks on a relentless quest to find the murderer of the former king, 
+    a path that serves as a grueling test of his resolve and integrity + cenno a plague + trials sono step che lo avvicinano alla verità"""@en .
+
+<oedipus-myth/stages/reveal-it-all-to-me> a monomyth:StageRealization ;  #titolo di momento in generale come altri step?
+    rdfs:label "Reveal it all to me!"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
-    monomyth:involvesCharacter <oedipus-myth/characters/jocasta> ;
-    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/teiresias> ;
+    monomyth:hasFitQuality monomyth:WeakFit ;   #o moderate?
     monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription """The 'Goddess' (Queen) is his own mother. The 
-union brings power and status but is the ultimate source of his corruption."""@en ;
-    monomyth:hasSemioticDivergence <oedipus-myth/divergences/semiotic/incestuous-goddess> .
+    monomyth:realizationDescription """Oedipus calls Teiresias to the palace to have answers about the regecide, as T. knows everything Apollo tells him. 
+    T. though doesn't want to tell Edipo anything for his own good but by the end he reveals that he is the murderer, 
+    though O. thinks he's a traitor ingaggiato by Creon. """@en ;
+    monomyth:fitNote """T. shows his love towards O. in his attempt to protect him + what more??"""@en .
+    # narrative div? no meeting with goddess ma sort of protection?
 
-<oedipus-myth/stages/jocastas-plea> a monomyth:StageRealization ;
-    rdfs:label "Jocasta's Plea"@en ;
+<oedipus-myth/stages/dont-concearn-yourself-with-prophecies> a monomyth:StageRealization ; #nome??
+    rdfs:label "Don't concearn yourself with prophecies!"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
-    monomyth:involvesCharacter <oedipus-myth/characters/jocasta> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/jocasta> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:realizationDescription """Jocasta begs Oedipus to stop seeking the truth. 
-She represents the temptation to remain in comfortable, powerful ignorance."""@en .
+She represents the temptation to remain in comfortable, powerful ignorance. She says prophecies dont count 
+and gives the example of the oracle given to Laius which she says was not fulfilled, unknowingly."""@en .
 
-<oedipus-myth/stages/the-herdsmans-revelation> a monomyth:StageRealization ;
+<oedipus-myth/stages/he-is-the-regicide> a monomyth:StageRealization ;
     rdfs:label "The Herdsman's Revelation"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
-    monomyth:involvesCharacter <oedipus-myth/characters/laius> ;
-    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/jocasta> ;
+    monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:stageRealizationOrder 9 ;
-    monomyth:realizationDescription """Oedipus realizes he has already 'atoned' with 
-the father by killing him. The reconciliation is replaced by total psychic collapse."""@en .
-
+    monomyth:realizationDescription """Oedipus realizes he has killed the former king from the words of Jocasta. 
+    But the atonement is not purely with the father, as he doesnt know yet that Laius is his father, but rather with the killed man ??"""@en ;
+    monomyth:fitNote """no father ma altro"""@en .
+    # narrative div invece che fitnote? non proprio atonement with father ma prima realizzazione/ricongiunzione dei fatti
+    #ARRIVATA QUI!
 <oedipus-myth/stages/the-self-blinding> a monomyth:StageRealization ;
     rdfs:label "The Self-Blinding"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
@@ -269,13 +296,18 @@ through the wilderness to his final resting place."""@en .
 
 # --- Narrative Divergences ------------
 
-<oedipus-myth/divergences/narrative/proactive-refusal> a monomyth:NarrativeDivergence ;
-    rdfs:label "Proactive Refusal divergence"@en ;
+<oedipus-myth/divergences/narrative/proactive-departure> a monomyth:NarrativeDivergence ;
+    rdfs:label "Proactive Departure divergence"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/fleeing-corinth> ;
     monomyth:divergesFrom monomyth:RefusalOfTheCall ;
     monomyth:divergenceRationale """In the Oedipus myth, refusal is not an act of 
 cowardice but a proactive attempt to outrun fate. This creates the 'Tragic Irony' 
 where the act of refusal is the very engine of the journey's fulfillment."""@en .
+
+
+# --- Sequential Divergences -------------
+
+<oedipus-myth/divergences/sequential/aid-before-flee> 
 
 # --- Semiotic Divergences -------------
 
