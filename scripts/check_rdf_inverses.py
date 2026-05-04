@@ -1,5 +1,25 @@
 #!/usr/bin/env python3
 
+"""
+Check Turtle graph files for inverse property consistency.
+
+The script loads ontology/ontology.ttl to discover owl:inverseOf declarations
+and rdfs:subPropertyOf relationships, then loads every .ttl file under
+ontology/graphs/ and validates Turtle syntax.
+
+It checks that every use of a property with an inverse is mirrored by the
+corresponding inverse triple. Subproperties are handled automatically, so a
+specific property such as monomyth:hasSequentialDivergence is accepted when
+its parent property is declared as the inverse.
+
+It reports inverse property inconsistencies, for example when resource A points
+to resource B through one property, but resource B points back to a different
+resource through the inverse property.
+
+The script exits with status 1 when syntax or inverse consistency issues are
+found, making it suitable for local checks and CI pipelines.
+"""
+
 from pathlib import Path
 from rdflib import Graph, Namespace
 from rdflib.namespace import OWL, RDFS
