@@ -242,8 +242,11 @@
         <oedipus-myth/characters/laius> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
-    monomyth:realizationDescription """Oedipus kills a traveler (Laius) at a crossroads. 
-This violent act is his crossing into the tragic world of his destiny."""@en .
+    monomyth:realizationDescription """At a place where three roads meet in Phocis, Oedipus encounters a haughty traveler 
+    traveling in a carriage. When the traveler and his retinue arrogantly attempt to force him off the road, Oedipus strikes 
+    out in a sudden, blinding rage. In the ensuing clash, he kills the old man who is unknowingly his biological father, King Laius, 
+    and all but one of his servants. This violent transgression serves as his definitive crossing into the tragic world of his 
+    destiny, as the first part of the prophecy is fulfilled"""@en .
 
 <oedipus-myth/stages/riddle-of-the-sphinx> a monomyth:StageRealization ;
     rdfs:label "Riddle of the Sphinx"@en ;
@@ -252,9 +255,10 @@ This violent act is his crossing into the tragic world of his destiny."""@en .
         <oedipus-myth/characters/the-sphinx> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
-    monomyth:realizationDescription """Oedipus confronts the Sphinx. By solving the 
-riddle, he 'dies' as a wandering traveler and is 'reborn' as the King of Thebes. 
-This brings him to the second step of the prophecy, marrying his mother."""@en .
+    monomyth:realizationDescription """Upon reaching the gates of Thebes, Oedipus confronts the Sphinx, a monstrous creature terrorizing 
+    the city with a deadly riddle. By answering her puzzle about the nature of man, he defeats the monster and liberates the city. 
+    In this transformative moment, he effectively 'dies' to his previous identity as a wandering traveler and is 'reborn' as the King of 
+    Thebes, inheriting both the throne and the hand of the widowed Queen Jocasta, hence fulfilling the second part of the prophecy."""@en .
 
 <oedipus-myth/stages/search-for-the-regicide> a monomyth:StageRealization ;
     rdfs:label "Search for the Regicide"@en ;
@@ -262,32 +266,40 @@ This brings him to the second step of the prophecy, marrying his mother."""@en .
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
-    monomyth:realizationDescription """Oedipus embarks on a relentless quest to find the murderer of the former king, 
-    a path that serves as a grueling test of his resolve and integrity + cenno a plague + trials sono step che lo avvicinano alla verità"""@en .
+    monomyth:realizationDescription """Years later, a devastating plague descends upon Thebes, sent by the gods due to the unpunished 
+    murder of the former king. Oedipus embarks on a relentless quest to identify and cast out Laius's killer to save his subjects. 
+    This investigation becomes a grueling test of his personal resolve and integrity, where every witness questioned and every clue 
+    uncovered brings him closer to the destructive truth of his own identity."""@en .
 
-<oedipus-myth/stages/reveal-it-all-to-me> a monomyth:StageRealization ;  #titolo di momento in generale come altri step?
+<oedipus-myth/stages/reveal-it-all-to-me> a monomyth:StageRealization ;  
     rdfs:label "Reveal it all to me!"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/teiresias> ;
-    monomyth:hasFitQuality monomyth:WeakFit ;   #o moderate?
+    monomyth:hasFitQuality monomyth:WeakFit ;  
     monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription """Oedipus calls Teiresias to the palace to have answers about the regecide, as T. knows everything Apollo tells him. 
-    T. though doesn't want to tell Edipo anything for his own good but by the end he reveals that he is the murderer, 
-    though O. thinks he's a traitor ingaggiato by Creon. """@en ;
-    monomyth:fitNote """T. shows his love towards O. in his attempt to protect him + what more??"""@en .
-    # narrative div? SII, no meeting with goddess ma sort of protection? anche semiotic? no goddess ma profeta, FORSE NO
-
-<oedipus-myth/stages/dont-concearn-yourself-with-prophecies> a monomyth:StageRealization ; #nome??
+    monomyth:realizationDescription """Seeking prophetic insight, Oedipus calls the blind seer Teiresias to the palace. 
+    Teiresias, who possesses Apollo's divine sight, is reluctant to speak out of a deep, tragic pity for the king. When his 
+    silence provokes Oedipus into furious accusations of treason and conspiracy with Creon, Teiresias finally snaps and reveals 
+    the devastating truth: Oedipus himself is the polluter and murderer of Laius."""@en ;
+    monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/protection-not-love> .
+    
+<oedipus-myth/stages/dont-concearn-yourself-with-prophecies> a monomyth:StageRealization ; 
     rdfs:label "Don't concearn yourself with prophecies!"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/jocasta> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """Jocasta begs Oedipus to stop seeking the truth. 
-She represents the temptation to remain in comfortable, powerful ignorance. She says prophecies dont count 
-and gives the example of the oracle given to Laius which she says was not fulfilled, unknowingly."""@en .
+    monomyth:realizationDescription """As Oedipus's dread intensifies, Jocasta intervenes, begging him to cease his investigation. 
+    In good faith, she tempts him to remain in comfortable ignorance to save their household. She attempts to discredit the divine 
+    by recalling a prophecy given to her late husband Laius - that he would be killed by his own son - which she wrongly believes went 
+    unfulfilled when they abandoned their infant on Mount Cithaeron. Her desperate plea represents the ultimate temptation for Oedipus 
+    to abandon his pursuit of truth in favor of his crown and safety."""@en ;
+    monomyth:fitNote """This temptation is offered in completely good faith, as Jocasta has not yet realized the true nature of Oedipus's 
+    identity. She is not attempting to conceal a horrifying truth she already knows; rather, she acts out of pure devotion to the hero's 
+    well-being. Seeing Oedipus deeply distressed by the unfolding investigation, her only desire is to comfort him and ease his torment;  
+    hers is therefore an innocent temptation to choose peace of mind."""@en .
 
 <oedipus-myth/stages/he-is-the-regicide> a monomyth:StageRealization ;
     rdfs:label "The Herdsman's Revelation"@en ;
@@ -435,6 +447,11 @@ with his death, transforming him into a chthonic protector of the land. + divent
     monomyth:divergenceRationale """In the Oedipus myth, refusal is not an act of 
 cowardice but a proactive attempt to outrun fate. This creates the 'Tragic Irony' 
 where the act of refusal is the very engine of the journey's fulfillment."""@en .
+
+<oedipus-myth/divergences/narrative/protection-not-love>
+The meeting acts as a distorted encounter with divine truth, where the seer tries to protect the hero from a fatal enlightenment.
+T. shows his love towards O. in his attempt to protect him + what more??
+love di T. è in protezione e rivela a edipo the deepest ground of his existence, è il primo a metterlo in faccia alla realtà
 
 <oedipus-myth/divergences/narrative/tragic-enlightenment> a monomyth:NarrativeDivergence ;
     rdfs:label "Tragic enlightenment divergence"@en ;
