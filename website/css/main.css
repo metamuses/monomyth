@@ -658,6 +658,8 @@ body::before {
 
 .fit-bar .segment.filled { background: var(--gold-dim); }
 .fit-bar .segment.filled.strong { background: var(--gold); }
+.fit-bar .segment.filled.weak { background: #c7af77;; }
+.fit-bar .segment.filled.inverted { background: #962d21; }
 
 .kg-card .fit-label {
   font-size: 0.72rem;
