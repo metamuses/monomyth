@@ -852,6 +852,20 @@ body::before {
 
 .footer-links a:hover { color: var(--gold); }
 
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+}
+
+.github-link svg {
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+  transform: translateY(8px);
+}
+
 .footer-copy {
   font-size: 0.75rem;
   color: var(--text-muted);
