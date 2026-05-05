@@ -13,7 +13,7 @@
         schema:MusicAlbum ;
     rdfs:label "SABLE, fABLE"@en ;
     dcterms:title "SABLE, fABLE"@en ;
-    dcterms:created "2025"xsd:gYear ;
+    dcterms:created "2025"^^xsd:gYear ;
     dcterms:creator "Bon Iver" ;
     schema:genre "Indie Folk"@en,
         "Art Pop"@en ;
