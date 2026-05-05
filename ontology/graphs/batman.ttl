@@ -72,8 +72,8 @@ narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey.
         <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasStageRealization <batman-year-one/stages/arrival-in-gotham>,
         <batman-year-one/stages/waiting-to-report>,
-        <batman-year-one/stages/the-absent-aid>
-        <batman-year-one/stages/the-beating>
+        <batman-year-one/stages/the-absent-aid>, 
+        <batman-year-one/stages/the-beating>,
         <batman-year-one/stages/beating-flass>,
         <batman-year-one/stages/the-honest-cop-trials>,
         <batman-year-one/stages/the-intellectual-equal>,
@@ -104,7 +104,7 @@ narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey.
     monomyth:heroOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
         <batman-year-one/monomyths/jim-gordon-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally , monomuyth:Hero ;
+    monomyth:embodiesArchetype monomyth:Ally , monomyth:Hero ;
     rdfs:comment "A corrupt-free cop who serves as a parallel hero and eventual ally."@en ;
     owl:sameAs wd:Q116113 .
 
