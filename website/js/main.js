@@ -34,6 +34,54 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 reveals.forEach(el => revealObserver.observe(el));
 
+// ── KG card modals (static HTML) ──
+const kgCards = document.querySelectorAll('.kg-card[data-modal-target]');
+const kgModals = document.querySelectorAll('.kg-modal');
+
+if (kgCards.length && kgModals.length) {
+  function openModal(modal) {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal(modal) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    if (!document.querySelector('.kg-modal.open')) {
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  kgCards.forEach(card => {
+    const targetId = card.getAttribute('data-modal-target');
+    const modal = targetId ? document.getElementById(targetId) : null;
+    if (!modal) return;
+
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.addEventListener('click', () => openModal(modal));
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openModal(modal);
+      }
+    });
+  });
+
+  kgModals.forEach(modal => {
+    modal.querySelectorAll('[data-close-modal]').forEach(closeTarget => {
+      closeTarget.addEventListener('click', () => closeModal(modal));
+    });
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      document.querySelectorAll('.kg-modal.open').forEach(open => closeModal(open));
+    }
+  });
+}
+
 // ── Hero canvas: antique celestial navigation chart ──
 const canvas = document.getElementById('heroCanvas');
 if (canvas) {

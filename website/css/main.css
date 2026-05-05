@@ -589,10 +589,16 @@ body::before {
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .kg-card:hover {
   background: var(--bg-card-hover);
+}
+
+.kg-card:focus-visible {
+  outline: 2px solid var(--gold-dim);
+  outline-offset: -2px;
 }
 
 .kg-card-inner {
@@ -658,7 +664,7 @@ body::before {
 
 .fit-bar .segment.filled { background: var(--gold-dim); }
 .fit-bar .segment.filled.strong { background: var(--gold); }
-.fit-bar .segment.filled.weak { background: #c7af77;; }
+.fit-bar .segment.filled.weak { background: #c7af77; }
 .fit-bar .segment.filled.inverted { background: #962d21; }
 
 .kg-card .fit-label {
@@ -693,6 +699,150 @@ body::before {
 .kg-card .meta-item span {
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.kg-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.kg-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.kg-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 21, 8, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.kg-modal-dialog {
+  position: relative;
+  margin: 44px auto;
+  width: min(980px, calc(100vw - 44px));
+  max-height: calc(100vh - 88px);
+  overflow-y: auto;
+  background: var(--bg-deep);
+  border: 1px solid rgba(122, 92, 20, 0.2);
+  box-shadow: 0 24px 54px rgba(30, 21, 8, 0.24);
+  padding: 36px;
+}
+
+.kg-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.kg-modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.kg-modal-close:hover {
+  color: var(--gold);
+}
+
+.kg-modal-kicker {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 10px;
+}
+
+.kg-modal-title {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.kg-modal-author {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.kg-modal-summary {
+  margin-top: 18px;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 78ch;
+}
+
+.kg-modal-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.kg-modal-section {
+  background: var(--bg-card);
+  border: 1px solid rgba(122, 92, 20, 0.12);
+  padding: 20px;
+}
+
+.kg-modal-section h4 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold-dim);
+  margin-bottom: 12px;
+}
+
+.kg-modal-section p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.fit-bar.fit-bar-large {
+  gap: 4px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.fit-bar.fit-bar-large .segment {
+  height: 11px;
+}
+
+.fit-label.fit-label-large {
+  font-size: 0.76rem;
+}
+
+.kg-modal-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.kg-modal-meta-item {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  border: 1px solid rgba(122, 92, 20, 0.16);
+  padding: 10px 12px;
 }
 
 /* ========================================================================
@@ -949,6 +1099,17 @@ body::before {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .kg-modal-dialog {
+    width: min(900px, calc(100vw - 28px));
+    margin: 26px auto;
+    max-height: calc(100vh - 52px);
+    padding: 24px;
+  }
+
+  .kg-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
   .ontology-diagram { min-height: 320px; }
   .journey-circle { width: 280px; height: 280px; }
 }
@@ -958,6 +1119,9 @@ body::before {
   .team-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
   .footer-links { justify-content: center; }
+  .kg-modal-dialog { padding: 18px; }
+  .kg-modal-title { font-size: 1.7rem; }
+  .kg-modal-meta { grid-template-columns: 1fr; }
 }
 
 /* ========================================================================
