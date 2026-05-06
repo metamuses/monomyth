@@ -49,8 +49,8 @@ narrative of 'Lady Bird', focusing on the character Christine's journey."""@en ;
         <lady-bird/stages/scholarships-aid>,
         <lady-bird/stages/applying-to-east-coast-schools>,
         <lady-bird/stages/ill-figure-it-out>,
-        <lady-bird/stages/danny-kyle-trials>,
-        <lady-bird/stages/unconditional-scholarship>,
+        <lady-bird/stages/growing-pains>,
+        <lady-bird/stages/dads-help>,
         <lady-bird/stages/never-enough>,
         <lady-bird/stages/added-to-waiting-list>,
         <lady-bird/stages/im-18>,
@@ -199,27 +199,59 @@ actively deciding her own path rather than passing through a literal gate."""@en
     rdfs:label "I'll figure it out"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
-    monomyth:realizationDescription """" ... """@en .
+    monomyth:realizationDescription """"After the applications are sent, Lady Bird tries growing up 
+by finding herself and her passions. She throws herself into the school musical, trying on a new 
+personality to see if it fits. By joining theater and waiting for college letters, she is swallowed 
+up by the "what if" of her future. It is a messy, quiet time where her childhood self starts fading 
+away, leaving her in the dark until she can figure out who she is supposed to be next."""@en .
 
-<lady-bird/stages/danny-kyle-trials> a monomyth:StageRealization ;
-    rdfs:label "The Road of Trials"@en ;
-    monomyth:realizesStage monomyth:TheRoadOfTrials ; #accenno a come tutti questi trials e oersonaggi sono thresh. guard. xk avviano e partecipano a sua crescita
+<lady-bird/stages/growing-pains> a monomyth:StageRealization ;
+    rdfs:label "The Growing Pains"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
+        <lady-bird/characters/julie>,
+        <lady-bird/characters/danny>,
+        <lady-bird/characters/kyle>,
+        <lady-bird/characters/jenna> ; 
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
-    monomyth:realizationDescription "A series of grueling emotional tests: her first boyfriend Danny is revealed to be gay, her father loses his job (threatening her financial path), and her pursuit of the 'cool' guy Kyle leads to her losing her virginity in an unfulfilling way. She also betrays her best friend Julie for Jenna, experiencing the trials of social climbing and the subsequent guilt of losing her moral compass."@en .
+    monomyth:realizationDescription """Lady Bird faces a series of messy emotional tests that strip 
+away her naive ideas about romance and status. Her first boyfriend Danny’s secret of being gay, her 
+father’s job loss, the continous fights with her mother, and her unfulfilling sexual experience with 
+Kyle all force her to confront a reality that doesn't care about her 'Lady Bird' persona. By 
+betraying her best friend Julie to fit in with Jenna, she experiences the guilt of social climbing. 
+These characters act as 'Threshold Guardians' who don't just stand in her way, but actively participate 
+in her growth by forcing her to deal with the consequences of her choices and actions."""@en ;
+    monomyth:fitNote """This stage slighlty diverges from the classic Monomyth by replacing heroic, 
+supernatural ordeals with the 'life tests' of a teenager, as the heroine forges her new self through 
+social mistakes and the 'growing pains' of hurting people she loves. """@en .
 
-<lady-bird/stages/unconditional-scholarship> a monomyth:StageRealization ;
-    rdfs:label "The Father's Sacrifice"@en ;
+<lady-bird/stages/dads-help> a monomyth:StageRealization ;
+    rdfs:label "Dad's Help"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
+        <lady-bird/characters/larry> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription "Despite his own clinical depression and unemployment, Larry McPherson helps Lady Bird secure financial aid. This scene functions as the 'Goddess' encounter—a moment of unconditional, selfless love that provides the hero with the support needed to continue, proving that she is valued beyond her own achievements."@en .
+    monomyth:realizationDescription """At night in her bedroom, Larry brings Lady Bird the financial 
+aid paperwork he has been helping her with in secret. Despite his own struggle with clinical 
+depression and the heavy weight of his unemployment, he chooses to set aside his own pain to focus 
+entirely on her future. By validating her ambitions while her mother dismisses them, Larry offers her 
+a profound sense of being 'seen' and loved without conditions, which she currenly cannot find in her
+mother."""@en ;
+    monomyth:hasSemioticDivergence <lady-bird/divergences/semiotic/goddess-as-paternal-love> .
 
 <lady-bird/stages/never-enough> a monomyth:StageRealization ;
-    rdfs:label "Whatever we give you is never enough"@en ;
+    rdfs:label "Whatever we give you is never enough!"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ; #aggiungi jenna come temptress, she loves sacramento maybe she could tempt lady b. to stay there to fit into high society instead of pursuing her dream future?
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
+        <lady-bird/characters/marion> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription "In a heated confrontation, Marion McPherson discovers Lady Bird's secret applications to East Coast schools. Marion acts as the 'temptress' of the status quo, using shame and financial reality to tempt Lady Bird into believing she is incapable, ungrateful, and destined for failure if she tries to move beyond her station."@en .
+    monomyth:realizationDescription "In a heated confrontation, Marion McPherson discovers Lady Bird's secret applications to East Coast schools. Marion acts as the 'temptress' of the status quo, using shame and financial reality to tempt Lady Bird into believing she is incapable, ungrateful, and destined for failure if she tries to move beyond her station."@en . #aggoungi quotes film give me a number
+    #!! QUI fitnote woman/mother as underestimator  -> è narr div perche non seduce ma vuole abbassre autostima, no semiotic xk è donna ma fa qualcosa di diverso dallo stage -> model div e add real desc
 
 <lady-bird/stages/added-to-waiting-list> a monomyth:StageRealization ;
     rdfs:label "Apotheosis"@en ;
@@ -315,6 +347,17 @@ the shift from a mystical gift to an institutional mechanism; scholarships act a
 required to transcend socioeconomic boundaries. By framing a loan application or a grant as the hero's 
 supernatural assistance, the film highlights how social mobility serves as the modern equivalent of 
 divine or magical intervention."""@en .
+
+<lady-bird/divergences/semiotic/goddess-as-paternal-love> a monomyth:SemioticDivergence ;
+    rdfs:label "Goddess as Paternal Love divergence"@en ;
+    monomyth:divergenceOf <lady-bird/stages/dads-help> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """This divergence replaces the 'Goddess', traditionally a source of 
+mystical love, with the very real, flawed, and quiet support of a father. The power of the scene isn't 
+in a magical blessing, but in the fact that Larry is struggling himself, yet chooses to empower his 
+daughter's future in secret. It shifts the 'encounter' from the supernatural to a grounded act of 
+family solidarity, where a simple letter of financial aid becomes the ultimate proof that the hero is 
+worthy of her own ambitions."""@en .
 
 
 <lady-bird/divergences/sequential/premature-peace> a monomyth:SequentialDivergence ;
