@@ -96,9 +96,10 @@ narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey.
     monomyth:heroOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
         <batman-year-one/monomyths/jim-gordon-journey> ;
-    monomyth:embodiesArchetype monomyth:Hero , monomyth:Ally ; 
-    rdfs:comment "The billionaire vigilante who returns to Gotham City and adopts the fearsome persona of Batman to fight crime, 
-serving as the primary hero and an eventual ally to Jim Gordon."@en ;
+    monomyth:embodiesArchetype monomyth:Hero, 
+        monomyth:Ally ; 
+    rdfs:comment """The billionaire vigilante who returns to Gotham City and adopts the fearsome persona of Batman to fight crime, 
+serving as the primary hero and an eventual ally to Jim Gordon."""@en ;
     owl:sameAs wd:Q2695156 .
 
 <batman-year-one/characters/jim-gordon> a monomyth:Character ;
@@ -106,7 +107,8 @@ serving as the primary hero and an eventual ally to Jim Gordon."@en ;
     monomyth:heroOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
         <batman-year-one/monomyths/jim-gordon-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally , monomyth:Hero ;
+    monomyth:embodiesArchetype monomyth:Ally, 
+        monomyth:Hero ;
     rdfs:comment "A corrupt-free cop who serves as a parallel hero and eventual ally."@en ;
     owl:sameAs wd:Q116113 .
 
