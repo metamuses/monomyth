@@ -144,7 +144,7 @@ beast, allowing him to decapitate it while Rakhsh bites its scales."""@en .
     monomyth:stageRealizationOrder 7 ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:realizationDescription """The narrative not only lacks a nurturing feminine figure but actively inverts the archetype. The only prominent feminine presence is a demonic sorceress who deceives and attacks Rostam. This replaces the 'Goddess' as a source of unity or wisdom with a figure of illusion and danger, reflecting the epic’s moral polarity rather than symbolic integration."""
+    monomyth:realizationDescription """The narrative not only lacks a nurturing feminine figure but actively inverts the archetype. The only prominent feminine presence is a demonic sorceress who deceives and attacks Rostam. This replaces the 'Goddess' as a source of unity or wisdom with a figure of illusion and danger, reflecting the epic’s moral polarity rather than symbolic integration."""@en .
 
 <rostam-haft-khan/stages/08-temptress> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 8 ;
