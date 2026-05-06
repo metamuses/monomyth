@@ -61,28 +61,35 @@
 
 <walter-mitty/characters/walter> a monomyth:Character ;
     rdfs:label "Walter Mitty"@en ;
-    monomyth:embodiesArchetype monomyth:Hero .
+    monomyth:embodiesArchetype monomyth:Hero ;
+    monomyth:heroOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walters-journey> .
 
 <walter-mitty/characters/sean> a monomyth:Character ;
     rdfs:label "Sean O'Connell"@en ;
+    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor, monomyth:Herald .
 
 <walter-mitty/characters/cheryl> a monomyth:Character ;
     rdfs:label "Cheryl Melhoff"@en ;
+    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Ally, monomyth:Mentor .
 
 <walter-mitty/characters/ted> a monomyth:Character ;
     rdfs:label "Ted Hendricks"@en ;
+    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow, monomyth:ThresholdGuardian .
 
 <walter-mitty/characters/mother> a monomyth:Character ;
     rdfs:label "Edna Mitty"@en ;
+    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Ally, monomyth:Herald .
+
 <walter-mitty/characters/todd> a monomyth:Character ;
     rdfs:label "Todd Maher"@en ;
+    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Ally ;
     rdfs:comment "The eHarmony representative who provides external encouragement."@en .
-
 # --- Stage Realizations ---------------
 
 <walter-mitty/stages/negative-25-missing> a monomyth:StageRealization ;
