@@ -493,7 +493,7 @@ makes his flight both a rejection of the call and the inevitable start of the jo
 
 <oedipus-myth/divergences/narrative/protection-not-love> a monomyth:NarrativeDivergence ;
     rdfs:label "Protection not Love divergence"@en ;
-    monomyth:divergeOf <oedipus-myth/stages/reveal-it-all-to-me> ;
+    monomyth:divergenceOf <oedipus-myth/stages/reveal-it-all-to-me> ;
     monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
     monomyth:divergenceRationale """This stage diverges from the traditional archetype by alterating
 the nature of the goddess's unconditional love. The meeting acts as a distorted encounter with divine 
@@ -559,7 +559,7 @@ and of the Theban dynamics until the moment of death."""@en .
 
 <oedipus-myth/divergences/narrative/freedom-in-death> a monomyth:NarrativeDivergence ;
     rdfs:label "Freedom in Death divergence"@en ;
-    monomyth:divergeOf <oedipus-myth/stages/transfiguration-at-colonus> ;
+    monomyth:divergenceOf <oedipus-myth/stages/transfiguration-at-colonus> ;
     monomyth:divergesFrom monomyth:FreedomToLive ;
     monomyth:divergenceRationale """This represents an 'Inverted Fit' of the final monomyth stage. 
 While 'Freedom to Live' traditionally suggests the hero’s ability to exist in the ordinary world without 
