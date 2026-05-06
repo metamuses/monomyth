@@ -658,13 +658,13 @@ body::before {
 .fit-bar .segment {
   height: 3px;
   flex: 1;
-  background: rgba(122, 92, 20, 0.12);
   position: relative;
 }
 
-.fit-bar .segment.filled { background: var(--gold-dim); }
 .fit-bar .segment.filled.strong { background: var(--gold); }
+.fit-bar .segment.filled.moderate { background: var(--gold-dim); }
 .fit-bar .segment.filled.weak { background: #c7af77; }
+.fit-bar .segment.filled.absent { background: #7a5c141f; }
 .fit-bar .segment.filled.inverted { background: #962d21; }
 
 .kg-card .fit-label {
