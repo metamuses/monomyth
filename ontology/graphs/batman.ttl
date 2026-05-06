@@ -589,7 +589,7 @@ corruption, and tactical reality where 'divine knowledge' has no place."""@en .
         <batman-year-one/stages/crossing-the-return-threshold> ,
         <batman-year-one/stages/master-of-two-worlds> ,
         <batman-year-one/stages/freedom-to-live> ;
-    monomyth:divergenceFrom monomyth:RefusalOfTheReturn , 
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn , 
         monomyth:TheMagicFlight ,
         monomyth:RescueFromWithout ,
         monomyth:TheCrossingOfTheReturnThreshold ,
