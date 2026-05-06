@@ -549,7 +549,7 @@ the plague, the regicide would have had to be exiled or killed."""@en .
 <oedipus-myth/divergences/narrative/denied-mastery> a monomyth:NarrativeDivergence ;
     rdfs:label "Denied Mastery"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/trouble-from-thebes> ;
-    monomyth:divergesFrom monomyth:MasterOfTwoWorlds ;
+    monomyth:divergesFrom monomyth:MasterOfTheTwoWorlds ;
     monomyth:divergenceRationale """In the Monomyth, Mastery implies a transpersonal state where the 
 hero is at home in both worlds. Here, the 'Mastery' is negated: the world where the hero's 
 transformation has happened, hence Thebes and its politics, aggressively seeks to weaponize the hero’s 
