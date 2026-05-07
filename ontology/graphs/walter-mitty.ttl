@@ -17,6 +17,7 @@
     rdfs:label "The Secret Life of Walter Mitty (2013)"@en ;
     dcterms:title "The Secret Life of Walter Mitty"@en ;
     dcterms:creator "Ben Stiller" ;
+    schema:countryOfOrigin wd:Q30 ; 
     schema:genre "Adventure"@en, "Drama"@en ;
     owl:sameAs wd:Q3522637 ;
     monomyth:interpretedBy <walter-mitty/monomyths/walters-journey> ;
