@@ -70,7 +70,7 @@ anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and ac
     rdfs:label "The Partner / The New Love"@en ;
     rdfs:comment "The figure represents healing, unity, and a safe harbor."@en ;
     monomyth:characterOf <sable-fable/monomyths/justin-vernon-journey> ;
-    monomyth:embodiesArchetype monomyth:Goddess .
+    monomyth:embodiesArchetype monomyth:Ally .
 
 # --- Stage Realizations ---------------
 
