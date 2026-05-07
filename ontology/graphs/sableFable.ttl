@@ -17,6 +17,7 @@
     dcterms:title "SABLE, fABLE"@en ;
     dcterms:created "2025"^^xsd:gYear ;
     dcterms:creator "Bon Iver" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Indie Folk"@en,
         "Art Pop"@en ;
     owl:sameAs wd:Q132775424 ;
