@@ -1,4 +1,4 @@
-# The Monomyth Ontology [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20324715.svg)](https://doi.org/10.5281/zenodo.20324715)
+# The Monomyth Ontology
 
 The **Monomyth Ontology** is an RDF/OWL ontology for modeling narrative works
 through **Joseph Campbell**'s theory of the hero's journey, developed in *The
@@ -100,6 +100,9 @@ Digital Knowledge_ at University of Bologna.
 - [Nicol D'Amelio](https://github.com/nicoldamelio)
 - [Maryam Dadrasrazi](https://github.com/Maryamdadras)
 - [Martina Uccheddu](https://github.com/martinaucch)
+
+## Citation
+This work is published on Zenodo and can be cited using its DOI: [https://doi.org/10.5281/zenodo.20324715](https://doi.org/10.5281/zenodo.20324715).
 
 ## License
 

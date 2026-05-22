@@ -9,6 +9,7 @@ message: >-
   If you use this dataset, please cite it using the metadata
   from this file.
 type: dataset
+doi: 10.5281/zenodo.20324715
 authors:
   - given-names: Tommaso
     family-names: Barbato
