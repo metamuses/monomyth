@@ -102,7 +102,7 @@ Digital Knowledge_ at University of Bologna.
 - [Martina Uccheddu](https://github.com/martinaucch)
 
 ## Citation
-This work is published on Zenodo and can be cited using its DOI: [https://doi.org/10.5281/zenodo.20324715](https://doi.org/10.5281/zenodo.20324715).
+This work is published on Zenodo and can be cited using its DOI: [https://doi.org/10.5281/zenodo.20324714](https://doi.org/10.5281/zenodo.20324714).
 
 ## License
 
