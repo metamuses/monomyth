@@ -218,6 +218,18 @@
             justify-content: space-between;
         }
 
+        .mobile-title-link,
+        .mobile-title-link:visited,
+        .mobile-title-link:hover,
+        .mobile-title-link:active,
+        .mobile-title-link:focus {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #000000;
+        }
+
         .menu-toggle {
             background: white;
             border: 2px solid var(--border-color);
@@ -252,15 +264,18 @@
             .entity-anchor { display: none; }
             nav {
                 position: fixed;
-                left: -300px;
+                left: auto;
+                right: -300px;
                 top: 0;
                 width: 300px;
                 height: 100vh;
                 z-index: 150;
-                transition: left 0.3s ease;
-                box-shadow: 4px 0 0 var(--border-color);
+                transition: right 0.3s ease;
+                box-shadow: -4px 0 0 var(--border-color);
+                border-right: none;
+                border-left: 2px solid var(--border-color);
             }
-            nav.open { left: 0; }
+            nav.open { right: 0; }
             .nav-backdrop.open { display: block; }
             main { padding: 1rem 1.5rem; width: 100%; max-width: none; overflow-x: hidden; }
             header { margin-bottom: 3rem; }
@@ -279,6 +294,7 @@
 <div class="nav-backdrop" id="backdrop"></div>
 
 <div class="mobile-header">
+    <a href="#" class="mobile-title-link" aria-label="Back to top">monomyth</a>
     <button class="menu-toggle" id="menuToggle">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -287,13 +303,12 @@
         </svg>
         MENU
     </button>
-    <span style="font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">monomyth</span>
 </div>
 
 <nav id="sidebar">
     <h2>Contents</h2>
     <ul>
-        <li><a href="#metadata">HOME</a></li>
+        <li><a href="#">HOME</a></li>
         <li><a href="#namespaces">1. NAMESPACES</a></li>
         <li><a href="#overview">2. OVERVIEW</a></li>
         <li><a href="#classes">3. CLASSES</a></li>
@@ -390,7 +405,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
     </header>
 
     <section id="namespaces">
-        <h2>1. Namespaces <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <h2>1. Namespaces <a href="#" class="back-to-top">TOP &uarr;</a></h2>
         <table>
             <thead><tr><th>Prefix</th><th>IRI</th></tr></thead>
             <tbody>
@@ -407,7 +422,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
     </section>
 
     <section id="overview">
-        <h2>2. Overview <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <h2>2. Overview <a href="#" class="back-to-top">TOP &uarr;</a></h2>
         <div class="metadata-grid" style="display: block;">
             <div style="margin-bottom: 2rem;">
                 <h3 style="font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase;">Classes</h3>
@@ -437,7 +452,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
     </section>
 
     <section id="classes">
-        <h2>3. Classes <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <h2>3. Classes <a href="#" class="back-to-top">TOP &uarr;</a></h2>
 
         <div id="NarrativeWork" class="entity-card">
             <a class="entity-anchor" href="#NarrativeWork" aria-label="Link to Narrative Work" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
@@ -605,7 +620,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
         </div>
         </section>
     <section id="object-properties">
-        <h2>4. Object Properties <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <h2>4. Object Properties <a href="#" class="back-to-top">TOP &uarr;</a></h2>
         <div id="interpretedBy" class="entity-card">
             <a class="entity-anchor" href="#interpretedBy" aria-label="Link to interpreted by" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
             <div class="entity-header">
@@ -925,7 +940,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
                 <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#hasDivergence">hasDivergence</a></div></div>
             </div>
         </div>
-        </section><section id="data-properties"><h2>5. Data Properties <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        </section><section id="data-properties"><h2>5. Data Properties <a href="#" class="back-to-top">TOP &uarr;</a></h2>
         <div id="actOrder" class="entity-card">
             <a class="entity-anchor" href="#actOrder" aria-label="Link to act order" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
             <div class="entity-header">
@@ -1023,7 +1038,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
                 <div class="property-row"><div class="property-label">Range</div><div class="property-value">Literal</div></div>
             </div>
         </div>
-        </section><section id="individuals"><h2>6. Individuals <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        </section><section id="individuals"><h2>6. Individuals <a href="#" class="back-to-top">TOP &uarr;</a></h2>
         <div id="Departure" class="entity-card">
             <a class="entity-anchor" href="#Departure" aria-label="Link to Departure" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
             <div class="entity-header">
