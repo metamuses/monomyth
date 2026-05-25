@@ -1757,6 +1757,7 @@ code {
 
   .kg-modal-title {
     font-size: 1.7rem;
+    line-height: 1.05;
   }
 
   .kg-modal-meta {
@@ -1769,12 +1770,11 @@ code {
   }
 
   .kg-modal-author {
-    margin-top: -4px;
+    margin-top: 4px;
   }
 
   .kg-modal-repo-link {
-    font-size: 0.45rem;
-    padding: 2px 6px;
+    display: none;
   }
 
   /* Icons stay visible but taps should target the stage segment container */
