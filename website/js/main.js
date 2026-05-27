@@ -39,19 +39,49 @@ const kgCards = document.querySelectorAll('.kg-card[data-modal-target]');
 const kgModals = document.querySelectorAll('.kg-modal');
 
 if (kgCards.length && kgModals.length) {
-  function openModal(modal) {
+  function getFallbackFocusTarget() {
+    return document.querySelector('.kg-card[data-modal-target]') || document.body;
+  }
+
+  function openModal(modal, triggerEl) {
+    if (triggerEl instanceof HTMLElement) {
+      modal.__returnFocusEl = triggerEl;
+    } else if (document.activeElement instanceof HTMLElement) {
+      modal.__returnFocusEl = document.activeElement;
+    } else {
+      modal.__returnFocusEl = null;
+    }
+
+    modal.removeAttribute('inert');
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+
+    const closeButton = modal.querySelector('.kg-modal-close');
+    if (closeButton instanceof HTMLElement) closeButton.focus();
   }
 
   function closeModal(modal) {
+    const active = document.activeElement;
+    const returnTarget = modal.__returnFocusEl instanceof HTMLElement
+      ? modal.__returnFocusEl
+      : getFallbackFocusTarget();
+
+    if (active instanceof HTMLElement && modal.contains(active)) {
+      returnTarget.focus();
+    }
+
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('inert', '');
     if (!document.querySelector('.kg-modal.open')) {
       document.body.classList.remove('modal-open');
     }
   }
+
+  kgModals.forEach(modal => {
+    modal.setAttribute('inert', '');
+  });
 
   kgCards.forEach(card => {
     const targetId = card.getAttribute('data-modal-target');
@@ -60,11 +90,11 @@ if (kgCards.length && kgModals.length) {
 
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
-    card.addEventListener('click', () => openModal(modal));
+    card.addEventListener('click', () => openModal(modal, card));
     card.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        openModal(modal);
+        openModal(modal, card);
       }
     });
   });
