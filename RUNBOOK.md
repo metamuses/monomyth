@@ -11,6 +11,7 @@ updated to reflect the new steps and assumptions.
 ## Table of contents
 
 - [Release a new version](#release-a-new-version)
+- [Update an existing subgraph](#update-an-existing-subgraph)
 
 ## Release a new version
 When a new version of the ontology and graph is ready to be released, it is
@@ -52,8 +53,9 @@ Follow these steps to release a new version:
       the new version being released as string, e.g. `"1.2"`
     - `date-released`  
       the date of the new release in ISO format, e.g. `"2026-05-25"`
-4. Update `website/docs.html` with the same changes in step 1 for the ontology
-   metadata.
+4. Update `website/docs.html` with the changes to namespaces, classes,
+   properties and individuals of the new version, if applicable. Then, update
+   the ontology metadata section with the same changes of step 1.
 5. Evaluate if the graffoo digram of the ontology at `graffoo/ontology.graphml`
    needs to be updated to reflect the changes in the new version. If so, update
    the diagram and export it again as png at `graffoo/ontology.png` with:
@@ -72,3 +74,25 @@ Follow these steps to release a new version:
 11. Edit the GitHub release notes to include the new version-specific Zenodo DOI
     and the IRI of the versioned ontology and graph, following the format of
     previous releases.
+
+## Update an existing subgraph
+To update an existing narrative subgraph, edit the corresponding source TTL file
+and then regenerate the derived general graph and website data from it.
+Subgraphs are the authoritative sources for individual narrative works, while
+`graph/graph.ttl` and `website/data/modal_data.json` are generated outputs that
+must stay in sync. Each update should therefore be validated before the merged
+graph and website data are regenerated.
+
+1. Edit the TTL file for the narrative work in `graph/subgraphs/`.
+2. Validate that the TTL file is syntatically and semantically correct by
+   running the 3 RDF validation scripts:
+    - `python scripts/check_rdf_issues.py graph/subgraphs/the_file.ttl`
+    - `python scripts/check_rdf_entities.py graph/subgraphs/the_file.ttl`
+    - `python scripts/check_rdf_inverses.py graph/subgraphs/the_file.ttl`
+3. Run `python scripts/merge_subgraphs.py` to regenerate the full graph at
+   `graph/graph.ttl`.
+4. Run `python scripts/generate_modal_data.py` to regenerate the JSON data for
+   the website at `website/data/modal_data.json`.
+5. Make sure the hardcoded data in the knowledge graphs section of the website
+   (in `website/index.html`) is updated to reflect the applied changes, if
+   applicable.
