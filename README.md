@@ -58,7 +58,8 @@ journey. These examples are intended both as case studies in comparative
 narrative analysis and as practical models for creating new graphs with the
 ontology.
 
-The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
+The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).  
+The SPARQL endpoint is available at [monomyth.metamuses.org/sparql](https://monomyth.metamuses.org/sparql).
 
 Analyzed works include:
 
