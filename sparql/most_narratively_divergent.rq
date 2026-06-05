@@ -1,0 +1,27 @@
+# Title:    Most narratively divergent stage
+# Question: Which monomyth stage exhibits the most narrative divergences across
+#           its realizations?
+# Output:   stage class, stage name, number of realizations, number of
+#           narrative divergences, average narrative divergences per realization
+
+PREFIX monomyth: <https://monomyth.metamuses.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stage ?stageLabel
+       (COUNT(DISTINCT ?realization) AS ?realizationCount)
+       (COUNT(DISTINCT ?narrativeDivergence) AS ?narrativeDivergenceCount)
+       ((COUNT(DISTINCT ?narrativeDivergence) * 1.0) / COUNT(DISTINCT ?realization) AS ?avgNarrativeDivergencesPerRealization)
+WHERE {
+  ?stage a monomyth:Stage ;
+         rdfs:label ?stageLabel .
+
+  ?realization a monomyth:StageRealization ;
+               monomyth:realizesStage ?stage .
+
+  OPTIONAL {
+    ?realization monomyth:hasNarrativeDivergence ?narrativeDivergence .
+  }
+}
+GROUP BY ?stage ?stageLabel
+ORDER BY DESC(?avgNarrativeDivergencesPerRealization) DESC(?narrativeDivergenceCount)
+LIMIT 1

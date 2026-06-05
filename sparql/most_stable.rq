@@ -1,0 +1,32 @@
+# Title:    Most stable stage
+# Question: Which monomyth stage remains the most stable and consistent across
+#           its realizations?
+# Output:   stage class, stage name, number of realizations, number of
+#           divergences, average divergences per realization
+
+PREFIX monomyth: <https://monomyth.metamuses.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stage ?stageLabel
+       (COUNT(DISTINCT ?realization) AS ?realizationCount)
+       (COUNT(DISTINCT ?divergence) AS ?divergenceCount)
+       ((COUNT(DISTINCT ?divergence) * 1.0) / COUNT(DISTINCT ?realization) AS ?avgDivergencesPerRealization)
+WHERE {
+  ?stage a monomyth:Stage ;
+         rdfs:label ?stageLabel .
+
+  ?realization a monomyth:StageRealization ;
+               monomyth:realizesStage ?stage .
+
+  OPTIONAL {
+    ?realization (
+      monomyth:hasNarrativeDivergence |
+      monomyth:hasSequentialDivergence |
+      monomyth:hasSemioticDivergence |
+      monomyth:hasDivergence
+    ) ?divergence .
+  }
+}
+GROUP BY ?stage ?stageLabel
+ORDER BY ASC(?avgDivergencesPerRealization) ASC(?divergenceCount)
+LIMIT 1

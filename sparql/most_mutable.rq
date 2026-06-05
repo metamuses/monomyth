@@ -1,0 +1,49 @@
+# Title:    Most mutable stage
+# Question: Which monomyth stage is the most mutable and exposed to divergences?
+# Output:   stage class, stage name, number of stage realizations, total number
+#           of divergences, number of narrative divergences, number of
+#           sequential divergences, number of semiotic divergences, average
+#           divergences per realization
+
+PREFIX monomyth: <https://monomyth.metamuses.org/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stage ?stageLabel
+       (COUNT(DISTINCT ?realization) AS ?realizationCount)
+       (COUNT(DISTINCT ?anyDivergence) AS ?divergenceCount)
+       (COUNT(DISTINCT ?narrativeDivergence) AS ?narrativeDivergenceCount)
+       (COUNT(DISTINCT ?sequentialDivergence) AS ?sequentialDivergenceCount)
+       (COUNT(DISTINCT ?semioticDivergence) AS ?semioticDivergenceCount)
+       ((COUNT(DISTINCT ?anyDivergence) * 1.0) / COUNT(DISTINCT ?realization) AS ?avgDivergencesPerRealization)
+WHERE {
+  ?stage a monomyth:Stage ;
+         rdfs:label ?stageLabel .
+
+  ?realization a monomyth:StageRealization ;
+               monomyth:realizesStage ?stage .
+
+  OPTIONAL {
+    ?realization monomyth:hasNarrativeDivergence ?narrativeDivergence .
+  }
+
+  OPTIONAL {
+    ?realization monomyth:hasSequentialDivergence ?sequentialDivergence .
+  }
+
+  OPTIONAL {
+    ?realization monomyth:hasSemioticDivergence ?semioticDivergence .
+  }
+
+  OPTIONAL {
+    ?realization ?divergenceProperty ?anyDivergence .
+
+    VALUES ?divergenceProperty {
+      monomyth:hasNarrativeDivergence
+      monomyth:hasSequentialDivergence
+      monomyth:hasSemioticDivergence
+    }
+  }
+}
+GROUP BY ?stage ?stageLabel
+ORDER BY DESC(?avgDivergencesPerRealization) DESC(?divergenceCount)
+LIMIT 1
