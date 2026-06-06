@@ -20,11 +20,12 @@ The script exits with status 1 when syntax or inverse consistency issues are
 found, making it suitable for local checks and CI pipelines.
 """
 
+import sys
 from pathlib import Path
+
 from rdflib import Graph, Namespace
 from rdflib.namespace import OWL, RDFS
 from rdflib.plugins.parsers.notation3 import BadSyntax
-import sys
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 

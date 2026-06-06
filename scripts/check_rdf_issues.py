@@ -16,6 +16,7 @@ making it suitable for local checks and CI pipelines.
 
 import sys
 from pathlib import Path
+
 from rdflib import Graph, URIRef
 from rdflib.plugins.parsers.notation3 import BadSyntax
 

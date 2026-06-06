@@ -20,8 +20,8 @@ The script exits with status 1 when syntax or vocabulary consistency issues
 are found, making it suitable for local checks and CI pipelines.
 """
 
-from pathlib import Path
 import sys
+from pathlib import Path
 
 from rdflib import Graph, URIRef
 from rdflib.namespace import RDF, RDFS, OWL

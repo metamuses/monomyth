@@ -21,8 +21,8 @@ times produces the same JSON output as long as the source Turtle files do not
 change.
 """
 
-import json
 import sys
+import json
 from pathlib import Path
 
 from rdflib import Graph, Namespace, URIRef
