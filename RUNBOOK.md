@@ -56,7 +56,7 @@ Follow these steps to release a new version:
 4. Update `website/docs.html` with the changes to namespaces, classes,
    properties and individuals of the new version, if applicable. Then, update
    the ontology metadata section with the same changes of step 1.
-5. Evaluate if the graffoo digram of the ontology at `graffoo/ontology.graphml`
+5. Evaluate if the graffoo diagram of the ontology at `graffoo/ontology.graphml`
    needs to be updated to reflect the changes in the new version. If so, update
    the diagram and export it again as png at `graffoo/ontology.png` with:
      - Size: Original Size
