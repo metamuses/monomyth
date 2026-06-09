@@ -12,6 +12,7 @@ updated to reflect the new steps and assumptions.
 
 - [Release a new version](#release-a-new-version)
 - [Update an existing subgraph](#update-an-existing-subgraph)
+- [Add a new subgraph](#add-a-new-subgraph)
 
 ## Release a new version
 When a new version of the ontology and graph is ready to be released, it is
@@ -66,7 +67,7 @@ Follow these steps to release a new version:
 6. Update the `CHANGELOG.md` file with the new version and a summary of the
    changes in the release, following the format of previous entries.
 7. Create a commit `"Bump version to vX.Y"` and push to GitHub, e.g. `git commit -m "Bump version to v1.2"`.
-8. Tag the commit with `"vX.Y"` and push the tag to GitHub, e.g. `git tag v1.2 -m "v1.2"` .
+8. Tag the commit with `"vX.Y"` and push the tag to GitHub, e.g. `git tag v1.2 -m "v1.2"`.
 9. Create a release `"vX.Y"` on GitHub from the tag and include the release notes
    with the same summary of changes as in the `CHANGELOG.md`.
 10. Check the Zenodo publication for the new synced release being properly rolled
@@ -84,7 +85,7 @@ must stay in sync. Each update should therefore be validated before the merged
 graph and website data are regenerated.
 
 1. Edit the TTL file for the narrative work in `graph/subgraphs/`.
-2. Validate that the TTL file is syntatically and semantically correct by
+2. Validate that the TTL file is syntactically and semantically correct by
    running the 3 RDF validation scripts:
     - `python scripts/check_rdf_issues.py graph/subgraphs/the_file.ttl`
     - `python scripts/check_rdf_entities.py graph/subgraphs/the_file.ttl`
@@ -93,6 +94,30 @@ graph and website data are regenerated.
    `graph/graph.ttl`.
 4. Run `python scripts/generate_modal_data.py` to regenerate the JSON data for
    the website at `website/data/modal_data.json`.
-5. Make sure the hardcoded data in the knowledge graphs section of the website
+5. Make sure the static data in the knowledge graphs section of the website
    (in `website/index.html`) is updated to reflect the applied changes, if
    applicable.
+
+## Add a new subgraph
+To add a new narrative work to the knowledge graph, create a new subgraph TTL
+file with the appropriate content, validate its syntax and semantics, add a new
+narrative card in the website, and then regenerate the derived general graph
+and modal data from it.
+
+1. Create a new TTL file for the narrative work in `graph/subgraphs/`, following
+   the format of existing subgraph files.
+2. Validate that the TTL file is syntactically and semantically correct by
+   running the 3 RDF validation scripts:
+    - `python scripts/check_rdf_issues.py graph/subgraphs/the_file.ttl`
+    - `python scripts/check_rdf_entities.py graph/subgraphs/the_file.ttl`
+    - `python scripts/check_rdf_inverses.py graph/subgraphs/the_file.ttl`
+3. Add the new TTL file to the `SUBGRAPHS` list in `scripts/merge_subgraphs.py`
+   and then run the script to regenerate the full graph at `graph/graph.ttl`.
+4. Add the new TTL file to the `MODAL_TTL_MAP` dict in `scripts/generate_modal_data.py`
+   and then run the script to regenerate the JSON data for the website at
+   `website/data/modal_data.json`.
+5. Create the static data in the knowledge graphs section of the website by
+   adding a new `kg-card` and `kg-modal` element for the new narrative work in
+   `website/index.html`, following the format of existing cards and modals and
+   making sure to link the subgraph TTL endpoint in `kg-modal-repo-link` of
+   the modal.
