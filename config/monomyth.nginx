@@ -118,7 +118,7 @@ server {
     location = /sparql {
         set $triplydb api.triplydb.com;
 
-        proxy_pass https://$triplydb/datasets/epistrephein/monomyth/sparql;
+        proxy_pass https://$triplydb/datasets/epistrephein/monomyth/sparql$is_args$args;
 
         proxy_ssl_server_name on;
         proxy_ssl_name api.triplydb.com;
