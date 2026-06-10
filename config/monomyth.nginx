@@ -116,9 +116,12 @@ server {
     # ===== SPARQL ===========================
     # proxy /sparql to Triply SPARQL endpoint
     location = /sparql {
-        proxy_pass https://api.triplydb.com/datasets/epistrephein/monomyth/sparql;
+        set $triplydb api.triplydb.com;
+
+        proxy_pass https://$triplydb/datasets/epistrephein/monomyth/sparql;
 
         proxy_ssl_server_name on;
+        proxy_ssl_name api.triplydb.com;
         proxy_set_header Host api.triplydb.com;
 
         proxy_set_header X-Real-IP $remote_addr;
