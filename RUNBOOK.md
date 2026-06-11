@@ -87,9 +87,9 @@ graph and website data are regenerated.
 1. Edit the TTL file for the narrative work in `graph/subgraphs/`.
 2. Validate that the TTL file is syntactically and semantically correct by
    running the 3 RDF validation scripts:
-    - `python scripts/check_rdf_issues.py graph/subgraphs/the_file.ttl`
-    - `python scripts/check_rdf_entities.py graph/subgraphs/the_file.ttl`
-    - `python scripts/check_rdf_inverses.py graph/subgraphs/the_file.ttl`
+    - `python scripts/check_rdf_issues.py`
+    - `python scripts/check_rdf_entities.py`
+    - `python scripts/check_rdf_inverses.py`
 3. Run `python scripts/merge_subgraphs.py` to regenerate the full graph at
    `graph/graph.ttl`.
 4. Run `python scripts/generate_modal_data.py` to regenerate the JSON data for
@@ -108,9 +108,9 @@ and modal data from it.
    the format of existing subgraph files.
 2. Validate that the TTL file is syntactically and semantically correct by
    running the 3 RDF validation scripts:
-    - `python scripts/check_rdf_issues.py graph/subgraphs/the_file.ttl`
-    - `python scripts/check_rdf_entities.py graph/subgraphs/the_file.ttl`
-    - `python scripts/check_rdf_inverses.py graph/subgraphs/the_file.ttl`
+    - `python scripts/check_rdf_issues.py`
+    - `python scripts/check_rdf_entities.py`
+    - `python scripts/check_rdf_inverses.py`
 3. Add the new TTL file to the `SUBGRAPHS` list in `scripts/merge_subgraphs.py`
    and then run the script to regenerate the full graph at `graph/graph.ttl`.
 4. Add the new TTL file to the `MODAL_TTL_MAP` dict in `scripts/generate_modal_data.py`
