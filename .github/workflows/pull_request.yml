@@ -3,7 +3,9 @@ name: pull_request
 on:
   pull_request:
     paths:
+      - '**/*.py'
       - '**/*.ttl'
+      - 'website/data/modal_data.json'
 
 jobs:
   validate-ttl:
@@ -64,3 +66,21 @@ jobs:
         run: pip install -r requirements.txt
       - name: Check RDF entities
         run: python scripts/check_rdf_entities.py
+
+  check-generated-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          cache: 'pip'
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Regenerate graph and modal data
+        run: |
+          python scripts/merge_subgraphs.py
+          python scripts/generate_modal_data.py
+      - name: Check generated artifacts are up to date
+        run: git diff --exit-code -- graph/graph.ttl website/data/modal_data.json
