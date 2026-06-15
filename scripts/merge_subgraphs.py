@@ -66,7 +66,7 @@ subgraph_bodies = []
 for filename in SUBGRAPHS:
     path = SUBGRAPHS_DIR / filename
 
-    # Skip missing subgraphs
+    # Error out if any subgraph file is missing to prevent partial merges
     if not path.exists():
         sys.exit(f"Error: Subgraph file {filename} does not exist")
 
@@ -81,9 +81,11 @@ for filename in SUBGRAPHS:
         None,
     )
 
-    # Skip files without a clear header/body separator
+    # Error out if a subgraph file does not have a clear header/body separator
     if first_blank_line is None:
-        continue
+        sys.exit(
+            f"Error: Subgraph file {filename} does not have a clear header/body separator"
+        )
 
     # Keep only the body after the prefix/header section
     body = "\n".join(lines[first_blank_line + 1 :]).strip()
