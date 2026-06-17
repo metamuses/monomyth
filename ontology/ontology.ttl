@@ -473,7 +473,7 @@ monomyth:stageRealizationOrder a owl:DatatypeProperty,
     rdfs:label "stage realization order"@en ;
     rdfs:comment """The position at which this stage realization factually occurs in the narrative's
 own sequence. Expressed as a positive integer starting from 1, forming a continuous sequence across
-all realizations in a MonomythInstance.
+all realizations in a MonomythExpression.
 
 The canonical monomyth defines 17 stages ordered 1-17 via stageOrder on Stage individuals. When a
 narrative realizes each stage exactly once in canonical order, stageRealizationOrder values will
