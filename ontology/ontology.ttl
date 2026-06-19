@@ -280,6 +280,7 @@ monomyth:interprets a owl:ObjectProperty ;
 monomyth:hasHero a owl:ObjectProperty ;
     rdfs:label "has hero"@en ;
     rdfs:comment """The character whose journey is being traced through the monomyth."""@en ;
+    rdfs:subPropertyOf monomyth:hasCharacter ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:Character .
 
@@ -316,6 +317,7 @@ monomyth:heroOf a owl:ObjectProperty ;
     rdfs:label "hero of"@en ;
     rdfs:comment """Links a character to the monomyth expression in which they are the hero."""@en ;
     owl:inverseOf monomyth:hasHero ;
+    rdfs:subPropertyOf monomyth:characterOf ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:MonomythExpression .
 
