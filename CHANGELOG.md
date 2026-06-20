@@ -3,6 +3,14 @@
 All notable changes to this project's ontology and/or knowledge graph will be
 documented in this file.  
 
+## Unreleased
+[Diff](https://github.com/metamuses/monomyth/compare/v1.1...main)
+
+### Ontology
+
+- Declared `monomyth:hasHero` and `monomyth:heroOf` as sub-properties of `monomyth:hasCharacter` and `monomyth:characterOf` respectively (`rdfs:subPropertyOf`), making the hero/character hierarchy explicit at the schema level while preserving existing explicit triples.
+- Fixed incorrect class name `MonomythInstance` → `MonomythExpression` in the `rdfs:comment` of `monomyth:stageRealizationOrder`.
+
 ## 1.1 - 2026-05-21
 [Release](https://github.com/metamuses/monomyth/releases/tag/v1.1) |
 [Diff](https://github.com/metamuses/monomyth/compare/v1.0...v1.1)
