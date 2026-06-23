@@ -197,6 +197,14 @@
         .property-value { flex-grow: 1; min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
         .property-value a { color: var(--primary-color); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: all 0.15s; }
         .property-value a:hover { border-bottom: 1px solid var(--primary-color); }
+        .property-value a.outer-link {
+            color: #b45309;
+            border-bottom: 1px dotted transparent;
+        }
+        .property-value a.outer-link:hover {
+            color: #92400e;
+            border-bottom-color: currentColor;
+        }
 
         table { width: 100%; border-collapse: collapse; background: var(--card-bg); border: 2px solid var(--border-color); box-shadow: 4px 4px 0 var(--border-color); margin-bottom: 2rem; }
         th, td { padding: 1rem; text-align: left; border: 1px solid var(--border-color); }
@@ -463,7 +471,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <div class="entity-iri">https://monomyth.metamuses.org/ontology#NarrativeWork</div>
             <p class="entity-comment">A story, novel, epic, film, or other narrative that can be analyzed through the monomyth framework.</p>
             <div class="entity-properties">
-                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a href="#CreativeProduct">CreativeProduct</a></div></div>
+                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#CreativeProduct" target="_blank" rel="noreferrer noopener">creon:CreativeProduct</a></div></div>
 
                 <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
             </div>
@@ -583,7 +591,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <div class="entity-iri">https://monomyth.metamuses.org/ontology#NarrativeDivergence</div>
             <p class="entity-comment">A creative departure from the expected monomyth pattern at a given stage, concerning the quality, presence, or structural role of the stage's manifestation within a specific narrative work. Narrative divergence formalizes the insight that imperfect alignments between a narrative and the monomyth template are not failures of fit but potential acts of deliberate artistic choice.<br><br>The monomyth ontology assesses every stage realization through a fit quality scale ranging from perfect alignment to complete absence or inversion. Narrative divergence operates in the space below perfect fit: when a stage is absent, the narrative has chosen silence where Campbell expects action; when a stage is inverted, the narrative has deliberately reversed the archetype's expected meaning; when a stage is weak or moderate, the narrative may have dispersed the stage's function across multiple moments, compressed it into a subordinate beat, merged it with an adjacent stage, or otherwise reshaped its dramatic weight. Each of these departures carries creative intent and thematic significance that a numeric fit score alone cannot capture.<br><br>Where sequential divergence concerns when a stage occurs in the narrative's order, and semiotic divergence concerns the conceptual vocabulary through which it is expressed, narrative divergence concerns what actually happens: whether the stage is present at all, whether it fulfills or subverts its archetypal function, and how the narrative's specific dramatic choices depart from the pattern Campbell describes. By explicitly modeling all three departure types as first-class entities linked to the stage realizations they characterize, the ontology enables richer analysis than fit scoring alone. It allows the documentation of why a narrative diverges, what artistic or thematic purpose the divergence serves, and how patterns of divergence cluster across works, genres, and periods, distinguishing narratives that systematically subvert specific acts or stages from those that faithfully preserve them, and capturing the creative rationale behind each departure.</p>
             <div class="entity-properties">
-                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
 
                 <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
             </div>
@@ -598,7 +606,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <div class="entity-iri">https://monomyth.metamuses.org/ontology#SequentialDivergence</div>
             <p class="entity-comment">A structural departure from the expected ordering of monomyth stages, occurring when a narrative realizes a stage earlier or later than its canonical position in Campbell's seventeen-stage sequence.<br><br>Where narrative divergence concerns the quality of a stage's manifestation, sequential divergence concerns its placement within the temporal architecture of the story. Campbell's model implies a fixed progression and a determinate order within each act, but many narratives rearrange this sequence for dramatic, thematic, or structural reasons: an Apotheosis may occur as the penultimate event rather than at the midpoint of Initiation, or a Refusal of the Call may surface retroactively through flashback rather than immediately following the Call to Adventure.<br><br>A stage may be a Perfect Fit in content, faithful in its semiotic register, yet significantly displaced in sequence; conversely, a stage in its canonical position may diverge narratively or semiotically. The three divergence types are orthogonal and composable on the same stage realization, each capturing a dimension of narrative craft that the other two cannot express, and together making explicit the distinction between what a narrative says at each stage, the signs through which it says it, and when it chooses to say it.</p>
             <div class="entity-properties">
-                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
 
                 <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
             </div>
@@ -613,7 +621,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <div class="entity-iri">https://monomyth.metamuses.org/ontology#SemioticDivergence</div>
             <p class="entity-comment">A divergence in the sign system through which a monomyth stage is expressed, occurring when the cultural, ontological, or figurative vehicle of a stage changes while its structural function within the hero's journey is preserved. Campbell's stage names encode specific semiotic assumptions rooted in comparative mythology and mid-twentieth-century cosmology: they presuppose particular kinds of agents (divine, patriarchal, gendered), particular ontological registers (the sacred, the supernatural, the numinous), and particular directions of force (external threat, external aid, external authority).<br><br>As narratives evolve across cultures, periods, and media, these signifiers are systematically replaced while the signified, the dramatic function each stage performs in the transformation of the hero, endures. Sacred agents become secular ones, external forces become internal states, gendered roles are recast or dissolved, and cosmological frameworks shift from the mythic to the psychological, the political, or the technological.<br><br>Where narrative divergence concerns what happens at a stage, and sequential divergence concerns when it happens, semiotic divergence concerns the conceptual vocabulary through which it happens: the signs a narrative selects to encode the archetypal structure. This captures a dimension of narrative evolution that neither fit quality nor structural reordering can express: the gradual, culturally determined drift in how stories signify the same underlying transformative pattern, making explicit the distinction between the monomyth's deep grammar and the surface language each narrative speaks.</p>
             <div class="entity-properties">
-                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Sub-class of</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
 
                 <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a></div></div>
             </div>
@@ -856,7 +864,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <div class="entity-properties">
 
                 <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
-                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
 
             </div>
         </div>
@@ -919,7 +927,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Links a divergence to the stage it departs from.</p>
             <div class="entity-properties">
 
-                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
                 <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
 
             </div>
@@ -935,7 +943,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Links a divergence to the stage realization where the departure occurs.</p>
             <div class="entity-properties">
 
-                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
                 <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
                 <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#hasDivergence">hasDivergence</a></div></div>
             </div>
@@ -1034,7 +1042,7 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <div class="entity-iri">https://monomyth.metamuses.org/ontology#divergenceRationale</div>
             <p class="entity-comment">A prose description of the artistic, thematic, structural, or sequential purpose behind a divergence from the monomyth template. Complements a fit note on a stage realization by focusing specifically on the motivation for the departure.</p>
             <div class="entity-properties">
-                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a class="outer-link" href="http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#ProductDivergence" target="_blank" rel="noreferrer noopener">creon:ProductDivergence</a></div></div>
                 <div class="property-row"><div class="property-label">Range</div><div class="property-value">Literal</div></div>
             </div>
         </div>
