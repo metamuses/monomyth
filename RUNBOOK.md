@@ -64,8 +64,11 @@ Follow these steps to release a new version:
      - Margin: 100
      - Region: Complete Diagram
      - Scaling Factor: 1.0
-6. Update the `CHANGELOG.md` file with the new version and a summary of the
-   changes in the release, following the format of previous entries.
+6. Promote the `Unreleased` section of `CHANGELOG.md` to a versioned entry:
+   replace the `## Unreleased` heading with `## X.Y - YYYY-MM-DD`, add a
+   Release link pointing to the GitHub release and a Diff link comparing `vX.Y`
+   against the previous tag (following the format of previous entries), and add
+   a new empty `## Unreleased` section with a fresh diff link at the top.
 7. Create a commit `"Bump version to vX.Y"` and push to GitHub, e.g. `git commit -m "Bump version to v1.2"`.
 8. Tag the commit with `"vX.Y"` and push the tag to GitHub, e.g. `git tag v1.2 -m "v1.2"`.
 9. Create a release `"vX.Y"` on GitHub from the tag and include the release notes

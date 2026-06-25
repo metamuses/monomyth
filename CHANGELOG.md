@@ -1,7 +1,7 @@
 # Changelog
 
 All notable changes to this project's ontology and/or knowledge graph will be
-documented in this file.  
+documented in this file.
 
 ## Unreleased
 [Diff](https://github.com/metamuses/monomyth/compare/v1.1...main)
