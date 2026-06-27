@@ -46,6 +46,11 @@ jobs:
         run: python scripts/check_rdf_inverses.py
       - name: Check RDF entities
         run: python scripts/check_rdf_entities.py
+      - name: Check generated artifacts
+        run: |
+          python scripts/merge_subgraphs.py
+          python scripts/generate_modal_data.py
+          git diff --exit-code -- graph/graph.ttl website/data/modal_data.json
   deploy:
     runs-on: ubuntu-latest
     needs: test
