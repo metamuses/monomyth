@@ -3,8 +3,9 @@
 All notable changes to this project's ontology and/or knowledge graph will be
 documented in this file.
 
-## Unreleased
-[Diff](https://github.com/metamuses/monomyth/compare/v1.1...main)
+## 1.2 - 2026-07-18
+[Release](https://github.com/metamuses/monomyth/releases/tag/v1.2) |
+[Diff](https://github.com/metamuses/monomyth/compare/v1.1...v1.2)
 
 ### Ontology
 
